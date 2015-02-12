@@ -1,0 +1,8 @@
+prefix=/home/nicholaskwan-wong/roshydro/install
+
+Name: hector_map_tools
+Description: Description of hector_map_tools
+Version: 0.3.3
+Cflags: -I/home/nicholaskwan-wong/roshydro/install/include
+Libs: -L/home/nicholaskwan-wong/roshydro/install/lib 
+Requires: nav_msgs

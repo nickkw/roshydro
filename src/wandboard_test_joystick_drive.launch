@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <node name="cmd_send_pge5" pkg="cmd_send" type="cmd_send" output="screen" />
+  <node name="rec_odo_pge5" pkg="collect_odometry" type="rec_odo" output="screen" />
+  <node name="rssi4" pkg="rssi" type="rssi" output="screen" />
+
+</launch>

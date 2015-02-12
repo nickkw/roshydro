@@ -1,0 +1,8 @@
+prefix=/home/nicholaskwan-wong/roshydro/devel
+
+Name: hector_imu_tools
+Description: Description of hector_imu_tools
+Version: 0.3.3
+Cflags: 
+Libs: -L/home/nicholaskwan-wong/roshydro/devel/lib 
+Requires: 

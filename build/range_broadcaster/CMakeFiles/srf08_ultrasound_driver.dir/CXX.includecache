@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/nicholaskwan-wong/roshydro/src/range_broadcaster/srf08_ultrasound_driver/src/srf08.cpp
+stdbool.h
+-
+stdint.h
+-
+stdio.h
+-
+unistd.h
+-
+srf08.h
+/home/nicholaskwan-wong/roshydro/src/range_broadcaster/srf08_ultrasound_driver/src/srf08.h
+sys/stat.h
+-
+fcntl.h
+-
+sys/ioctl.h
+-
+linux/i2c-dev.h
+-
+
+/home/nicholaskwan-wong/roshydro/src/range_broadcaster/srf08_ultrasound_driver/src/srf08.h
+

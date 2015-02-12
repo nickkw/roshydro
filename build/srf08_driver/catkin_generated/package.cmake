@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "srf08_driver")
+set(srf08_driver_MAINTAINER "nicholaskwan-wong <nicholaskwan-wong@todo.todo>")
+set(srf08_driver_DEPRECATED "")
+set(srf08_driver_VERSION "0.0.0")
+set(srf08_driver_BUILD_DEPENDS )
+set(srf08_driver_RUN_DEPENDS )
+set(srf08_driver_BUILDTOOL_DEPENDS "catkin")

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <node name="lidar_sensor" pkg="urg_node" type="urg_node" output="screen">
+    <param name="~frame_id" value="base_frame" /> <!-- Set the laser tf frame here -->
+    <param name="~ip_address" value="192.168.1.15" /> <!-- Make sure to update ip address if ever changed -->
+    <param name="~ip_port" value="10940" />
+    <param name="~publish_multiecho" value="false" /> <!-- Can't use multiecho message types with hector_mapping node, so just use regular single scan topic -->
+  </node>
+
+  <node name="cmd_send_pge5" pkg="cmd_send" type="cmd_send" output="screen" />
+  <node name="rec_odo_pge5" pkg="collect_odometry" type="rec_odo" output="screen" />
+  <node name="rssi4" pkg="rssi" type="rssi" output="screen" />
+  <node name="odom_broadcaster" pkg="odom_broadcaster" type="odom_broadcaster" output="screen" />
+
+  <node name="amcl" pkg="amcl" type="amcl" output="screen">
+  	<param name="~base_frame_id" value="base_frame" />
+  	<param name="~odom_frame_id" value="odom_frame" />
+  	<param name="~global_frame_id" value="map" />
+
+  	<param name="~first_map_only" value="true" /> <!-- Must have this parameter set true! Or else map_server will try to rebroadcast map with improper origin. i.e. make sure to only broadcast the map once at launch -->
+  </node>
+
+</launch>

@@ -1,0 +1,8 @@
+prefix=/home/nicholaskwan-wong/roshydro/devel
+
+Name: hector_geotiff_plugins
+Description: Description of hector_geotiff_plugins
+Version: 0.3.3
+Cflags: 
+Libs: -L/home/nicholaskwan-wong/roshydro/devel/lib 
+Requires: 

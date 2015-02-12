@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+
+<launch>
+   
+  <node name="srf08_front_left" pkg="range_broadcaster" type="sensor_broadcaster" output="screen">
+	  <remap from="range" to="range_srf08_front_left" />
+
+	  <param name="i2c_bus" value="1" type="int" /> <!-- Set which i2c bus the sensors is on. This refers to /dev/i2c-X, where X is the bus number. Use i2cdetect to find bus the sensor is on. Def. 0x8C-->
+	  <param name="i2c_address" value="0x72" type="str" /> <!-- (Hex value of form 0x00) Set the device address of the sensor here. Def. 0x70-->
+	  <param name="max_range" value="0x8C" type="str" /> <!-- (Hex value of form 0x00) Set the maximum range of the sensor here. Default 0x8C = 6m -->
+	  <param name="max_gain" value="0x1F" type="str" /> <!-- (Hex value of form 0x00) Set the maximum gain the sensor will use. Use low values with multiple ultrasounds. See datasheet for details. Default 0x1F is maximum. -->
+	  <param name="ping_rate" value="10" type="int" /> <!-- Set the ping rate of the sensor. The maximum value should be 10, or else the sensor may report inaccurate readings. See SRF08 datasheet for details. Default 10Hz.-->
+  </node>
+
+  <node name="srf08_front_right" pkg="range_broadcaster" type="sensor_broadcaster" output="screen">
+	  <remap from="range" to="range_srf08_front_right" />
+
+	  <param name="i2c_bus" value="1" type="int" /> <!-- Set which i2c bus the sensors is on. This refers to /dev/i2c-X, where X is the bus number. Use i2cdetect to find bus the sensor is on. Def. 0x8C-->
+	  <param name="i2c_address" value="0x70" type="str" /> <!-- (Hex value of form 0x00) Set the device address of the sensor here. Def. 0x70-->
+	  <param name="max_range" value="0x8C" type="str" /> <!-- (Hex value of form 0x00) Set the maximum range of the sensor here. Default 0x8C = 6m -->
+	  <param name="max_gain" value="0x1F" type="str" /> <!-- (Hex value of form 0x00) Set the maximum gain the sensor will use. Use low values with multiple ultrasounds. See datasheet for details. Default 0x1F is maximum. -->
+	  <param name="ping_rate" value="10" type="int" /> <!-- Set the ping rate of the sensor. The maximum value should be 10, or else the sensor may report inaccurate readings. See SRF08 datasheet for details. Default 10Hz.-->
+  </node>
+
+  <node name="srf08_rear" pkg="range_broadcaster" type="sensor_broadcaster" output="screen">
+	  <remap from="range" to="range_srf08_rear" />
+
+	  <param name="i2c_bus" value="1" type="int" /> <!-- Set which i2c bus the sensors is on. This refers to /dev/i2c-X, where X is the bus number. Use i2cdetect to find bus the sensor is on. Def. 0x8C-->
+	  <param name="i2c_address" value="0x76" type="str" /> <!-- (Hex value of form 0x00) Set the device address of the sensor here. Def. 0x70-->
+	  <param name="max_range" value="0x8C" type="str" /> <!-- (Hex value of form 0x00) Set the maximum range of the sensor here. Default 0x8C = 6m -->
+	  <param name="max_gain" value="0x1F" type="str" /> <!-- (Hex value of form 0x00) Set the maximum gain the sensor will use. Use low values with multiple ultrasounds. See datasheet for details. Default 0x1F is maximum. -->
+	  <param name="ping_rate" value="10" type="int" /> <!-- Set the ping rate of the sensor. The maximum value should be 10, or else the sensor may report inaccurate readings. See SRF08 datasheet for details. Default 10Hz.-->
+  </node>
+
+</launch>

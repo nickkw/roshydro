@@ -1,0 +1,8 @@
+prefix=/home/nicholaskwan-wong/roshydro/install
+
+Name: odom_broadcaster
+Description: Description of odom_broadcaster
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/nicholaskwan-wong/roshydro/install/lib 
+Requires: 

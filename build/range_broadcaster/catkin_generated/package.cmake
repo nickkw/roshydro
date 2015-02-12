@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "range_broadcaster")
+set(range_broadcaster_MAINTAINER "nicholaskwan-wong <nicholaskwan-wong@todo.todo>")
+set(range_broadcaster_DEPRECATED "")
+set(range_broadcaster_VERSION "0.0.0")
+set(range_broadcaster_BUILD_DEPENDS "roscpp" "std_msgs")
+set(range_broadcaster_RUN_DEPENDS "roscpp" "std_msgs")
+set(range_broadcaster_BUILDTOOL_DEPENDS "catkin")

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<launch>
+  <node name="gmapping" pkg="gmapping" type="slam_gmapping"  output="screen">
+
+    <param name="scan_topic" value="scan" />
+
+    <param name="map_frame" value="map" />
+    <param name="base_frame" value="base_frame" />
+    <param name="odom_frame" value="odom_frame" />
+
+    <param name="maxUrange" value="30.0" />
+
+  </node>
+
+  <node name="rosbag_record" pkg="rosbag" type="record" output="screen" 
+    args="-O mapdata.bag /map /map_metadata"/>
+  
+</launch>

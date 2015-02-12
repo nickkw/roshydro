@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <node name="lidar_sensor" pkg="urg_node" type="urg_node" output="screen">
+    <param name="~frame_id" value="base_frame" /> <!-- Set the laser tf frame here -->
+    <param name="~ip_address" value="192.168.1.15" /> <!-- Make sure to update ip address if ever changed -->
+    <param name="~ip_port" value="10940" />
+    <param name="~publish_multiecho" value="false" /> <!-- Can't use multiecho message types with hector_mapping node, so just use regular single scan topic -->
+  </node>
+
+  <node name="cmd_send_pge5" pkg="cmd_send" type="cmd_send" output="screen" />
+  <node name="rec_odo_pge5" pkg="collect_odometry" type="rec_odo" output="screen" />
+  <node name="rssi4" pkg="rssi" type="rssi" output="screen" />
+
+</launch>

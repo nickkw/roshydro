@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "odom_broadcaster")
+set(odom_broadcaster_MAINTAINER "nicholaskwan-wong <nicholaskwan-wong@todo.todo>")
+set(odom_broadcaster_DEPRECATED "")
+set(odom_broadcaster_VERSION "0.0.0")
+set(odom_broadcaster_BUILD_DEPENDS "nav_msgs" "roscpp" "std_msgs" "tf")
+set(odom_broadcaster_RUN_DEPENDS "nav_msgs" "roscpp" "std_msgs" "tf")
+set(odom_broadcaster_BUILDTOOL_DEPENDS "catkin")
