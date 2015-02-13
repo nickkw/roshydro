@@ -2,8 +2,9 @@
 
 <launch>
    
-  <node name="srf08_front_left" pkg="range_broadcaster" type="sensor_broadcaster" output="screen">
-	  <remap from="range" to="range_srf08_front_left" />
+  <node name="srf08_left" pkg="range_broadcaster" type="sensor_broadcaster" output="screen">
+	  <!-- <remap from="range" to="range_srf08_front_left" /> -->
+	  <param name="sensor_frame" value="srf08_left" type="str" />
 
 	  <param name="i2c_bus" value="1" type="int" /> <!-- Set which i2c bus the sensors is on. This refers to /dev/i2c-X, where X is the bus number. Use i2cdetect to find bus the sensor is on. Def. 0x8C-->
 	  <param name="i2c_address" value="0x72" type="str" /> <!-- (Hex value of form 0x00) Set the device address of the sensor here. Def. 0x70-->
@@ -12,8 +13,9 @@
 	  <param name="ping_rate" value="10" type="int" /> <!-- Set the ping rate of the sensor. The maximum value should be 10, or else the sensor may report inaccurate readings. See SRF08 datasheet for details. Default 10Hz.-->
   </node>
 
-  <node name="srf08_front_right" pkg="range_broadcaster" type="sensor_broadcaster" output="screen">
-	  <remap from="range" to="range_srf08_front_right" />
+  <node name="srf08_right" pkg="range_broadcaster" type="sensor_broadcaster" output="screen">
+	  <!-- <remap from="range" to="range_srf08_front_right" /> -->
+	  <param name="sensor_frame" value="srf08_right" type="str" />
 
 	  <param name="i2c_bus" value="1" type="int" /> <!-- Set which i2c bus the sensors is on. This refers to /dev/i2c-X, where X is the bus number. Use i2cdetect to find bus the sensor is on. Def. 0x8C-->
 	  <param name="i2c_address" value="0x70" type="str" /> <!-- (Hex value of form 0x00) Set the device address of the sensor here. Def. 0x70-->
@@ -22,8 +24,9 @@
 	  <param name="ping_rate" value="10" type="int" /> <!-- Set the ping rate of the sensor. The maximum value should be 10, or else the sensor may report inaccurate readings. See SRF08 datasheet for details. Default 10Hz.-->
   </node>
 
-  <node name="srf08_rear" pkg="range_broadcaster" type="sensor_broadcaster" output="screen">
-	  <remap from="range" to="range_srf08_rear" />
+  <node name="srf08_front" pkg="range_broadcaster" type="sensor_broadcaster" output="screen">
+	  <!-- <remap from="range" to="range_srf08_rear" /> -->
+	  <param name="sensor_frame" value="srf08_front" type="str" />
 
 	  <param name="i2c_bus" value="1" type="int" /> <!-- Set which i2c bus the sensors is on. This refers to /dev/i2c-X, where X is the bus number. Use i2cdetect to find bus the sensor is on. Def. 0x8C-->
 	  <param name="i2c_address" value="0x76" type="str" /> <!-- (Hex value of form 0x00) Set the device address of the sensor here. Def. 0x70-->

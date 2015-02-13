@@ -7,7 +7,7 @@
 #include <iomanip>
 
 int i2c_bus_, i2c_address_, max_range_, max_gain_, ping_rate_;
-std::string i2c_address_str_, max_range_str_, max_gain_str_;
+std::string sensor_frame_, i2c_address_str_, max_range_str_, max_gain_str_;
 
 int error_count = 0; // Used to count timeout
 
@@ -23,6 +23,7 @@ int main(int argc, char** argv)
 
   // Parameters
 
+  pnh_.param<std::string>("sensor_frame", sensor_frame_, "srf08"); // Names the frame of the sensor.
   pnh_.param<int>("i2c_bus", i2c_bus_, 1); // Defines which i2c bus on the wandboard to use.
   pnh_.param<std::string>("i2c_address", i2c_address_str_, "0x70"); // Defines the address of the SRF08 sensor to be used.
   pnh_.param<std::string>("max_range", max_range_str_, "0x8C"); // Defines max range of the sensor to be used - default 6m
@@ -47,6 +48,7 @@ int main(int argc, char** argv)
   ROS_INFO("SRF08 sensor created on Bus: %d   Address: 0x%02x    with Max range: %d cm    Gain register: 0x%02x", i2c_bus_, i2c_address_, (max_range_*43+43)/10, max_gain_);
 
   // These range message values will remain constant and are set at initialization.
+  msg.header.frame_id = sensor_frame_;
   msg.radiation_type = 0;
   msg.field_of_view = 0.959931089; // 55 degrees = 0.959931089 radians
   msg.min_range = 0.03; // Minimum range in metres
