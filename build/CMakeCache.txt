@@ -1122,6 +1122,12 @@ rostime_DIR:PATH=/home/nicholaskwan-wong/ros_catkin_ws/install_isolated/share/ro
 sensor_msgs_DIR:PATH=/home/nicholaskwan-wong/ros_catkin_ws/install_isolated/share/sensor_msgs/cmake
 
 //Value Computed by CMake
+simple_obstacle_pathing_BINARY_DIR:STATIC=/home/nicholaskwan-wong/roshydro/build/simple_obstacle_pathing
+
+//Value Computed by CMake
+simple_obstacle_pathing_SOURCE_DIR:STATIC=/home/nicholaskwan-wong/roshydro/src/simple_obstacle_pathing
+
+//Value Computed by CMake
 srf08_driver_BINARY_DIR:STATIC=/home/nicholaskwan-wong/roshydro/build/srf08_driver
 
 //Value Computed by CMake
@@ -1275,7 +1281,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=17
+CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=19
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

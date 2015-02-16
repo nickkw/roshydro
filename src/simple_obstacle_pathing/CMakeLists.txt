@@ -103,16 +103,16 @@ include_directories(
 # )
 
 ## Declare a cpp executable
-# add_executable(simple_obstacle_pathing_node src/simple_obstacle_pathing_node.cpp)
+add_executable(simple_obstacle_pathing src/simple_obstacle_pathing.cpp)
 
 ## Add cmake target dependencies of the executable/library
 ## as an example, message headers may need to be generated before nodes
 # add_dependencies(simple_obstacle_pathing_node simple_obstacle_pathing_generate_messages_cpp)
 
 ## Specify libraries to link a library or executable target against
-# target_link_libraries(simple_obstacle_pathing_node
-#   ${catkin_LIBRARIES}
-# )
+target_link_libraries(simple_obstacle_pathing
+   ${catkin_LIBRARIES}
+)
 
 #############
 ## Install ##

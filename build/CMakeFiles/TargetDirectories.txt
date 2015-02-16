@@ -51,6 +51,7 @@
 /home/nicholaskwan-wong/roshydro/build/hector_slam/hector_compressed_map_transport/CMakeFiles/sensor_msgs_generate_messages_cpp.dir
 /home/nicholaskwan-wong/roshydro/build/hector_slam/hector_compressed_map_transport/CMakeFiles/sensor_msgs_generate_messages_lisp.dir
 /home/nicholaskwan-wong/roshydro/build/hector_slam/hector_compressed_map_transport/CMakeFiles/sensor_msgs_generate_messages_py.dir
+/home/nicholaskwan-wong/roshydro/build/simple_obstacle_pathing/CMakeFiles/simple_obstacle_pathing.dir
 /home/nicholaskwan-wong/roshydro/build/range_broadcaster/CMakeFiles/srf08_ultrasound_driver.dir
 /home/nicholaskwan-wong/roshydro/build/hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_cpp.dir
 /home/nicholaskwan-wong/roshydro/build/hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_lisp.dir
