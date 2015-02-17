@@ -142,6 +142,7 @@ IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   INCLUDE("/home/nicholaskwan-wong/roshydro/build/hector_slam/hector_trajectory_server/cmake_install.cmake")
   INCLUDE("/home/nicholaskwan-wong/roshydro/build/odom_broadcaster/cmake_install.cmake")
   INCLUDE("/home/nicholaskwan-wong/roshydro/build/hector_slam/hector_mapping/cmake_install.cmake")
+  INCLUDE("/home/nicholaskwan-wong/roshydro/build/tf_sensors/cmake_install.cmake")
 
 ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)
 

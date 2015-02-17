@@ -1062,7 +1062,7 @@ kdl_conversions_DIR:PATH=/home/nicholaskwan-wong/ros_catkin_ws/install_isolated/
 laser_geometry_DIR:PATH=/home/nicholaskwan-wong/ros_catkin_ws/install_isolated/share/laser_geometry/cmake
 
 //Path to a library.
-lib:FILEPATH=/home/nicholaskwan-wong/ros_catkin_ws/install_isolated/lib/libkdl_conversions.so
+lib:FILEPATH=/home/nicholaskwan-wong/ros_catkin_ws/install_isolated/lib/libtf2.so
 
 //The directory containing a CMake configuration file for message_filters.
 message_filters_DIR:PATH=/home/nicholaskwan-wong/ros_catkin_ws/install_isolated/share/message_filters/cmake
@@ -1156,6 +1156,12 @@ tf_DIR:PATH=/home/nicholaskwan-wong/ros_catkin_ws/install_isolated/share/tf/cmak
 
 //The directory containing a CMake configuration file for tf_conversions.
 tf_conversions_DIR:PATH=/home/nicholaskwan-wong/ros_catkin_ws/install_isolated/share/tf_conversions/cmake
+
+//Value Computed by CMake
+tf_sensors_BINARY_DIR:STATIC=/home/nicholaskwan-wong/roshydro/build/tf_sensors
+
+//Value Computed by CMake
+tf_sensors_SOURCE_DIR:STATIC=/home/nicholaskwan-wong/roshydro/src/tf_sensors
 
 //The directory containing a CMake configuration file for visualization_msgs.
 visualization_msgs_DIR:PATH=/home/nicholaskwan-wong/ros_catkin_ws/install_isolated/share/visualization_msgs/cmake
@@ -1281,7 +1287,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=19
+CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=20
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

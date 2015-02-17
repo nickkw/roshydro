@@ -6,6 +6,7 @@
 #include <geometry_msgs/Twist.h>
 // #include <string>
 #include <sstream>
+#include <algorithm>
 #include "math.h"
 using namespace std;
 
@@ -157,42 +158,62 @@ void avoidObstacle(){
   // float range_l_norm = range_l / range_thresh_;
   // float range_r_norm = range_r / range_thresh_;
 
-  // Front sensor right in front of obstacle... stop and turn!
-  if(range_f < 0.2) {
-    l_vel = 0; // Don't bump into the object!
-    if(range_l < range_r) // Predict obstacle on left -- turn clockwise
-      a_vel = 0.2;
-    else if (range_r < range_l) // Predict obstacle on right -- turn counter-clockwise
-      a_vel = -0.2;
-  }
-  // Front sensor closest to obstacle case -- turn to avoid obstacle
-  else if( (range_f < range_l) && (range_f < range_r) ){
-    l_vel = range_f; // The closer the sensor is to the obstacle, the slower it goes
-    if (range_l < range_r) // Predict obstacle on left -- turn clockwise w/ gain set by how close the object is on the front sensor
-      a_vel = 1/range_f * range_thresh_;
-    if (range_r < range_l) // Predict obstacle on right -- turn counter-clockwise w/ gain set by how close the object is on the front sensor
-      a_vel = -1/range_f * range_thresh_;
-  }
+  // // Front sensor right in front of obstacle... stop and turn!
+  // if(range_f < 0.30) {
+  //   l_vel = 0; // Don't bump into the object!
+  //   if(range_l < range_r) // Predict obstacle on left -- turn clockwise
+  //     a_vel = -0.6;
+  //   else if (range_r < range_l) // Predict obstacle on right -- turn counter-clockwise
+  //     a_vel = 0.6;
+  // }
+  // // Front sensor closest to obstacle case -- turn to avoid obstacle
+  // else if( (range_f < range_l) && (range_f < range_r) ){
+  //   l_vel = range_f * 0.3; // The closer the sensor is to the obstacle, the slower it goes
+  //   if (range_l < range_r) // Predict obstacle on left -- turn clockwise w/ gain set by how close the object is on the front sensor
+  //     a_vel = -1*(0.5 + range_thresh_ - range_f);
+  //   if (range_r < range_l) // Predict obstacle on right -- turn counter-clockwise w/ gain set by how close the object is on the front sensor
+  //     a_vel = 0.5 + range_thresh_ - range_f;
+  // }
 
-  // Side sensors too close to obstacle case -- turn slightly to avoid
-  else if (range_l < 0.20 || range_r < 0.20) {
-    l_vel = 0.05; // Give a slight bit of forward velocity
-    if (range_l < range_r) // Turn clockwise
-      a_vel = 0.1;
-    else if (range_r < range_l) // Turn counter clockwise
-      a_vel = -0.1;
-  }
+  // // Side sensors too close to obstacle case -- turn slightly to avoid
+  // else if (range_l < 0.25 || range_r < 0.25) {
+  //   l_vel = 0.1; // Give a slight bit of forward velocity
+  //   if (range_l < range_r) // Turn clockwise
+  //     a_vel = -0.6;
+  //   else if (range_r < range_l) // Turn counter clockwise
+  //     a_vel = 0.6;
+  // }
 
-  // Side sensors closer than front sensor obstacle case -- drive forward
+  // // Side sensors closer than front sensor obstacle case -- drive forward
+  // else {
+  //   l_vel = std::min((float)0.3, std::min(range_l, range_r)); // Linear velocity is the lesser of 0.3 or the normalized distance ranged 
+  //   a_vel = 0; // Don't turn at all
+  // }
+
+  if(range_f < 0.30) {
+    l_vel = 0;
+    a_vel = 0.61;
+  }
+  else if ((range_l < 0.2) || (range_r < 0.2)) {
+    if (range_l < range_r) { // Predict obstacle on left -- turn clockwise w/ gain set by how close the object is on the front sensor
+      l_vel = 0.41;
+      a_vel = -0.62;
+    } 
+
+    if (range_r < range_l) {
+      // Predict obstacle on right -- turn counter-clockwise w/ gain set by how close the object is on the front sensor
+      l_vel = 0.42;
+      a_vel = 0.63;
+    } 
+  }
   else {
-    l_vel = min((float)0.3, min(range_l, range_r)); // Linear velocity is the lesser of 0.3 or the normalized distance ranged 
-    a_vel = 0; // Don't turn at all
+    l_vel = 0.31;
+    a_vel = 0.0;
   }
-
 
   // Scale velocities to max parameters, min prevents any errors in normalizing in the above code
-  l_vel = min(l_vel * l_vel_max_, a_vel_max_);
-  a_vel = min(a_vel * a_vel_max_, a_vel_max_);
+  l_vel = std::min(l_vel * l_vel_max_, l_vel_max_);
+  a_vel = std::min(a_vel * a_vel_max_, a_vel_max_);
 
   // Format velocities into string
   linear_vel << l_vel;
@@ -236,7 +257,7 @@ int main(int argc, char **argv)
   {
     if((range_l == 0 || range_r == 0 || range_f == 0)) {
       std::stringstream tt;
-      ROS_ERROR("A sensor is malfunctioning! (A sensor returned range 0)");
+      // ROS_ERROR("A sensor is malfunctioning! (A sensor returned range 0)");
       // Set velocity to 0
       tt << "0";
       tt << " ";
@@ -245,8 +266,14 @@ int main(int argc, char **argv)
     }
 
     // if all sensor ranges > range_thresh_ cm, move on
-    if((range_f < range_thresh_) && (range_l < range_thresh_) && (range_r < range_thresh_)) {
-      moveNoObstacles();
+    else if((range_f > range_thresh_) && (range_l > range_thresh_) && (range_r > range_thresh_)) {
+      // moveNoObstacles();
+      // Temporary until waypoint is implemented
+      std::stringstream tt;
+      tt << "0.222";
+      tt << " ";
+      tt << "0";
+      pubmsg.data = tt.str();
     }
 
     // Else avoid obstacle

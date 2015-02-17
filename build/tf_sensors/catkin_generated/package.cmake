@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "tf_sensors")
+set(tf_sensors_MAINTAINER "nicholaskwan-wong <nicholaskwan-wong@todo.todo>")
+set(tf_sensors_DEPRECATED "")
+set(tf_sensors_VERSION "0.0.0")
+set(tf_sensors_BUILD_DEPENDS "roscpp" "tf")
+set(tf_sensors_RUN_DEPENDS "roscpp" "tf")
+set(tf_sensors_BUILDTOOL_DEPENDS "catkin")

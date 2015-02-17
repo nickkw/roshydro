@@ -1,0 +1,8 @@
+prefix=/home/nicholaskwan-wong/roshydro/devel
+
+Name: tf_sensors
+Description: Description of tf_sensors
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/nicholaskwan-wong/roshydro/devel/lib 
+Requires: 

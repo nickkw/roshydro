@@ -213,6 +213,8 @@ SET(CMAKE_MAKEFILE_DEPENDS
   "range_broadcaster/catkin_generated/package.cmake"
   "simple_obstacle_pathing/catkin_generated/ordered_paths.cmake"
   "simple_obstacle_pathing/catkin_generated/package.cmake"
+  "tf_sensors/catkin_generated/ordered_paths.cmake"
+  "tf_sensors/catkin_generated/package.cmake"
   "/home/nicholaskwan-wong/roshydro/devel/share/hector_geotiff/cmake/hector_geotiffConfig-version.cmake"
   "/home/nicholaskwan-wong/roshydro/devel/share/hector_geotiff/cmake/hector_geotiffConfig.cmake"
   "/home/nicholaskwan-wong/roshydro/devel/share/hector_map_tools/cmake/hector_map_toolsConfig-version.cmake"
@@ -258,6 +260,8 @@ SET(CMAKE_MAKEFILE_DEPENDS
   "/home/nicholaskwan-wong/roshydro/src/range_broadcaster/package.xml"
   "/home/nicholaskwan-wong/roshydro/src/simple_obstacle_pathing/CMakeLists.txt"
   "/home/nicholaskwan-wong/roshydro/src/simple_obstacle_pathing/package.xml"
+  "/home/nicholaskwan-wong/roshydro/src/tf_sensors/CMakeLists.txt"
+  "/home/nicholaskwan-wong/roshydro/src/tf_sensors/package.xml"
   "/usr/lib/python2.7/dist-packages/catkin_pkg/templates/metapackage.cmake.in"
   "/usr/share/cmake-2.8/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-2.8/Modules/CMakeCXXInformation.cmake"
@@ -334,6 +338,7 @@ SET(CMAKE_MAKEFILE_PRODUCTS
   "hector_slam/hector_trajectory_server/CMakeFiles/CMakeDirectoryInformation.cmake"
   "odom_broadcaster/CMakeFiles/CMakeDirectoryInformation.cmake"
   "hector_slam/hector_mapping/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "tf_sensors/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -406,4 +411,5 @@ SET(CMAKE_DEPEND_INFO_FILES
   "hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_py.dir/DependInfo.cmake"
   "hector_slam/hector_mapping/CMakeFiles/hector_mapping_genlisp.dir/DependInfo.cmake"
   "hector_slam/hector_mapping/CMakeFiles/hector_mapping_genpy.dir/DependInfo.cmake"
+  "tf_sensors/CMakeFiles/tf_sensor_broadcaster.dir/DependInfo.cmake"
   )

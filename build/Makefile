@@ -1036,6 +1036,19 @@ hector_mapping_genpy/fast:
 	$(MAKE) -f hector_slam/hector_mapping/CMakeFiles/hector_mapping_genpy.dir/build.make hector_slam/hector_mapping/CMakeFiles/hector_mapping_genpy.dir/build
 .PHONY : hector_mapping_genpy/fast
 
+#=============================================================================
+# Target rules for targets named tf_sensor_broadcaster
+
+# Build rule for target.
+tf_sensor_broadcaster: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tf_sensor_broadcaster
+.PHONY : tf_sensor_broadcaster
+
+# fast build rule for target.
+tf_sensor_broadcaster/fast:
+	$(MAKE) -f tf_sensors/CMakeFiles/tf_sensor_broadcaster.dir/build.make tf_sensors/CMakeFiles/tf_sensor_broadcaster.dir/build
+.PHONY : tf_sensor_broadcaster/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1117,6 +1130,7 @@ help:
 	@echo "... hector_mapping_generate_messages_py"
 	@echo "... hector_mapping_genlisp"
 	@echo "... hector_mapping_genpy"
+	@echo "... tf_sensor_broadcaster"
 .PHONY : help
 
 
