@@ -1,0 +1,7 @@
+digraph G {
+"map" -> "base_frame"[label="Broadcaster: /tf_sensor_broadcaster\nAverage rate: 10.222 Hz\nMost recent transform: 1424380229.964 \nBuffer length: 4.500 sec\n"];
+"map" -> "odom_frame"[label="Broadcaster: /tf_sensor_broadcaster\nAverage rate: 10.222 Hz\nMost recent transform: 1424380229.964 \nBuffer length: 4.500 sec\n"];
+"base_frame" -> "srf08_front"[label="Broadcaster: /srf08_front_tf\nAverage rate: 10.196 Hz\nMost recent transform: 1424380230.097 \nBuffer length: 4.512 sec\n"];
+"base_frame" -> "srf08_left"[label="Broadcaster: /srf08_left_tf\nAverage rate: 10.202 Hz\nMost recent transform: 1424380230.015 \nBuffer length: 4.411 sec\n"];
+"base_frame" -> "srf08_right"[label="Broadcaster: /srf08_right_tf\nAverage rate: 10.196 Hz\nMost recent transform: 1424380230.034 \nBuffer length: 4.413 sec\n"];
+}

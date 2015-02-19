@@ -738,19 +738,6 @@ sensor_msgs_generate_messages_py/fast:
 .PHONY : sensor_msgs_generate_messages_py/fast
 
 #=============================================================================
-# Target rules for targets named simple_obstacle_pathing
-
-# Build rule for target.
-simple_obstacle_pathing: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 simple_obstacle_pathing
-.PHONY : simple_obstacle_pathing
-
-# fast build rule for target.
-simple_obstacle_pathing/fast:
-	$(MAKE) -f simple_obstacle_pathing/CMakeFiles/simple_obstacle_pathing.dir/build.make simple_obstacle_pathing/CMakeFiles/simple_obstacle_pathing.dir/build
-.PHONY : simple_obstacle_pathing/fast
-
-#=============================================================================
 # Target rules for targets named actionlib_generate_messages_cpp
 
 # Build rule for target.
@@ -933,6 +920,19 @@ odom_broadcaster/fast:
 .PHONY : odom_broadcaster/fast
 
 #=============================================================================
+# Target rules for targets named simple_obstacle_pathing
+
+# Build rule for target.
+simple_obstacle_pathing: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 simple_obstacle_pathing
+.PHONY : simple_obstacle_pathing
+
+# fast build rule for target.
+simple_obstacle_pathing/fast:
+	$(MAKE) -f simple_obstacle_pathing/CMakeFiles/simple_obstacle_pathing.dir/build.make simple_obstacle_pathing/CMakeFiles/simple_obstacle_pathing.dir/build
+.PHONY : simple_obstacle_pathing/fast
+
+#=============================================================================
 # Target rules for targets named hector_mapping
 
 # Build rule for target.
@@ -1107,7 +1107,6 @@ help:
 	@echo "... sensor_msgs_generate_messages_cpp"
 	@echo "... sensor_msgs_generate_messages_lisp"
 	@echo "... sensor_msgs_generate_messages_py"
-	@echo "... simple_obstacle_pathing"
 	@echo "... actionlib_generate_messages_cpp"
 	@echo "... actionlib_generate_messages_lisp"
 	@echo "... actionlib_generate_messages_py"
@@ -1122,6 +1121,7 @@ help:
 	@echo "... hector_map_server"
 	@echo "... hector_trajectory_server"
 	@echo "... odom_broadcaster"
+	@echo "... simple_obstacle_pathing"
 	@echo "... hector_mapping"
 	@echo "... hector_mapping_gencpp"
 	@echo "... hector_mapping_generate_messages"

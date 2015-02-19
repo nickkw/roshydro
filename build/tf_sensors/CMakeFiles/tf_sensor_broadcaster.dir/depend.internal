@@ -8,6 +8,8 @@ tf_sensors/CMakeFiles/tf_sensor_broadcaster.dir/src/tf_sensor_broadcaster.cpp.o
  /home/nicholaskwan-wong/ros_catkin_ws/install_isolated/include/geometry_msgs/PointStamped.h
  /home/nicholaskwan-wong/ros_catkin_ws/install_isolated/include/geometry_msgs/Pose.h
  /home/nicholaskwan-wong/ros_catkin_ws/install_isolated/include/geometry_msgs/PoseStamped.h
+ /home/nicholaskwan-wong/ros_catkin_ws/install_isolated/include/geometry_msgs/PoseWithCovariance.h
+ /home/nicholaskwan-wong/ros_catkin_ws/install_isolated/include/geometry_msgs/PoseWithCovarianceStamped.h
  /home/nicholaskwan-wong/ros_catkin_ws/install_isolated/include/geometry_msgs/Quaternion.h
  /home/nicholaskwan-wong/ros_catkin_ws/install_isolated/include/geometry_msgs/QuaternionStamped.h
  /home/nicholaskwan-wong/ros_catkin_ws/install_isolated/include/geometry_msgs/Transform.h
@@ -71,6 +73,7 @@ tf_sensors/CMakeFiles/tf_sensor_broadcaster.dir/src/tf_sensor_broadcaster.cpp.o
  /home/nicholaskwan-wong/ros_catkin_ws/install_isolated/include/ros/wall_timer_options.h
  /home/nicholaskwan-wong/ros_catkin_ws/install_isolated/include/rosconsole/macros_generated.h
  /home/nicholaskwan-wong/ros_catkin_ws/install_isolated/include/std_msgs/Header.h
+ /home/nicholaskwan-wong/ros_catkin_ws/install_isolated/include/std_msgs/String.h
  /home/nicholaskwan-wong/ros_catkin_ws/install_isolated/include/tf/LinearMath/Matrix3x3.h
  /home/nicholaskwan-wong/ros_catkin_ws/install_isolated/include/tf/LinearMath/MinMax.h
  /home/nicholaskwan-wong/ros_catkin_ws/install_isolated/include/tf/LinearMath/QuadWord.h

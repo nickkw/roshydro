@@ -35,16 +35,23 @@
     <param name="ping_rate" value="10" type="int" /> <!-- Set the ping rate of the sensor. The maximum value should be 10, or else the sensor may report inaccurate readings. See SRF08 datasheet for details. Default 10Hz.-->
   </node>
 
+  <node name="srf08_front_tf" pkg="tf" type="static_transform_publisher" args="0.135 0 0 0 0 0 base_frame srf08_front 100" />
+  <node name="srf08_left_tf" pkg="tf" type="static_transform_publisher" args="0.075 0.18 0 1.2217 0 0 base_frame srf08_left 100" />
+  <node name="srf08_right_tf" pkg="tf" type="static_transform_publisher" args="0.075 -0.18 0 -1.2217 0 0 base_frame srf08_right 100" />
+  <!-- <node name="odom_to_base_tf" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 odom_frame base_frame 100" /> -->
+
   <node name="tf_sensor_broadcaster" pkg="tf_sensors" type="tf_sensor_broadcaster" output="screen">
     <param name="base_frame" value="base_frame" type="str" /> <!-- Name of base tf frame. Default base_frame -->
+    <param name="odom_frame" value="odom_frame" type="str" /> <!-- Name of odom tf frame. Default odom_frame -->
+    <param name="map_frame" value="map" type="str" /> <!-- Name of base tf frame. Default map -->
     <param name="left_sensor_frame" value="srf08_left" type="str" /> <!-- Name of sensor_frame parameter set for the left SRF08 sensor. Default srf08_left -->
-    <param name="right_sensor_frame" value="srf08_right" type="str" /> <!-- Name of sensor_frame parameter set for the right SRF08 sensor. Default srf08_right -->
+    <param name="right_sensor_frame" value="srf08_right" type="str" /> <!--Name of sensor_frame parameter set for the right SRF08 sensor. Default srf08_right -->
     <param name="front_sensor_frame" value="srf08_front" type="str" /> <!-- Name of sensor_frame parameter set for the front SRF08 sensor. Default srf08_front -->
   </node>
 
   <node name="cmd_send_pge5" pkg="cmd_send" type="cmd_send" output="screen" />
   <node name="rec_odo_pge5" pkg="collect_odometry" type="rec_odo" output="screen" />
-  <node name="odom_broadcaster" pkg="odom_broadcaster" type="odom_broadcaster" output="screen" />
+  <!-- <node name="odom_broadcaster" pkg="odom_broadcaster" type="odom_broadcaster" output="screen" /> -->
 
   <node name="simple_obstacle_pathing" pkg="simple_obstacle_pathing" type="simple_obstacle_pathing" output="screen">
     <remap from="command_pge5" to="command" />
@@ -53,8 +60,8 @@
     <param name="right_sensor_frame" value="srf08_right" type="str" /> <!-- Name of sensor_frame parameter set for the right SRF08 sensor. Default srf08_right -->
     <param name="front_sensor_frame" value="srf08_front" type="str" /> <!-- Name of sensor_frame parameter set for the front SRF08 sensor. Default srf08_front -->
 
-    <param name="lin_vel_max" value="1.0" type="double" /> <!-- Maximum linear velocity of the robot. Default 1.0 -->
-    <param name="ang_vel_max" value="1.0" type="double" /> <!-- Maximum angular velocity of the robot. Default 1.0 -->
+    <param name="lin_vel_max" value="0.5" type="double" /> <!-- Maximum linear velocity of the robot. Default 1.0 -->
+    <param name="ang_vel_max" value="2.0" type="double" /> <!-- Maximum angular velocity of the robot. Default 1.0 -->
 
     <param name="obstacle_range_threshold" value="0.50" type="double" /> <!-- [in metres] Minimum (ceiling) proximity for an object to be considered an obstacle -->
   </node>

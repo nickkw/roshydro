@@ -772,9 +772,9 @@ clean: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_gencpp.dir/clean
 # Target rules for target hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages.dir
 
 # All Build rule for target.
+hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_cpp.dir/all
 hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py.dir/all
 hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_lisp.dir/all
-hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_cpp.dir/all
 	$(MAKE) -f hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages.dir/build.make hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages.dir/depend
 	$(MAKE) -f hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages.dir/build.make hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nicholaskwan-wong/roshydro/build/CMakeFiles 
@@ -992,28 +992,28 @@ hector_slam/hector_geotiff/preinstall:
 # Target rules for target hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir
 
 # All Build rule for target.
-hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_map_tools/CMakeFiles/nav_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_map_tools/CMakeFiles/nav_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_map_tools/CMakeFiles/nav_msgs_generate_messages_py.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_py.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_py.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_lisp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_cpp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_py.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_cpp.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all
 	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/build.make hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/depend
 	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/build.make hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nicholaskwan-wong/roshydro/build/CMakeFiles  2
@@ -1048,28 +1048,28 @@ clean: hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/clean
 # Target rules for target hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir
 
 # All Build rule for target.
-hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_map_tools/CMakeFiles/nav_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_map_tools/CMakeFiles/nav_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_map_tools/CMakeFiles/nav_msgs_generate_messages_py.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_py.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_py.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_lisp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_cpp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_py.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_cpp.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all
 	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/build.make hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/depend
 	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/build.make hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nicholaskwan-wong/roshydro/build/CMakeFiles  3
@@ -1104,27 +1104,27 @@ clean: hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/clean
 # Target rules for target hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir
 
 # All Build rule for target.
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/nav_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/nav_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/nav_msgs_generate_messages_py.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_py.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_py.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_lisp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_py.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_cpp.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
 	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/build.make hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/depend
 	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/build.make hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nicholaskwan-wong/roshydro/build/CMakeFiles  4
@@ -1360,28 +1360,28 @@ hector_slam/hector_geotiff_plugins/preinstall:
 # Target rules for target hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir
 
 # All Build rule for target.
-hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py.dir/all
 hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py.dir/all
 hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_map_tools/CMakeFiles/nav_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/all
 hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_map_tools/CMakeFiles/nav_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_map_tools/CMakeFiles/nav_msgs_generate_messages_py.dir/all
-hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
-hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_py.dir/all
-hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
-hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/all
-hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/all
-hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
-hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/all
 hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_py.dir/all
-hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_lisp.dir/all
-hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_cpp.dir/all
-hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all
+hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
+hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
+hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_py.dir/all
+hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/all
+hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_cpp.dir/all
 hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all
 	$(MAKE) -f hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/build.make hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/depend
 	$(MAKE) -f hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/build.make hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nicholaskwan-wong/roshydro/build/CMakeFiles  7
@@ -1768,56 +1768,6 @@ hector_slam/hector_compressed_map_transport/CMakeFiles/sensor_msgs_generate_mess
 
 # clean rule for target.
 clean: hector_slam/hector_compressed_map_transport/CMakeFiles/sensor_msgs_generate_messages_py.dir/clean
-.PHONY : clean
-
-#=============================================================================
-# Directory level rules for directory simple_obstacle_pathing
-
-# Convenience name for "all" pass in the directory.
-simple_obstacle_pathing/all: simple_obstacle_pathing/CMakeFiles/simple_obstacle_pathing.dir/all
-.PHONY : simple_obstacle_pathing/all
-
-# Convenience name for "clean" pass in the directory.
-simple_obstacle_pathing/clean: simple_obstacle_pathing/CMakeFiles/simple_obstacle_pathing.dir/clean
-.PHONY : simple_obstacle_pathing/clean
-
-# Convenience name for "preinstall" pass in the directory.
-simple_obstacle_pathing/preinstall:
-.PHONY : simple_obstacle_pathing/preinstall
-
-#=============================================================================
-# Target rules for target simple_obstacle_pathing/CMakeFiles/simple_obstacle_pathing.dir
-
-# All Build rule for target.
-simple_obstacle_pathing/CMakeFiles/simple_obstacle_pathing.dir/all:
-	$(MAKE) -f simple_obstacle_pathing/CMakeFiles/simple_obstacle_pathing.dir/build.make simple_obstacle_pathing/CMakeFiles/simple_obstacle_pathing.dir/depend
-	$(MAKE) -f simple_obstacle_pathing/CMakeFiles/simple_obstacle_pathing.dir/build.make simple_obstacle_pathing/CMakeFiles/simple_obstacle_pathing.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nicholaskwan-wong/roshydro/build/CMakeFiles  41
-	@echo "Built target simple_obstacle_pathing"
-.PHONY : simple_obstacle_pathing/CMakeFiles/simple_obstacle_pathing.dir/all
-
-# Include target in all.
-all: simple_obstacle_pathing/CMakeFiles/simple_obstacle_pathing.dir/all
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-simple_obstacle_pathing/CMakeFiles/simple_obstacle_pathing.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nicholaskwan-wong/roshydro/build/CMakeFiles 1
-	$(MAKE) -f CMakeFiles/Makefile2 simple_obstacle_pathing/CMakeFiles/simple_obstacle_pathing.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nicholaskwan-wong/roshydro/build/CMakeFiles 0
-.PHONY : simple_obstacle_pathing/CMakeFiles/simple_obstacle_pathing.dir/rule
-
-# Convenience name for target.
-simple_obstacle_pathing: simple_obstacle_pathing/CMakeFiles/simple_obstacle_pathing.dir/rule
-.PHONY : simple_obstacle_pathing
-
-# clean rule for target.
-simple_obstacle_pathing/CMakeFiles/simple_obstacle_pathing.dir/clean:
-	$(MAKE) -f simple_obstacle_pathing/CMakeFiles/simple_obstacle_pathing.dir/build.make simple_obstacle_pathing/CMakeFiles/simple_obstacle_pathing.dir/clean
-.PHONY : simple_obstacle_pathing/CMakeFiles/simple_obstacle_pathing.dir/clean
-
-# clean rule for target.
-clean: simple_obstacle_pathing/CMakeFiles/simple_obstacle_pathing.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -2227,42 +2177,42 @@ hector_slam/hector_map_server/preinstall:
 # Target rules for target hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir
 
 # All Build rule for target.
-hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py.dir/all
 hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py.dir/all
 hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/nav_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/all
 hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/nav_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/nav_msgs_generate_messages_py.dir/all
-hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
-hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_py.dir/all
-hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
-hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/all
-hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/all
-hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
-hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/all
 hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_py.dir/all
-hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_lisp.dir/all
-hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
+hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
+hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_py.dir/all
+hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/all
+hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_cpp.dir/all
 hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_lisp.dir/all
-hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_compressed_map_transport/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
-hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_marker_drawing/CMakeFiles/visualization_msgs_generate_messages_py.dir/all
-hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_marker_drawing/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
 hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf2_msgs_generate_messages_py.dir/all
 hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_marker_drawing/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/all
+hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_marker_drawing/CMakeFiles/visualization_msgs_generate_messages_py.dir/all
+hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/all
+hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_marker_drawing/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf_generate_messages_cpp.dir/all
+hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_compressed_map_transport/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
 hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_compressed_map_transport/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_compressed_map_transport/CMakeFiles/sensor_msgs_generate_messages_py.dir/all
-hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf_generate_messages_py.dir/all
-hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf_generate_messages_lisp.dir/all
-hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/all
-hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/all
 hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_imu_attitude_to_tf/CMakeFiles/actionlib_generate_messages_cpp.dir/all
+hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf_generate_messages_lisp.dir/all
+hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf_generate_messages_py.dir/all
 hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_imu_attitude_to_tf/CMakeFiles/actionlib_generate_messages_lisp.dir/all
 hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_imu_attitude_to_tf/CMakeFiles/actionlib_generate_messages_py.dir/all
-hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf_generate_messages_cpp.dir/all
+hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/all
 	$(MAKE) -f hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/build.make hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/depend
 	$(MAKE) -f hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/build.make hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nicholaskwan-wong/roshydro/build/CMakeFiles  8
@@ -2312,39 +2262,39 @@ hector_slam/hector_trajectory_server/preinstall:
 # Target rules for target hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir
 
 # All Build rule for target.
-hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py.dir/all
 hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py.dir/all
 hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/nav_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/all
 hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/nav_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/nav_msgs_generate_messages_py.dir/all
-hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
-hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_py.dir/all
-hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
-hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/all
-hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/all
-hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
-hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/all
 hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_py.dir/all
-hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_lisp.dir/all
-hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
+hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
+hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_py.dir/all
+hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/all
+hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_cpp.dir/all
 hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_lisp.dir/all
-hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_compressed_map_transport/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
 hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf2_msgs_generate_messages_py.dir/all
+hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/all
+hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf_generate_messages_cpp.dir/all
+hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_compressed_map_transport/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
 hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_compressed_map_transport/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_compressed_map_transport/CMakeFiles/sensor_msgs_generate_messages_py.dir/all
-hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf_generate_messages_py.dir/all
-hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf_generate_messages_lisp.dir/all
-hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/all
-hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/all
 hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_imu_attitude_to_tf/CMakeFiles/actionlib_generate_messages_cpp.dir/all
+hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf_generate_messages_lisp.dir/all
+hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf_generate_messages_py.dir/all
 hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_imu_attitude_to_tf/CMakeFiles/actionlib_generate_messages_lisp.dir/all
 hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_imu_attitude_to_tf/CMakeFiles/actionlib_generate_messages_py.dir/all
-hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf_generate_messages_cpp.dir/all
+hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_imu_attitude_to_tf/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/all
 	$(MAKE) -f hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/build.make hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/depend
 	$(MAKE) -f hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/build.make hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nicholaskwan-wong/roshydro/build/CMakeFiles  35
@@ -2423,6 +2373,56 @@ odom_broadcaster/CMakeFiles/odom_broadcaster.dir/clean:
 
 # clean rule for target.
 clean: odom_broadcaster/CMakeFiles/odom_broadcaster.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory simple_obstacle_pathing
+
+# Convenience name for "all" pass in the directory.
+simple_obstacle_pathing/all: simple_obstacle_pathing/CMakeFiles/simple_obstacle_pathing.dir/all
+.PHONY : simple_obstacle_pathing/all
+
+# Convenience name for "clean" pass in the directory.
+simple_obstacle_pathing/clean: simple_obstacle_pathing/CMakeFiles/simple_obstacle_pathing.dir/clean
+.PHONY : simple_obstacle_pathing/clean
+
+# Convenience name for "preinstall" pass in the directory.
+simple_obstacle_pathing/preinstall:
+.PHONY : simple_obstacle_pathing/preinstall
+
+#=============================================================================
+# Target rules for target simple_obstacle_pathing/CMakeFiles/simple_obstacle_pathing.dir
+
+# All Build rule for target.
+simple_obstacle_pathing/CMakeFiles/simple_obstacle_pathing.dir/all:
+	$(MAKE) -f simple_obstacle_pathing/CMakeFiles/simple_obstacle_pathing.dir/build.make simple_obstacle_pathing/CMakeFiles/simple_obstacle_pathing.dir/depend
+	$(MAKE) -f simple_obstacle_pathing/CMakeFiles/simple_obstacle_pathing.dir/build.make simple_obstacle_pathing/CMakeFiles/simple_obstacle_pathing.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nicholaskwan-wong/roshydro/build/CMakeFiles  41
+	@echo "Built target simple_obstacle_pathing"
+.PHONY : simple_obstacle_pathing/CMakeFiles/simple_obstacle_pathing.dir/all
+
+# Include target in all.
+all: simple_obstacle_pathing/CMakeFiles/simple_obstacle_pathing.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+simple_obstacle_pathing/CMakeFiles/simple_obstacle_pathing.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nicholaskwan-wong/roshydro/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 simple_obstacle_pathing/CMakeFiles/simple_obstacle_pathing.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nicholaskwan-wong/roshydro/build/CMakeFiles 0
+.PHONY : simple_obstacle_pathing/CMakeFiles/simple_obstacle_pathing.dir/rule
+
+# Convenience name for target.
+simple_obstacle_pathing: simple_obstacle_pathing/CMakeFiles/simple_obstacle_pathing.dir/rule
+.PHONY : simple_obstacle_pathing
+
+# clean rule for target.
+simple_obstacle_pathing/CMakeFiles/simple_obstacle_pathing.dir/clean:
+	$(MAKE) -f simple_obstacle_pathing/CMakeFiles/simple_obstacle_pathing.dir/build.make simple_obstacle_pathing/CMakeFiles/simple_obstacle_pathing.dir/clean
+.PHONY : simple_obstacle_pathing/CMakeFiles/simple_obstacle_pathing.dir/clean
+
+# clean rule for target.
+clean: simple_obstacle_pathing/CMakeFiles/simple_obstacle_pathing.dir/clean
 .PHONY : clean
 
 #=============================================================================
