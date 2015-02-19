@@ -265,7 +265,7 @@ int main(int argc, char **argv)
   ros::Subscriber odom_sub = n.subscribe("odo_pose_pge5", 10, &odometryCallback);
 
   // TF objects to get pose
-  tf::TransformListener tf_listener; // TF listener to get robot pose
+  tf::TransformListener listener; // TF listener to get robot pose
   tf::StampedTransform transform;
   double x, y, th;
 
@@ -289,7 +289,14 @@ int main(int argc, char **argv)
     //   }
 
     // Update pose of robot
-    tf_listener.lookupTransform(map_frame_, base_frame_, ros::Time(0), transform);
+    try {
+    listener.waitForTransform(base_frame_, map_frame_, ros::Time(0), ros::Duration(10.0) );
+    listener.lookupTransform(base_frame_, map_frame_, ros::Time(0), transform);
+    } 
+    catch (tf::TransformException ex) {
+        ROS_ERROR("%s",ex.what());
+    }
+
     x = transform.getOrigin().x();
     y = transform.getOrigin().y();
     th = tf::getYaw(transform.getRotation());
