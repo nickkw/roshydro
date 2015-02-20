@@ -5,64 +5,42 @@
 #include <tf/transform_listener.h>
 #include <geometry_msgs/Point.h>
 #include <geometry_msgs/Twist.h>
-// #include <string>
 #include <sstream>
 #include <algorithm>
 #include "math.h"
 using namespace std;
 
+/* Global variables */
 ros::Publisher command_pge5_pub_ ;
-geometry_msgs::Point way_point;
-float angle = 0;
-int move_status = 0;
+geometry_msgs::PointStamped waypoint;
 
-string x;
-string y;
-string w;
+tf::TransformListener* listener_wp = NULL; // Initialize the object as a pointer
 
 string left_sensor_frame_, right_sensor_frame_, front_sensor_frame_, base_frame_, map_frame_;
 double l_vel_max_, a_vel_max_; // Maximum velocities, passed by ROS parameters
 double range_thresh_;
 
-float xf;
-float yf;
-float wf;
+bool movingToObjective = false;
+
+float range_l, range_r, range_f;  // Range on left, right, and front sensors, respectively
+
+string xstr, ystr, wstr;
+double x, y, th;  // Represent the robot's pose in the map
 
 std_msgs::String msg, pubmsg;
 // std::stringstream ss;
 // std::ostringstream linear_vel;
 // std::ostringstream angular_vel;
 
-float range_l, range_r, range_f;  // Range on left, right, and front sensors, respectively
 
-// Callback functions
-
-void odometryCallback(const std_msgs::String::ConstPtr& msg)
-{
-  string data = msg->data.c_str();
-  int pos = data.find(" ");
-  x = data.substr(0, pos);
-  string d = data.substr(pos+1);
-  pos = d.find(" ");
-  y = d.substr(0, pos);
-  w = d.substr(pos+1);
-  
-  xf = atof(x.c_str());
-  yf = atof(y.c_str());
-  wf = atof(w.c_str()) * 57.324840764;
-  if (wf < 0)
-    wf += 360;
-  //cout<< "x = " << x <<  endl;
-  //cout<< "y = " << y <<  endl;  
-  //cout<< "w = " << w <<  endl;
-}
+/* Callback functions */
 
 void wayPointCallback(const geometry_msgs::PointStamped::ConstPtr& msg)
 {
- way_point.x = msg->point.x;
- way_point.y = msg->point.y;
- move_status = 1;
- ROS_INFO("Point published! Moving to coordinates\t x: %3.3f y: %3.3f", way_point.x, way_point.y);
+  waypoint.point.x = msg->point.x;
+  waypoint.point.y = msg->point.y;
+
+  ROS_INFO("Point published! Moving to map coordinates:   x: %3.3f y: %3.3f", waypoint.point.x, waypoint.point.y);
 }
 
 // Updates reported sensor ranges
@@ -87,63 +65,77 @@ void rangeCallback(const sensor_msgs::Range::ConstPtr& msg)
 void moveNoObstacles(){
 
   // Initialization
-  float diff;
-  float l_vel, a_vel;
+  double diff;
+  double angle;
+  double l_vel, a_vel;
   std::stringstream ss;
   std::ostringstream linear_vel;
   std::ostringstream angular_vel;
 
-  if (move_status == 1)
+  // Linear velocity processing
+  l_vel = l_vel_max_ * sqrt( pow((waypoint.point.y - y), 2) + pow((waypoint.point.x - x), 2) );
+
+  // Angular velocity processing
+  // if( waypoint.point.x > x ) {
+  //   angle = atan( (waypoint.point.y - y) / (waypoint.point.x - x) ); // Quadrant 1 or 4 case
+  // }
+  // else if ( waypoint.point.x < x ) {
+  //   if (angle > 0)
+  //     angle += M_PI/2;  // Quadrant 2 case
+  //   else if (angle < 0)
+  //     angle = -M_PI - angle ;  // Quadrant 3 case
+  // }
+
+  angle = atan2((waypoint.point.y - y), (waypoint.point.x - x));
+
+  diff = fmod(th, M_PI);  // Normalize theta
+  if (angle > th)
   {
-    // Angular velocity processing
-    angle = atan( (way_point.y - yf) / (way_point.x - xf) ) * 57.324840764;
-    if ( way_point.y > yf && way_point.x < xf)
-      angle += 180;
-    else if ( way_point.y < yf && way_point.x < xf )
-      angle += 180;
-    else if ( way_point.y < yf && way_point.x > xf )
-      angle += 360;
-    if (angle > wf)
-    {
-      diff = angle - wf;
-      if (diff > 180)
-        diff = (-1) * ((360 - angle) + wf);
-    }
-    else
-    {
-      diff = wf - angle;
-      if (diff > 180)
-        diff = (360 - wf) + angle;
-      else
-        diff *= -1;
-    }
-
-    // Linear velocity
-    float l_vel = sqrt( pow((way_point.y - yf), 2) + pow((way_point.x - xf), 2) ) ;
-    //float l_vel = abs((way_point.x - xf) / 2);
-    if (l_vel > l_vel_max_)
-      l_vel = l_vel_max_;
-
-    // Process to string message
-    linear_vel << l_vel;
-    // cout << "l_vel = " << l_vel << endl;
-    angular_vel << (diff/60);
-    if (a_vel > a_vel_max_);
-      a_vel = a_vel_max_;
-
-    if (l_vel > 0.01)
-    { 
-      ss << linear_vel.str();
-      ss << " ";
-      ss << angular_vel.str(); 
-    }
-    else
-    { 
-      ss << "0";
-      ss << " ";
-      ss << "0";
-    }
+    diff = angle - th;
+    if (diff > M_PI)
+      diff = (-1) * ((2*M_PI - angle) + th);
   }
+  else
+  {
+    diff = th - angle;
+    if (diff > M_PI)
+      diff = (2*M_PI - th) + angle;
+    else
+      diff *= -1;
+  }
+  diff = fmod(diff, M_PI); // Normalize diff to between -PI and PI using float modulus
+  diff = diff / M_PI; // Normalize diff to one
+
+  a_vel = 2 * a_vel_max_ * diff;
+
+  // Velocity limiter
+  if (l_vel > l_vel_max_)
+    l_vel = l_vel_max_;
+
+  if (abs(a_vel) > a_vel_max_) {
+    if(a_vel > 0)
+      a_vel = 2 * a_vel_max_;
+    else if (a_vel < 0)
+      a_vel = 2 * -a_vel_max_;
+  }
+
+  // Process to string message
+  linear_vel << l_vel;
+  angular_vel << a_vel;
+
+  if (l_vel > 0.01)
+  { 
+    ss << linear_vel.str();
+    ss << " ";
+    ss << angular_vel.str(); 
+  }
+  else
+  { 
+    ss << "0";
+    ss << " ";
+    ss << "0";
+  }
+
   pubmsg.data = ss.str();
 }
 
@@ -262,36 +254,32 @@ int main(int argc, char **argv)
 
   ros::Subscriber range_sub = n.subscribe<sensor_msgs::Range>("range", 20, &rangeCallback);
   ros::Subscriber point_sub = n.subscribe<geometry_msgs::PointStamped>("/clicked_point", 1, &wayPointCallback);
-  ros::Subscriber odom_sub = n.subscribe("odo_pose_pge5", 10, &odometryCallback);
 
   // TF objects to get pose
   tf::TransformListener listener; // TF listener to get robot pose
   tf::StampedTransform transform;
-  double x, y, th;
+
+  listener_wp = new(tf::TransformListener); // TF listener to get waypoint. Needed so we can use the transformListener inside the waypoint callback function.
 
   ros::Rate loop_rate(15);
 
   while (ros::ok())
   {
 
-    // if((range_l == 0 || range_r == 0 || range_f == 0)) {
-    //   i++;
-    // }
-    // if(i > 50 && (range_l == 0 || range_r == 0 || range_f == 0)) {
-    //   std::stringstream tt;
-    //   // ROS_ERROR("A sensor is malfunctioning! (A sensor returned range 0)");
-    //   // Set velocity to 0
-    //   i = 0;
-    //   tt << "0";
-    //   tt << " ";
-    //   tt << "0";
-    //   pubmsg.data = tt.str();
-    //   }
+    if(range_l == 0 || range_r == 0 || range_f == 0) {
+      std::stringstream tt;
+      // ROS_ERROR("A sensor is malfunctioning! (A sensor returned range 0)");
+      // Set velocity to 0
+      tt << "0";
+      tt << " ";
+      tt << "0";
+      pubmsg.data = tt.str();
+      }
 
     // Update pose of robot
     try {
-    listener.waitForTransform(base_frame_, map_frame_, ros::Time(0), ros::Duration(10.0) );
-    listener.lookupTransform(base_frame_, map_frame_, ros::Time(0), transform);
+      listener.waitForTransform(map_frame_, base_frame_, ros::Time(0), ros::Duration(10.0) );
+      listener.lookupTransform(map_frame_, base_frame_, ros::Time(0), transform);
     } 
     catch (tf::TransformException ex) {
         ROS_ERROR("%s",ex.what());
@@ -301,18 +289,31 @@ int main(int argc, char **argv)
     y = transform.getOrigin().y();
     th = tf::getYaw(transform.getRotation());
 
-    // If the robot is within a 10cm radius of the target waypoint, stop.
-    if((abs(x - way_point.x) < 0.10) && (abs(y - way_point.y) < 0.10)) {
+    // If the robot is within a 20cm radius of the target waypoint or if a waypoint has not been yet specified, don't move.
+    if( (abs(x - waypoint.point.x) < 0.20) && (abs(y - waypoint.point.y) < 0.20)) {
+      if(movingToObjective) {
+        ROS_INFO("Reached objective!");
+        movingToObjective = false;
+      }
       std::stringstream tt;
-      tt << "0";
+      tt << "0.0";
       tt << " ";
-      tt << "0";
+      tt << "0.0";
       pubmsg.data = tt.str();
+    }
+
+    // Check avoid obstacle case first
+    else if((range_f < range_thresh_) || (range_l < range_thresh_) || (range_r < range_thresh_)) {
+      
+      avoidObstacle();
+
     }
 
     // if all sensor ranges > range_thresh_ cm, move on
     else if((range_f > range_thresh_) && (range_l > range_thresh_) && (range_r > range_thresh_)) {
+      movingToObjective = true;
       moveNoObstacles();
+
       // // Temporary until waypoint is implemented
       // std::stringstream tt;
       // tt << "0.222";
@@ -321,9 +322,13 @@ int main(int argc, char **argv)
       // pubmsg.data = tt.str();
     }
 
-    // Else avoid obstacle
+    // If not sure what to do, simply stop
     else {
-      avoidObstacle();
+      std::stringstream tt;
+      tt << "0.0";
+      tt << " ";
+      tt << "0.0";
+      pubmsg.data = tt.str();
     }
 
     // Publish the velocity commands to ROS

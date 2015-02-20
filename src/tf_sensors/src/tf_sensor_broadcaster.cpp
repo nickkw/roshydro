@@ -112,35 +112,31 @@ int main(int argc, char** argv){
     // transform.setRotation( rotation );
     // br.sendTransform(tf::StampedTransform(transform, ros::Time::now(), base_frame_, right_sensor_frame_));
 
-    // Odom -> Base transform WORKING
-    transform.setOrigin( tf::Vector3(0.0, 0.0, 0.0) );
-    rotation.setRPY(0, 0, 0);
-    transform.setRotation( rotation );
-    br.sendTransform(tf::StampedTransform(transform, ros::Time::now(), odom_frame_, base_frame_));
-
-    // Base -> map transform WORKING
-    transform.setOrigin( tf::Vector3(x_odo + x_pose, y_odo + y_pose, 0.0) );
-    //if((th_odo + th_pose) > 2*PI){th_odo += th_pose - 2*PI;}
-    //else if((th_odo + th_pose) < 2*PI){th_odo += th_pose + 2*PI;}
-    //else{th_odo += th_pose;}
-    rotation.setRPY(0, 0, th_odo + th_pose);
-    transform.setRotation( rotation );
-    br.sendTransform(tf::StampedTransform(transform, ros::Time::now(), map_frame_, odom_frame_));
-
-    // // Post Odom -> Base transform
-    // transform.setOrigin( tf::Vector3(x_pose, y_pose, 0.0) );
-    // rotation.setRPY(0, 0, th_pose);
+    // // Odom -> Base transform WORKING
+    // transform.setOrigin( tf::Vector3(0.0, 0.0, 0.0) );
+    // rotation.setRPY(0, 0, 0);
     // transform.setRotation( rotation );
     // br.sendTransform(tf::StampedTransform(transform, ros::Time::now(), odom_frame_, base_frame_));
 
-    // // Base -> map transform
-    // transform.setOrigin( tf::Vector3(x_odo, y_odo, 0.0) );
-    // //if((th_odo + th_pose) > 2*PI){th_odo += th_pose - 2*PI;}
-    // //else if((th_odo + th_pose) < 2*PI){th_odo += th_pose + 2*PI;}
-    // //else{th_odo += th_pose;}
-    // rotation.setRPY(0, 0, th_odo);
+    // // Map -> Odom transform WORKING
+    // transform.setOrigin( tf::Vector3(x_odo + x_pose, y_odo + y_pose, 0.0) );
+    // rotation.setRPY(0, 0, th_odo + th_pose);
     // transform.setRotation( rotation );
     // br.sendTransform(tf::StampedTransform(transform, ros::Time::now(), map_frame_, odom_frame_));
+
+
+    // Map -> Base transform
+    transform.setOrigin( tf::Vector3(x_pose + x_odo, y_pose + y_odo, 0.0) );
+    rotation.setRPY(0, 0, th_pose + th_odo);
+    transform.setRotation( rotation );
+    br.sendTransform(tf::StampedTransform(transform, ros::Time::now(), map_frame_, base_frame_));
+
+    // Map -> Odom transform
+    transform.setOrigin( tf::Vector3(x_odo, y_odo, 0.0) );
+    rotation.setRPY(0, 0, th_odo);
+    transform.setRotation( rotation );
+    br.sendTransform(tf::StampedTransform(transform, ros::Time::now(), map_frame_, odom_frame_));
+
 
     rate.sleep();
   }
