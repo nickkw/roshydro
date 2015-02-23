@@ -155,7 +155,7 @@ void avoidObstacle(){
   // float range_r_norm = range_r / range_thresh_;
 
   // // Front sensor right in front of obstacle... stop and turn!
-  if(range_f < 0.30) {
+  if(range_f < 0.35) {
     l_vel = 0; // Don't bump into the object!
     if(range_l < range_r) // Predict obstacle on left -- turn clockwise
       a_vel = -0.7;
@@ -181,7 +181,7 @@ void avoidObstacle(){
   // }
 
   // Side sensors too close to obstacle case -- turn slightly to avoid
-  else if (range_l < 0.25 || range_r < 0.25) {
+  else if (range_l < 0.30 || range_r < 0.30) {
     l_vel = 0.5; // Give a slight bit of forward velocity
     if (range_l < range_r) // Turn clockwise
       a_vel = -0.6;

@@ -63,7 +63,7 @@
     <param name="lin_vel_max" value="0.5" type="double" /> <!-- Maximum linear velocity of the robot. Default 1.0 -->
     <param name="ang_vel_max" value="2.0" type="double" /> <!-- Maximum angular velocity of the robot. Default 1.0 -->
 
-    <param name="obstacle_range_threshold" value="0.50" type="double" /> <!-- [in metres] Minimum (ceiling) proximity for an object to be considered an obstacle -->
+    <param name="obstacle_range_threshold" value="0.60" type="double" /> <!-- [in metres] Minimum (ceiling) proximity for an object to be considered an obstacle -->
   </node>
 
 </launch>
