@@ -16,13 +16,13 @@ geometry_msgs::PointStamped waypoint;
 
 tf::TransformListener* listener_wp = NULL; // Initialize the object as a pointer
 
-string left_sensor_frame_, right_sensor_frame_, front_sensor_frame_, base_frame_, map_frame_;
+string left_sensor_frame_, right_sensor_frame_, front_left_sensor_frame_, front_right_sensor_frame_, front_sensor_frame_, base_frame_, map_frame_;
 double l_vel_max_, a_vel_max_; // Maximum velocities, passed by ROS parameters
 double range_thresh_;
 
 bool movingToObjective = false;
 
-float range_l, range_r, range_f;  // Range on left, right, and front sensors, respectively
+float range_l, range_r, range_f_l, range_f_r, range_f;  // Range on left, right, and front sensors, respectively
 
 string xstr, ystr, wstr;
 double x, y, th;  // Represent the robot's pose in the map
@@ -51,6 +51,12 @@ void rangeCallback(const sensor_msgs::Range::ConstPtr& msg)
 
   else if(msg->header.frame_id == right_sensor_frame_) 
     range_r = msg->range;
+
+  else if(msg->header.frame_id == front_left_sensor_frame_) 
+    range_f_l = msg->range;
+
+  else if(msg->header.frame_id == front_right_sensor_frame_) 
+    range_f_r = msg->range;
 
   else if(msg->header.frame_id == front_sensor_frame_) 
     range_f = msg->range;
@@ -154,21 +160,24 @@ void avoidObstacle(){
   // float range_l_norm = range_l / range_thresh_;
   // float range_r_norm = range_r / range_thresh_;
 
-  // // Front sensor right in front of obstacle... stop and turn!
-  if(range_f < 0.35) {
+  // // Front sensors right in front of obstacle... stop and turn!
+  if(range_f < 0.40 || range_f_l < 0.40 || range_f_r < 0.40) {
     l_vel = 0; // Don't bump into the object!
+    // if(range_l < range_r || range_f_l < range_f_r) // Predict obstacle on left -- turn clockwise
     if(range_l < range_r) // Predict obstacle on left -- turn clockwise
       a_vel = -0.7;
-    else if (range_r < range_l) // Predict obstacle on right -- turn counter-clockwise
+    // else if (range_r < range_l || range_f_r < range_f_l) // Predict obstacle on right -- turn counter-clockwise
+    else if(range_l < range_r) // Predict obstacle on left -- turn clockwise
       a_vel = 0.7;
   }
   // Front sensor closest to obstacle case -- turn to avoid obstacle
-  else if( (range_f < range_l) && (range_f < range_r) ){
-    l_vel = range_f * 1.5; // The closer the sensor is to the obstacle, the slower it goes
+  // else if( (range_f < range_l) && (range_f < range_r) ){
+  else if( (fmin(fmin(range_f, range_f_l),range_f_r) < range_l) && (fmin(fmin(range_f, range_f_l),range_f_r) < range_r) ){
+    l_vel = fmin(fmin(range_f, range_f_l),range_f_r) * 1.5; // The closer the sensor is to the obstacle, the slower it goes
     if (range_l < range_r) // Predict obstacle on left -- turn clockwise w/ gain set by how close the object is on the front sensor
-      a_vel = -1*(0.8 + range_thresh_ - range_f);
+      a_vel = -1*(0.6 + range_thresh_ - fmin(fmin(range_f, range_f_l), range_f_r));
     if (range_r < range_l) // Predict obstacle on right -- turn counter-clockwise w/ gain set by how close the object is on the front sensor
-      a_vel = 0.8 + range_thresh_ - range_f;
+      a_vel = 0.6 + range_thresh_ - fmin(fmin(range_f, range_f_l), range_f_r);
   }
 
   // // Side sensors too close to obstacle case -- turn slightly to avoid
@@ -191,7 +200,7 @@ void avoidObstacle(){
 
   // Side sensors closer than front sensor obstacle case -- drive forward
   else {
-    l_vel = std::min((float)0.3, std::min(range_l, range_r)); // Linear velocity is the lesser of 0.3 or the normalized distance ranged 
+    l_vel = fmin((float)0.5, fmin(range_l, range_r)); // Linear velocity is the lesser of 0.3 or the normalized distance ranged 
     a_vel = 0; // Don't turn at all
   }
 
@@ -241,9 +250,13 @@ int main(int argc, char **argv)
   // Parameters
   n.param<std::string>("base_frame", base_frame_, "base_frame"); // Names of the base_frame tf frame to subscribe to.
   n.param<std::string>("map_frame", map_frame_, "map"); // Names of the map tf frame to subscribe to.
+
   pnh_.param<std::string>("left_sensor_frame", left_sensor_frame_, "srf08_left"); // Names the frame of the front left sensor.
   pnh_.param<std::string>("right_sensor_frame", right_sensor_frame_, "srf08_right"); // Names the frame of the right sensor.
+  pnh_.param<std::string>("front_left_sensor_frame", front_left_sensor_frame_, "srf08_front_left"); // Names the frame of the front left sensor.
+  pnh_.param<std::string>("front_right_sensor_frame", front_right_sensor_frame_, "srf08_front_right"); // Names the frame of the right sensor.
   pnh_.param<std::string>("front_sensor_frame", front_sensor_frame_, "srf08_front"); // Names the frame of the front sensor.
+
   pnh_.param<double>("lin_vel_max", l_vel_max_, 1.0);  // Maximum linear velocity
   pnh_.param<double>("ang_vel_max", a_vel_max_, 1.0);  // Maximum angular velocity
 
@@ -265,8 +278,8 @@ int main(int argc, char **argv)
 
   while (ros::ok())
   {
-
-    if(range_l == 0 || range_r == 0 || range_f == 0) {
+    // Misfunctioning range sensor case
+    if(range_l == 0 || range_r == 0 || range_f == 0 || range_f_r == 0 || range_f_l == 0) {
       std::stringstream tt;
       // ROS_ERROR("A sensor is malfunctioning! (A sensor returned range 0)");
       // Set velocity to 0
@@ -303,14 +316,15 @@ int main(int argc, char **argv)
     }
 
     // Check avoid obstacle case first
-    else if((range_f < range_thresh_) || (range_l < range_thresh_) || (range_r < range_thresh_)) {
+    else if((range_f < range_thresh_) || (range_f_l < range_thresh_) || (range_f_r < range_thresh_) || (range_l < range_thresh_) || (range_r < range_thresh_)) {
       
       avoidObstacle();
 
     }
 
     // if all sensor ranges > range_thresh_ cm, move on
-    else if((range_f > range_thresh_) && (range_l > range_thresh_) && (range_r > range_thresh_)) {
+    else if((range_f > range_thresh_) && (range_f_l > range_thresh_) && (range_f_r > range_thresh_) && (range_l > range_thresh_) && (range_r > range_thresh_)) {
+
       movingToObjective = true;
       moveNoObstacles();
 

@@ -40,19 +40,18 @@ void velCallback(const std_msgs::String& str) {
   thmsg = velstr.substr(strpos2);
 
   // If the odometry is restarted, reset the origin (messy implementation)
-  if(atof(xmsg.c_str()) == 0.0 || atof(ymsg.c_str()) == 0.0 || atof(thmsg.c_str()) == 0.00) {
+  if(atof(xmsg.c_str()) == 0.0 && atof(ymsg.c_str()) == 0.0 && atof(thmsg.c_str()) == 0.00) {
     x_odo_origin = 0;
     y_odo_origin = 0;
     th_odo_origin = 0;
   }
-  
+
   // Convert message substrings to doubles and store values as current
   x_odo_raw = atof(xmsg.c_str()) - x_odo_origin;
   y_odo_raw = atof(ymsg.c_str()) - y_odo_origin;
   th_odo_raw = atof(thmsg.c_str()) - th_odo_origin;
-  // th_odo_raw = fmod(th_odo_raw, M_PI); // Normalize theta to within (-PI, PI)
 
-  // Transform odometry messages into new frame
+  // Transform odometry messages into pose frame
   x_odo = x_odo_raw * cos(th_init_pose) - y_odo_raw * sin(th_init_pose); // Find new x' component relative to the new frame (since odometry hardware always reports relative to initial startup coordinates)
   y_odo = x_odo_raw * sin(th_init_pose) + y_odo_raw * cos(th_init_pose); // Find new y' component relative to the new frame (since odometry hardware always reports relative to initial startup coordinates)
   th_odo = th_odo_raw;
