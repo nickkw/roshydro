@@ -8,6 +8,11 @@
 #include <sstream>
 #include <algorithm>
 #include "math.h"
+
+#define LEFT 0
+#define RIGHT 1
+#define FLIP 2
+
 using namespace std;
 
 /* Global variables */
@@ -22,7 +27,12 @@ double range_thresh_;
 
 bool movingToObjective = false;
 
+bool avoiding = false;
+bool turning = false;
+
 float range_l, range_r, range_f_l, range_f_r, range_f;  // Range on left, right, and front sensors, respectively
+
+int turnedDir;
 
 string xstr, ystr, wstr;
 double x, y, th;  // Represent the robot's pose in the map
@@ -80,17 +90,6 @@ void moveNoObstacles(){
 
   // Linear velocity processing
   l_vel = l_vel_max_ * sqrt( pow((waypoint.point.y - y), 2) + pow((waypoint.point.x - x), 2) );
-
-  // Angular velocity processing
-  // if( waypoint.point.x > x ) {
-  //   angle = atan( (waypoint.point.y - y) / (waypoint.point.x - x) ); // Quadrant 1 or 4 case
-  // }
-  // else if ( waypoint.point.x < x ) {
-  //   if (angle > 0)
-  //     angle += M_PI/2;  // Quadrant 2 case
-  //   else if (angle < 0)
-  //     angle = -M_PI - angle ;  // Quadrant 3 case
-  // }
 
   angle = atan2((waypoint.point.y - y), (waypoint.point.x - x));
 
@@ -155,43 +154,33 @@ void avoidObstacle(){
 
   float l_vel, a_vel;
 
-  // Normalized range values
-  // float range_f_norm = range_f / range_thresh_;
-  // float range_l_norm = range_l / range_thresh_;
-  // float range_r_norm = range_r / range_thresh_;
-
   // // Front sensors right in front of obstacle... stop and turn!
   if(range_f < 0.40 || range_f_l < 0.40 || range_f_r < 0.40) {
     l_vel = 0; // Don't bump into the object!
     // if(range_l < range_r || range_f_l < range_f_r) // Predict obstacle on left -- turn clockwise
-    if(range_l < range_r) // Predict obstacle on left -- turn clockwise
+    if(range_l < range_r) {  // Predict obstacle on left -- turn clockwise
       a_vel = -0.7;
+      turnedDir = RIGHT;
+    }
     // else if (range_r < range_l || range_f_r < range_f_l) // Predict obstacle on right -- turn counter-clockwise
-    else if(range_l < range_r) // Predict obstacle on left -- turn clockwise
+    else if(range_r < range_l) { // Predict obstacle on right -- turn counter-clockwise
       a_vel = 0.7;
+      turnedDir = LEFT;
+    }
   }
   // Front sensor closest to obstacle case -- turn to avoid obstacle
   // else if( (range_f < range_l) && (range_f < range_r) ){
   else if( (fmin(fmin(range_f, range_f_l),range_f_r) < range_l) && (fmin(fmin(range_f, range_f_l),range_f_r) < range_r) ){
-    l_vel = fmin(fmin(range_f, range_f_l),range_f_r) * 1.5; // The closer the sensor is to the obstacle, the slower it goes
+    l_vel = fmin(fmin(range_f, range_f_l),range_f_r); // The closer the sensor is to the obstacle, the slower it goes
     if (range_l < range_r) // Predict obstacle on left -- turn clockwise w/ gain set by how close the object is on the front sensor
       a_vel = -1*(0.6 + range_thresh_ - fmin(fmin(range_f, range_f_l), range_f_r));
     if (range_r < range_l) // Predict obstacle on right -- turn counter-clockwise w/ gain set by how close the object is on the front sensor
       a_vel = 0.6 + range_thresh_ - fmin(fmin(range_f, range_f_l), range_f_r);
   }
 
-  // // Side sensors too close to obstacle case -- turn slightly to avoid
-  // else if (range_l < 0.3 || range_r < 0.3) {
-  //   l_vel = 0.1; // Give a slight bit of forward velocity
-  //   if (range_l < range_r) // Turn clockwise
-  //     a_vel = -0.7;
-  //   else if (range_r < range_l) // Turn counter clockwise
-  //     a_vel = 0.7;
-  // }
-
   // Side sensors too close to obstacle case -- turn slightly to avoid
-  else if (range_l < 0.30 || range_r < 0.30) {
-    l_vel = 0.5; // Give a slight bit of forward velocity
+  else if (range_l < 0.35 || range_r < 0.35) {
+    l_vel = 0.4; // Give a slight bit of forward velocity
     if (range_l < range_r) // Turn clockwise
       a_vel = -0.6;
     else if (range_r < range_l) // Turn counter clockwise
@@ -204,26 +193,6 @@ void avoidObstacle(){
     a_vel = 0; // Don't turn at all
   }
 
-  // if(range_f < 0.30) {
-  //   l_vel = 0;
-  //   a_vel = 0.61;
-  // }
-  // else if ((range_l < 0.2) || (range_r < 0.2)) {
-  //   if (range_l < range_r) { // Predict obstacle on left -- turn clockwise w/ gain set by how close the object is on the front sensor
-  //     l_vel = 0.41;
-  //     a_vel = -0.62;
-  //   } 
-
-  //   if (range_r < range_l) {
-  //     // Predict obstacle on right -- turn counter-clockwise w/ gain set by how close the object is on the front sensor
-  //     l_vel = 0.42;
-  //     a_vel = 0.63;
-  //   } 
-  // }
-  // else {
-  //   l_vel = 0.31;
-  //   a_vel = 0.0;
-  // }
 
   // Scale velocities to max parameters, min prevents any errors in normalizing in the above code
   l_vel = std::min(l_vel * l_vel_max_, l_vel_max_);
@@ -238,6 +207,144 @@ void avoidObstacle(){
   ss << angular_vel.str(); 
 
   pubmsg.data = ss.str();
+}
+
+
+int guessDirection(){
+  int direction;
+  double angle;
+
+  angle = atan2((waypoint.point.y - y), (waypoint.point.x - x));
+  if(angle < M_PI/2 && angle > -M_PI/2){
+    direction = RIGHT;
+  }
+  else {
+    direction = LEFT;
+  }
+  return direction;
+}
+
+// Rotate the robot by angle amount.
+void turn(double angle){
+
+  std::stringstream ss;
+  std::ostringstream linear_vel;
+  std::ostringstream angular_vel;
+  float l_vel, a_vel;
+  static double init_angle;
+
+  // If it's the first time entering the turning state, set the initial angle
+  if(!turning)
+    init_angle = th;
+
+  static double goal_angle = angle;
+
+  l_vel = 0;
+  a_vel = 0;
+
+  if(abs(th - init_angle) > abs(angle)){ // Turn is complete!
+    turning = false;
+  }
+
+  else { // Otherwise, keep turning.
+    turning = true;
+
+    if(angle > 0) {  // Left turn
+      a_vel = a_vel_max_ * 0.5;
+    }
+    else if (angle < 0) { // Right turn
+      a_vel = -1 * a_vel_max_ * 0.5;
+    }
+  }
+
+  // Publish
+  linear_vel << l_vel;
+  angular_vel << a_vel;
+
+  ss << linear_vel.str();
+  ss << " ";
+  ss << angular_vel.str(); 
+
+  pubmsg.data = ss.str();
+}
+
+// Avoids obstacle within range_thresh_ based on sensor weightings
+void avoidObstacle2(){
+
+  // Initialization
+  std::stringstream ss;
+  std::ostringstream linear_vel;
+  std::ostringstream angular_vel;
+  float l_vel, a_vel;
+  float angle;
+
+  // If it's the first time entering the avoidance state, guess a direction to go
+  if(!avoiding){
+    turnedDir = guessDirection();
+    turning = false;
+
+    if(turnedDir == LEFT){
+      angle = M_PI/2;
+    }
+    else if(turnedDir == RIGHT){
+      angle = -M_PI/2;
+    }
+    turn(angle);
+    avoiding = true;
+  }
+
+  // Complete a turn if turning
+  if(turning){
+    if(turnedDir == LEFT){
+      angle = M_PI/2;
+    }
+    else if(turnedDir == RIGHT){
+      angle = -M_PI/2;
+    }
+    else if(turnedDir == FLIP){
+      angle = M_PI;
+    }
+    turn(angle);
+  }
+
+  // Otherwise drive forward and avoid obstacles on either side.
+  else {
+    l_vel = fmin(fmin(range_f, range_f_l),range_f_r); // Drive forward
+
+    if (range_l < 0.40 || range_r < 0.40) { // If the side sensors is a little close to the obstacle, turn.
+      // l_vel = 0.4; // Give a slight bit of forward velocity
+      if (range_l < range_r) // Turn right
+        a_vel = -0.3;
+      else if (range_r < range_l) // Turn left
+        a_vel = 0.3;
+    }
+    else {
+      a_vel = 0;
+    }
+
+    // Scale velocities to max parameters, min prevents any errors in normalizing in the above code
+    l_vel = fmin(l_vel * l_vel_max_, l_vel_max_);
+    a_vel = fmin(a_vel * a_vel_max_, a_vel_max_);
+
+    // Format velocities into string
+    linear_vel << l_vel;
+    angular_vel << a_vel;
+
+    ss << linear_vel.str();
+    ss << " ";
+    ss << angular_vel.str(); 
+
+    pubmsg.data = ss.str();
+
+    // An obstacle has appeared in front! Alert the system for the next iteration.
+    // if (range_f < 0.30 || range_f_l < 0.30 || range_f_r < 0.30) {
+    if (range_f < 0.30 && turning == false) {
+      turning = false;
+      angle = M_PI;
+      turnedDir = FLIP;
+      turn(angle);
+    }
+  }
 }
 
 int main(int argc, char **argv)
@@ -278,7 +385,7 @@ int main(int argc, char **argv)
 
   while (ros::ok())
   {
-    // Misfunctioning range sensor case
+    // Malfunctioning range sensor case
     if(range_l == 0 || range_r == 0 || range_f == 0 || range_f_r == 0 || range_f_l == 0) {
       std::stringstream tt;
       // ROS_ERROR("A sensor is malfunctioning! (A sensor returned range 0)");
@@ -303,11 +410,12 @@ int main(int argc, char **argv)
     th = tf::getYaw(transform.getRotation());
 
     // If the robot is within a 20cm radius of the target waypoint or if a waypoint has not been yet specified, don't move.
-    if( (abs(x - waypoint.point.x) < 0.20) && (abs(y - waypoint.point.y) < 0.20)) {
+    if( (abs(x - waypoint.point.x) < 0.15) && (abs(y - waypoint.point.y) < 0.15)) {
       if(movingToObjective) {
         ROS_INFO("Reached objective!");
         movingToObjective = false;
       }
+      avoiding = false;
       std::stringstream tt;
       tt << "0.0";
       tt << " ";
@@ -318,7 +426,7 @@ int main(int argc, char **argv)
     // Check avoid obstacle case first
     else if((range_f < range_thresh_) || (range_f_l < range_thresh_) || (range_f_r < range_thresh_) || (range_l < range_thresh_) || (range_r < range_thresh_)) {
       
-      avoidObstacle();
+      avoidObstacle2();
 
     }
 
@@ -326,6 +434,7 @@ int main(int argc, char **argv)
     else if((range_f > range_thresh_) && (range_f_l > range_thresh_) && (range_f_r > range_thresh_) && (range_l > range_thresh_) && (range_r > range_thresh_)) {
 
       movingToObjective = true;
+      avoiding = false;
       moveNoObstacles();
 
       // // Temporary until waypoint is implemented

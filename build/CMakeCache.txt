@@ -20,20 +20,50 @@ BOOST_THREAD_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libpthread.so
 //Build shared libraries (DLLs).
 BUILD_SHARED_LIBS:BOOL=ON
 
+//Boost date_time library (debug)
+Boost_DATE_TIME_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_date_time.so
+
+//Boost date_time library (release)
+Boost_DATE_TIME_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_date_time.so
+
 //The directory containing a CMake configuration file for Boost.
 Boost_DIR:PATH=Boost_DIR-NOTFOUND
+
+//Boost filesystem library (debug)
+Boost_FILESYSTEM_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+
+//Boost filesystem library (release)
+Boost_FILESYSTEM_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_filesystem.so
 
 //Path to a file.
 Boost_INCLUDE_DIR:PATH=/usr/include
 
+//Boost iostreams library (debug)
+Boost_IOSTREAMS_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_iostreams.so
+
+//Boost iostreams library (release)
+Boost_IOSTREAMS_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_iostreams.so
+
 //Boost library directory
 Boost_LIBRARY_DIR:PATH=/usr/lib/x86_64-linux-gnu
+
+//Boost serialization library (debug)
+Boost_SERIALIZATION_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_serialization.so
+
+//Boost serialization library (release)
+Boost_SERIALIZATION_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_serialization.so
 
 //Boost signals library (debug)
 Boost_SIGNALS_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_signals.so
 
 //Boost signals library (release)
 Boost_SIGNALS_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_signals.so
+
+//Boost system library (debug)
+Boost_SYSTEM_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_system.so
+
+//Boost system library (release)
+Boost_SYSTEM_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_system.so
 
 //Boost thread library (debug)
 Boost_THREAD_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_thread.so
@@ -221,8 +251,20 @@ DOXYGEN_FOUND:BOOL=TRUE
 //Path to a file.
 EIGEN_INCLUDE_DIR:PATH=/usr/include/eigen3
 
+//Path to a file.
+EIGEN_INCLUDE_DIRS:PATH=/usr/include/eigen3
+
 //Path to a program.
 EMPY_EXECUTABLE:FILEPATH=/usr/bin/empy
+
+//Path to a file.
+FLANN_INCLUDE_DIRS:PATH=/usr/include
+
+//Path to a library.
+FLANN_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libflann_cpp_s.a
+
+//Path to a library.
+FLANN_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libflann_cpp_s.a
 
 //Path to a file.
 GTEST_INCLUDE_DIR:PATH=/usr/include
@@ -239,6 +281,12 @@ GTEST_MAIN_LIBRARY:FILEPATH=GTEST_MAIN_LIBRARY-NOTFOUND
 //Path to a library.
 GTEST_MAIN_LIBRARY_DEBUG:FILEPATH=GTEST_MAIN_LIBRARY_DEBUG-NOTFOUND
 
+//Path to a file.
+LIBUSB_1_INCLUDE_DIR:PATH=/usr/include
+
+//Path to a library.
+LIBUSB_1_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libusb-1.0.so
+
 //lsb_release executable was found
 LSB_FOUND:BOOL=TRUE
 
@@ -247,6 +295,12 @@ LSB_RELEASE_EXECUTABLE:FILEPATH=/usr/bin/lsb_release
 
 //Path to a program.
 NOSETESTS:FILEPATH=/usr/bin/nosetests
+
+//Path to a file.
+OPENNI_INCLUDE_DIRS:PATH=/usr/include/ni
+
+//Path to a library.
+OPENNI_LIBRARY:FILEPATH=/usr/lib/libOpenNI.so
 
 //Path where debug 3rdpaty OpenCV dependencies are located
 OpenCV_3RDPARTY_LIB_DIR_DBG:PATH=
@@ -265,6 +319,174 @@ OpenCV_LIB_DIR_DBG:PATH=
 //Path where release OpenCV libraries are located
 OpenCV_LIB_DIR_OPT:PATH=
 
+//path to apps headers
+PCL_APPS_INCLUDE_DIR:PATH=/usr/include/pcl-1.7
+
+//path to pcl_apps library
+PCL_APPS_LIBRARY:FILEPATH=/usr/lib/libpcl_apps.so
+
+//path to pcl_apps library debug
+PCL_APPS_LIBRARY_DEBUG:FILEPATH=/usr/lib/libpcl_apps.so
+
+//path to common headers
+PCL_COMMON_INCLUDE_DIR:PATH=/usr/include/pcl-1.7
+
+//path to pcl_common library
+PCL_COMMON_LIBRARY:FILEPATH=/usr/lib/libpcl_common.so
+
+//path to pcl_common library debug
+PCL_COMMON_LIBRARY_DEBUG:FILEPATH=/usr/lib/libpcl_common.so
+
+//The directory containing a CMake configuration file for PCL.
+PCL_DIR:PATH=/usr/share/pcl-1.7
+
+//path to features headers
+PCL_FEATURES_INCLUDE_DIR:PATH=/usr/include/pcl-1.7
+
+//path to pcl_features library
+PCL_FEATURES_LIBRARY:FILEPATH=/usr/lib/libpcl_features.so
+
+//path to pcl_features library debug
+PCL_FEATURES_LIBRARY_DEBUG:FILEPATH=/usr/lib/libpcl_features.so
+
+//path to filters headers
+PCL_FILTERS_INCLUDE_DIR:PATH=/usr/include/pcl-1.7
+
+//path to pcl_filters library
+PCL_FILTERS_LIBRARY:FILEPATH=/usr/lib/libpcl_filters.so
+
+//path to pcl_filters library debug
+PCL_FILTERS_LIBRARY_DEBUG:FILEPATH=/usr/lib/libpcl_filters.so
+
+//path to geometry headers
+PCL_GEOMETRY_INCLUDE_DIR:PATH=/usr/include/pcl-1.7
+
+//path to io headers
+PCL_IO_INCLUDE_DIR:PATH=/usr/include/pcl-1.7
+
+//path to pcl_io library
+PCL_IO_LIBRARY:FILEPATH=/usr/lib/libpcl_io.so
+
+//path to pcl_io library debug
+PCL_IO_LIBRARY_DEBUG:FILEPATH=/usr/lib/libpcl_io.so
+
+//path to kdtree headers
+PCL_KDTREE_INCLUDE_DIR:PATH=/usr/include/pcl-1.7
+
+//path to pcl_kdtree library
+PCL_KDTREE_LIBRARY:FILEPATH=/usr/lib/libpcl_kdtree.so
+
+//path to pcl_kdtree library debug
+PCL_KDTREE_LIBRARY_DEBUG:FILEPATH=/usr/lib/libpcl_kdtree.so
+
+//path to keypoints headers
+PCL_KEYPOINTS_INCLUDE_DIR:PATH=/usr/include/pcl-1.7
+
+//path to pcl_keypoints library
+PCL_KEYPOINTS_LIBRARY:FILEPATH=/usr/lib/libpcl_keypoints.so
+
+//path to pcl_keypoints library debug
+PCL_KEYPOINTS_LIBRARY_DEBUG:FILEPATH=/usr/lib/libpcl_keypoints.so
+
+//path to octree headers
+PCL_OCTREE_INCLUDE_DIR:PATH=/usr/include/pcl-1.7
+
+//path to pcl_octree library
+PCL_OCTREE_LIBRARY:FILEPATH=/usr/lib/libpcl_octree.so
+
+//path to pcl_octree library debug
+PCL_OCTREE_LIBRARY_DEBUG:FILEPATH=/usr/lib/libpcl_octree.so
+
+//path to outofcore headers
+PCL_OUTOFCORE_INCLUDE_DIR:PATH=/usr/include/pcl-1.7
+
+//path to pcl_outofcore library
+PCL_OUTOFCORE_LIBRARY:FILEPATH=/usr/lib/libpcl_outofcore.so
+
+//path to pcl_outofcore library debug
+PCL_OUTOFCORE_LIBRARY_DEBUG:FILEPATH=/usr/lib/libpcl_outofcore.so
+
+//path to people headers
+PCL_PEOPLE_INCLUDE_DIR:PATH=/usr/include/pcl-1.7
+
+//path to pcl_people library
+PCL_PEOPLE_LIBRARY:FILEPATH=/usr/lib/libpcl_people.so
+
+//path to pcl_people library debug
+PCL_PEOPLE_LIBRARY_DEBUG:FILEPATH=/usr/lib/libpcl_people.so
+
+//path to recognition headers
+PCL_RECOGNITION_INCLUDE_DIR:PATH=/usr/include/pcl-1.7
+
+//path to pcl_recognition library
+PCL_RECOGNITION_LIBRARY:FILEPATH=/usr/lib/libpcl_recognition.so
+
+//path to pcl_recognition library debug
+PCL_RECOGNITION_LIBRARY_DEBUG:FILEPATH=/usr/lib/libpcl_recognition.so
+
+//path to registration headers
+PCL_REGISTRATION_INCLUDE_DIR:PATH=/usr/include/pcl-1.7
+
+//path to pcl_registration library
+PCL_REGISTRATION_LIBRARY:FILEPATH=/usr/lib/libpcl_registration.so
+
+//path to pcl_registration library debug
+PCL_REGISTRATION_LIBRARY_DEBUG:FILEPATH=/usr/lib/libpcl_registration.so
+
+//path to sample_consensus headers
+PCL_SAMPLE_CONSENSUS_INCLUDE_DIR:PATH=/usr/include/pcl-1.7
+
+//path to pcl_sample_consensus library
+PCL_SAMPLE_CONSENSUS_LIBRARY:FILEPATH=/usr/lib/libpcl_sample_consensus.so
+
+//path to pcl_sample_consensus library debug
+PCL_SAMPLE_CONSENSUS_LIBRARY_DEBUG:FILEPATH=/usr/lib/libpcl_sample_consensus.so
+
+//path to search headers
+PCL_SEARCH_INCLUDE_DIR:PATH=/usr/include/pcl-1.7
+
+//path to pcl_search library
+PCL_SEARCH_LIBRARY:FILEPATH=/usr/lib/libpcl_search.so
+
+//path to pcl_search library debug
+PCL_SEARCH_LIBRARY_DEBUG:FILEPATH=/usr/lib/libpcl_search.so
+
+//path to segmentation headers
+PCL_SEGMENTATION_INCLUDE_DIR:PATH=/usr/include/pcl-1.7
+
+//path to pcl_segmentation library
+PCL_SEGMENTATION_LIBRARY:FILEPATH=/usr/lib/libpcl_segmentation.so
+
+//path to pcl_segmentation library debug
+PCL_SEGMENTATION_LIBRARY_DEBUG:FILEPATH=/usr/lib/libpcl_segmentation.so
+
+//path to surface headers
+PCL_SURFACE_INCLUDE_DIR:PATH=/usr/include/pcl-1.7
+
+//path to pcl_surface library
+PCL_SURFACE_LIBRARY:FILEPATH=/usr/lib/libpcl_surface.so
+
+//path to pcl_surface library debug
+PCL_SURFACE_LIBRARY_DEBUG:FILEPATH=/usr/lib/libpcl_surface.so
+
+//path to tracking headers
+PCL_TRACKING_INCLUDE_DIR:PATH=/usr/include/pcl-1.7
+
+//path to pcl_tracking library
+PCL_TRACKING_LIBRARY:FILEPATH=/usr/lib/libpcl_tracking.so
+
+//path to pcl_tracking library debug
+PCL_TRACKING_LIBRARY_DEBUG:FILEPATH=/usr/lib/libpcl_tracking.so
+
+//path to visualization headers
+PCL_VISUALIZATION_INCLUDE_DIR:PATH=/usr/include/pcl-1.7
+
+//path to pcl_visualization library
+PCL_VISUALIZATION_LIBRARY:FILEPATH=/usr/lib/libpcl_visualization.so
+
+//path to pcl_visualization library debug
+PCL_VISUALIZATION_LIBRARY_DEBUG:FILEPATH=/usr/lib/libpcl_visualization.so
+
 //pkg-config executable
 PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
 
@@ -279,6 +501,15 @@ Project_BINARY_DIR:STATIC=/home/nicholaskwan-wong/roshydro/build
 
 //Value Computed by CMake
 Project_SOURCE_DIR:STATIC=/home/nicholaskwan-wong/roshydro/src
+
+//Path to a file.
+QHULL_INCLUDE_DIRS:PATH=/usr/include
+
+//Path to a library.
+QHULL_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libqhull.so
+
+//Path to a library.
+QHULL_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libqhull.so
 
 //Path to a library.
 QT_ARTHURPLUGIN_PLUGIN_DEBUG:FILEPATH=QT_ARTHURPLUGIN_PLUGIN_DEBUG-NOTFOUND
@@ -901,6 +1132,12 @@ actionlib_DIR:PATH=/home/nicholaskwan-wong/ros_catkin_ws/install_isolated/share/
 //The directory containing a CMake configuration file for actionlib_msgs.
 actionlib_msgs_DIR:PATH=/home/nicholaskwan-wong/ros_catkin_ws/install_isolated/share/actionlib_msgs/cmake
 
+//The directory containing a CMake configuration file for bond.
+bond_DIR:PATH=/home/nicholaskwan-wong/ros_catkin_ws/install_isolated/share/bond/cmake
+
+//The directory containing a CMake configuration file for bondcpp.
+bondcpp_DIR:PATH=/home/nicholaskwan-wong/ros_catkin_ws/install_isolated/share/bondcpp/cmake
+
 //The directory containing a CMake configuration file for catkin.
 catkin_DIR:PATH=/home/nicholaskwan-wong/ros_catkin_ws/install_isolated/share/catkin/cmake
 
@@ -915,6 +1152,9 @@ cpp_common_DIR:PATH=/home/nicholaskwan-wong/ros_catkin_ws/install_isolated/share
 
 //The directory containing a CMake configuration file for cv_bridge.
 cv_bridge_DIR:PATH=/home/nicholaskwan-wong/ros_catkin_ws/install_isolated/share/cv_bridge/cmake
+
+//The directory containing a CMake configuration file for dynamic_reconfigure.
+dynamic_reconfigure_DIR:PATH=/home/nicholaskwan-wong/ros_catkin_ws/install_isolated/share/dynamic_reconfigure/cmake
 
 //The directory containing a CMake configuration file for gencpp.
 gencpp_DIR:PATH=/home/nicholaskwan-wong/ros_catkin_ws/install_isolated/share/gencpp/cmake
@@ -1052,6 +1292,9 @@ hector_trajectory_server_BINARY_DIR:STATIC=/home/nicholaskwan-wong/roshydro/buil
 //Value Computed by CMake
 hector_trajectory_server_SOURCE_DIR:STATIC=/home/nicholaskwan-wong/roshydro/src/hector_slam/hector_trajectory_server
 
+//The directory containing a CMake configuration file for image_geometry.
+image_geometry_DIR:PATH=/home/nicholaskwan-wong/ros_catkin_ws/install_isolated/share/image_geometry/cmake
+
 //The directory containing a CMake configuration file for image_transport.
 image_transport_DIR:PATH=/home/nicholaskwan-wong/ros_catkin_ws/install_isolated/share/image_transport/cmake
 
@@ -1062,7 +1305,16 @@ kdl_conversions_DIR:PATH=/home/nicholaskwan-wong/ros_catkin_ws/install_isolated/
 laser_geometry_DIR:PATH=/home/nicholaskwan-wong/ros_catkin_ws/install_isolated/share/laser_geometry/cmake
 
 //Path to a library.
-lib:FILEPATH=/home/nicholaskwan-wong/ros_catkin_ws/install_isolated/lib/libtf2.so
+lib:FILEPATH=/home/nicholaskwan-wong/ros_catkin_ws/install_isolated/lib/libtopic_tools.so
+
+//Value Computed by CMake
+libviso2_BINARY_DIR:STATIC=/home/nicholaskwan-wong/roshydro/build/viso2/libviso2
+
+//The directory containing a CMake configuration file for libviso2.
+libviso2_DIR:PATH=/home/nicholaskwan-wong/roshydro/devel/share/libviso2/cmake
+
+//Value Computed by CMake
+libviso2_SOURCE_DIR:STATIC=/home/nicholaskwan-wong/roshydro/src/viso2/libviso2
 
 //The directory containing a CMake configuration file for message_filters.
 message_filters_DIR:PATH=/home/nicholaskwan-wong/ros_catkin_ws/install_isolated/share/message_filters/cmake
@@ -1076,11 +1328,23 @@ message_runtime_DIR:PATH=/home/nicholaskwan-wong/ros_catkin_ws/install_isolated/
 //The directory containing a CMake configuration file for nav_msgs.
 nav_msgs_DIR:PATH=/home/nicholaskwan-wong/ros_catkin_ws/install_isolated/share/nav_msgs/cmake
 
+//The directory containing a CMake configuration file for nodelet.
+nodelet_DIR:PATH=/home/nicholaskwan-wong/ros_catkin_ws/install_isolated/share/nodelet/cmake
+
 //Value Computed by CMake
 odom_broadcaster_BINARY_DIR:STATIC=/home/nicholaskwan-wong/roshydro/build/odom_broadcaster
 
 //Value Computed by CMake
 odom_broadcaster_SOURCE_DIR:STATIC=/home/nicholaskwan-wong/roshydro/src/odom_broadcaster
+
+//The directory containing a CMake configuration file for pcl_conversions.
+pcl_conversions_DIR:PATH=/home/nicholaskwan-wong/ros_catkin_ws/install_isolated/share/pcl_conversions/cmake
+
+//The directory containing a CMake configuration file for pcl_msgs.
+pcl_msgs_DIR:PATH=/home/nicholaskwan-wong/ros_catkin_ws/install_isolated/share/pcl_msgs/cmake
+
+//The directory containing a CMake configuration file for pcl_ros.
+pcl_ros_DIR:PATH=/home/nicholaskwan-wong/ros_catkin_ws/install_isolated/share/pcl_ros/cmake
 
 //The directory containing a CMake configuration file for pluginlib.
 pluginlib_DIR:PATH=/home/nicholaskwan-wong/ros_catkin_ws/install_isolated/share/pluginlib/cmake
@@ -1090,6 +1354,12 @@ range_broadcaster_BINARY_DIR:STATIC=/home/nicholaskwan-wong/roshydro/build/range
 
 //Value Computed by CMake
 range_broadcaster_SOURCE_DIR:STATIC=/home/nicholaskwan-wong/roshydro/src/range_broadcaster
+
+//The directory containing a CMake configuration file for rosbag.
+rosbag_DIR:PATH=/home/nicholaskwan-wong/ros_catkin_ws/install_isolated/share/rosbag/cmake
+
+//The directory containing a CMake configuration file for rosbag_storage.
+rosbag_storage_DIR:PATH=/home/nicholaskwan-wong/ros_catkin_ws/install_isolated/share/rosbag_storage/cmake
 
 //The directory containing a CMake configuration file for rosconsole.
 rosconsole_DIR:PATH=/home/nicholaskwan-wong/ros_catkin_ws/install_isolated/share/rosconsole/cmake
@@ -1127,6 +1397,9 @@ simple_obstacle_pathing_BINARY_DIR:STATIC=/home/nicholaskwan-wong/roshydro/build
 //Value Computed by CMake
 simple_obstacle_pathing_SOURCE_DIR:STATIC=/home/nicholaskwan-wong/roshydro/src/simple_obstacle_pathing
 
+//The directory containing a CMake configuration file for smclib.
+smclib_DIR:PATH=/home/nicholaskwan-wong/ros_catkin_ws/install_isolated/share/smclib/cmake
+
 //Value Computed by CMake
 srf08_driver_BINARY_DIR:STATIC=/home/nicholaskwan-wong/roshydro/build/srf08_driver
 
@@ -1138,6 +1411,9 @@ srf08_ultrasound_driver_LIB_DEPENDS:STATIC=
 
 //The directory containing a CMake configuration file for std_msgs.
 std_msgs_DIR:PATH=/home/nicholaskwan-wong/ros_catkin_ws/install_isolated/share/std_msgs/cmake
+
+//The directory containing a CMake configuration file for std_srvs.
+std_srvs_DIR:PATH=/home/nicholaskwan-wong/ros_catkin_ws/install_isolated/share/std_srvs/cmake
 
 //The directory containing a CMake configuration file for tf2.
 tf2_DIR:PATH=/home/nicholaskwan-wong/ros_catkin_ws/install_isolated/share/tf2/cmake
@@ -1163,6 +1439,24 @@ tf_sensors_BINARY_DIR:STATIC=/home/nicholaskwan-wong/roshydro/build/tf_sensors
 //Value Computed by CMake
 tf_sensors_SOURCE_DIR:STATIC=/home/nicholaskwan-wong/roshydro/src/tf_sensors
 
+//The directory containing a CMake configuration file for topic_tools.
+topic_tools_DIR:PATH=/home/nicholaskwan-wong/ros_catkin_ws/install_isolated/share/topic_tools/cmake
+
+//Value Computed by CMake
+viso2_BINARY_DIR:STATIC=/home/nicholaskwan-wong/roshydro/build/viso2/viso2
+
+//Dependencies for target
+viso2_LIB_DEPENDS:STATIC=
+
+//Value Computed by CMake
+viso2_SOURCE_DIR:STATIC=/home/nicholaskwan-wong/roshydro/src/viso2/viso2
+
+//Value Computed by CMake
+viso2_ros_BINARY_DIR:STATIC=/home/nicholaskwan-wong/roshydro/build/viso2/viso2_ros
+
+//Value Computed by CMake
+viso2_ros_SOURCE_DIR:STATIC=/home/nicholaskwan-wong/roshydro/src/viso2/viso2_ros
+
 //The directory containing a CMake configuration file for visualization_msgs.
 visualization_msgs_DIR:PATH=/home/nicholaskwan-wong/ros_catkin_ws/install_isolated/share/visualization_msgs/cmake
 
@@ -1174,16 +1468,36 @@ xmlrpcpp_DIR:PATH=/home/nicholaskwan-wong/ros_catkin_ws/install_isolated/share/x
 # INTERNAL cache entries
 ########################
 
+//ADVANCED property for variable: Boost_DATE_TIME_LIBRARY_DEBUG
+Boost_DATE_TIME_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_DATE_TIME_LIBRARY_RELEASE
+Boost_DATE_TIME_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Boost_DIR
 Boost_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_FILESYSTEM_LIBRARY_DEBUG
+Boost_FILESYSTEM_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_FILESYSTEM_LIBRARY_RELEASE
+Boost_FILESYSTEM_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Boost_INCLUDE_DIR
 Boost_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_IOSTREAMS_LIBRARY_DEBUG
+Boost_IOSTREAMS_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_IOSTREAMS_LIBRARY_RELEASE
+Boost_IOSTREAMS_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Boost_LIBRARY_DIR
 Boost_LIBRARY_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_SERIALIZATION_LIBRARY_DEBUG
+Boost_SERIALIZATION_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_SERIALIZATION_LIBRARY_RELEASE
+Boost_SERIALIZATION_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Boost_SIGNALS_LIBRARY_DEBUG
 Boost_SIGNALS_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Boost_SIGNALS_LIBRARY_RELEASE
 Boost_SIGNALS_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_SYSTEM_LIBRARY_DEBUG
+Boost_SYSTEM_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_SYSTEM_LIBRARY_RELEASE
+Boost_SYSTEM_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Boost_THREAD_LIBRARY_DEBUG
 Boost_THREAD_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Boost_THREAD_LIBRARY_RELEASE
@@ -1287,7 +1601,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=20
+CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=23
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -1332,6 +1646,48 @@ CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 EIGEN_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //Details about finding Eigen
 FIND_PACKAGE_MESSAGE_DETAILS_Eigen:INTERNAL=[/usr/include/eigen3][v()]
+//Details about finding Flann
+FIND_PACKAGE_MESSAGE_DETAILS_Flann:INTERNAL=[/usr/lib/x86_64-linux-gnu/libflann_cpp_s.a][/usr/include][v()]
+//Details about finding PCL
+FIND_PACKAGE_MESSAGE_DETAILS_PCL:INTERNAL=[/usr/lib/x86_64-linux-gnu/libboost_system.so;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;/usr/lib/x86_64-linux-gnu/libboost_thread.so;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;/usr/lib/x86_64-linux-gnu/libboost_iostreams.so;/usr/lib/x86_64-linux-gnu/libboost_serialization.so;/usr/lib/x86_64-linux-gnu/libpthread.so;optimized;/usr/lib/libpcl_common.so;debug;/usr/lib/libpcl_common.so;optimized;/usr/lib/x86_64-linux-gnu/libflann_cpp_s.a;debug;/usr/lib/x86_64-linux-gnu/libflann_cpp_s.a;optimized;/usr/lib/libpcl_kdtree.so;debug;/usr/lib/libpcl_kdtree.so;optimized;/usr/lib/libpcl_octree.so;debug;/usr/lib/libpcl_octree.so;optimized;/usr/lib/libpcl_search.so;debug;/usr/lib/libpcl_search.so;optimized;/usr/lib/x86_64-linux-gnu/libqhull.so;debug;/usr/lib/x86_64-linux-gnu/libqhull.so;optimized;/usr/lib/libpcl_surface.so;debug;/usr/lib/libpcl_surface.so;optimized;/usr/lib/libpcl_sample_consensus.so;debug;/usr/lib/libpcl_sample_consensus.so;optimized;/usr/lib/libpcl_filters.so;debug;/usr/lib/libpcl_filters.so;optimized;/usr/lib/libpcl_features.so;debug;/usr/lib/libpcl_features.so;optimized;/usr/lib/libpcl_segmentation.so;debug;/usr/lib/libpcl_segmentation.so;/usr/lib/libOpenNI.so;vtkCommon;vtkRendering;vtkHybrid;vtkCharts;optimized;/usr/lib/libpcl_io.so;debug;/usr/lib/libpcl_io.so;optimized;/usr/lib/libpcl_registration.so;debug;/usr/lib/libpcl_registration.so;optimized;/usr/lib/libpcl_keypoints.so;debug;/usr/lib/libpcl_keypoints.so;optimized;/usr/lib/libpcl_recognition.so;debug;/usr/lib/libpcl_recognition.so;optimized;/usr/lib/libpcl_visualization.so;debug;/usr/lib/libpcl_visualization.so;optimized;/usr/lib/libpcl_people.so;debug;/usr/lib/libpcl_people.so;optimized;/usr/lib/libpcl_outofcore.so;debug;/usr/lib/libpcl_outofcore.so;optimized;/usr/lib/libpcl_tracking.so;debug;/usr/lib/libpcl_tracking.so;optimized;/usr/lib/libpcl_apps.so;debug;/usr/lib/libpcl_apps.so;/usr/lib/x86_64-linux-gnu/libboost_system.so;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;/usr/lib/x86_64-linux-gnu/libboost_thread.so;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;/usr/lib/x86_64-linux-gnu/libboost_iostreams.so;/usr/lib/x86_64-linux-gnu/libboost_serialization.so;/usr/lib/x86_64-linux-gnu/libpthread.so;optimized;/usr/lib/x86_64-linux-gnu/libqhull.so;debug;/usr/lib/x86_64-linux-gnu/libqhull.so;/usr/lib/libOpenNI.so;optimized;/usr/lib/x86_64-linux-gnu/libflann_cpp_s.a;debug;/usr/lib/x86_64-linux-gnu/libflann_cpp_s.a;vtkCommon;vtkRendering;vtkHybrid;vtkCharts][/usr/include/pcl-1.7;/usr/include/eigen3;/usr/include;/usr/include/ni;/usr/include/vtk-5.8][v()]
+//Details about finding PCL_APPS
+FIND_PACKAGE_MESSAGE_DETAILS_PCL_APPS:INTERNAL=[/usr/lib/libpcl_apps.so][/usr/include/pcl-1.7][v()]
+//Details about finding PCL_COMMON
+FIND_PACKAGE_MESSAGE_DETAILS_PCL_COMMON:INTERNAL=[/usr/lib/libpcl_common.so][/usr/include/pcl-1.7][v()]
+//Details about finding PCL_FEATURES
+FIND_PACKAGE_MESSAGE_DETAILS_PCL_FEATURES:INTERNAL=[/usr/lib/libpcl_features.so][/usr/include/pcl-1.7][v()]
+//Details about finding PCL_FILTERS
+FIND_PACKAGE_MESSAGE_DETAILS_PCL_FILTERS:INTERNAL=[/usr/lib/libpcl_filters.so][/usr/include/pcl-1.7][v()]
+//Details about finding PCL_GEOMETRY
+FIND_PACKAGE_MESSAGE_DETAILS_PCL_GEOMETRY:INTERNAL=[/usr/include/pcl-1.7][v()]
+//Details about finding PCL_IO
+FIND_PACKAGE_MESSAGE_DETAILS_PCL_IO:INTERNAL=[/usr/lib/libpcl_io.so][/usr/include/pcl-1.7][v()]
+//Details about finding PCL_KDTREE
+FIND_PACKAGE_MESSAGE_DETAILS_PCL_KDTREE:INTERNAL=[/usr/lib/libpcl_kdtree.so][/usr/include/pcl-1.7][v()]
+//Details about finding PCL_KEYPOINTS
+FIND_PACKAGE_MESSAGE_DETAILS_PCL_KEYPOINTS:INTERNAL=[/usr/lib/libpcl_keypoints.so][/usr/include/pcl-1.7][v()]
+//Details about finding PCL_OCTREE
+FIND_PACKAGE_MESSAGE_DETAILS_PCL_OCTREE:INTERNAL=[/usr/lib/libpcl_octree.so][/usr/include/pcl-1.7][v()]
+//Details about finding PCL_OUTOFCORE
+FIND_PACKAGE_MESSAGE_DETAILS_PCL_OUTOFCORE:INTERNAL=[/usr/lib/libpcl_outofcore.so][/usr/include/pcl-1.7][v()]
+//Details about finding PCL_PEOPLE
+FIND_PACKAGE_MESSAGE_DETAILS_PCL_PEOPLE:INTERNAL=[/usr/lib/libpcl_people.so][/usr/include/pcl-1.7][v()]
+//Details about finding PCL_RECOGNITION
+FIND_PACKAGE_MESSAGE_DETAILS_PCL_RECOGNITION:INTERNAL=[/usr/lib/libpcl_recognition.so][/usr/include/pcl-1.7][v()]
+//Details about finding PCL_REGISTRATION
+FIND_PACKAGE_MESSAGE_DETAILS_PCL_REGISTRATION:INTERNAL=[/usr/lib/libpcl_registration.so][/usr/include/pcl-1.7][v()]
+//Details about finding PCL_SAMPLE_CONSENSUS
+FIND_PACKAGE_MESSAGE_DETAILS_PCL_SAMPLE_CONSENSUS:INTERNAL=[/usr/lib/libpcl_sample_consensus.so][/usr/include/pcl-1.7][v()]
+//Details about finding PCL_SEARCH
+FIND_PACKAGE_MESSAGE_DETAILS_PCL_SEARCH:INTERNAL=[/usr/lib/libpcl_search.so][/usr/include/pcl-1.7][v()]
+//Details about finding PCL_SEGMENTATION
+FIND_PACKAGE_MESSAGE_DETAILS_PCL_SEGMENTATION:INTERNAL=[/usr/lib/libpcl_segmentation.so][/usr/include/pcl-1.7][v()]
+//Details about finding PCL_SURFACE
+FIND_PACKAGE_MESSAGE_DETAILS_PCL_SURFACE:INTERNAL=[/usr/lib/libpcl_surface.so][/usr/include/pcl-1.7][v()]
+//Details about finding PCL_TRACKING
+FIND_PACKAGE_MESSAGE_DETAILS_PCL_TRACKING:INTERNAL=[/usr/lib/libpcl_tracking.so][/usr/include/pcl-1.7][v()]
+//Details about finding PCL_VISUALIZATION
+FIND_PACKAGE_MESSAGE_DETAILS_PCL_VISUALIZATION:INTERNAL=[/usr/lib/libpcl_visualization.so][/usr/include/pcl-1.7][v()]
 //Details about finding PkgConfig
 FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v0.26()]
 //Details about finding PythonInterp
@@ -1340,6 +1696,14 @@ FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/usr/bin/python][v2.7.6()]
 FIND_PACKAGE_MESSAGE_DETAILS_Qt4:INTERNAL=[/usr/bin/qmake][/usr/lib/x86_64-linux-gnu/qt4/bin/moc][/usr/lib/x86_64-linux-gnu/qt4/bin/rcc][/usr/include/qt4][/usr/lib/x86_64-linux-gnu][/usr/include/qt4/QtCore][/usr/lib/x86_64-linux-gnu/libQtCore.so][/usr/include/qt4/QtGui][/usr/lib/x86_64-linux-gnu/libQtGui.so][/usr/lib/x86_64-linux-gnu/qt4/bin/uic][v4.8.6(4.6)]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
+//Details about finding eigen
+FIND_PACKAGE_MESSAGE_DETAILS_eigen:INTERNAL=[/usr/include/eigen3][v()]
+//Details about finding libusb-1.0
+FIND_PACKAGE_MESSAGE_DETAILS_libusb-1.0:INTERNAL=[/usr/include][v()]
+//Details about finding openni
+FIND_PACKAGE_MESSAGE_DETAILS_openni:INTERNAL=[/usr/lib/libOpenNI.so][/usr/include/ni][v()]
+//Details about finding qhull
+FIND_PACKAGE_MESSAGE_DETAILS_qhull:INTERNAL=[/usr/lib/x86_64-linux-gnu/libqhull.so][/usr/include][v()]
 GTEST_FROM_SOURCE_FOUND:INTERNAL=TRUE
 GTEST_FROM_SOURCE_INCLUDE_DIRS:INTERNAL=/usr/include
 GTEST_FROM_SOURCE_LIBRARIES:INTERNAL=gtest
@@ -1365,6 +1729,78 @@ OpenCV_CONFIG_PATH-ADVANCED:INTERNAL=1
 OpenCV_LIB_DIR_DBG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OpenCV_LIB_DIR_OPT
 OpenCV_LIB_DIR_OPT-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_APPS_LIBRARY
+PCL_APPS_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_APPS_LIBRARY_DEBUG
+PCL_APPS_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_COMMON_LIBRARY
+PCL_COMMON_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_COMMON_LIBRARY_DEBUG
+PCL_COMMON_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_FEATURES_LIBRARY
+PCL_FEATURES_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_FEATURES_LIBRARY_DEBUG
+PCL_FEATURES_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_FILTERS_LIBRARY
+PCL_FILTERS_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_FILTERS_LIBRARY_DEBUG
+PCL_FILTERS_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_IO_LIBRARY
+PCL_IO_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_IO_LIBRARY_DEBUG
+PCL_IO_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_KDTREE_LIBRARY
+PCL_KDTREE_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_KDTREE_LIBRARY_DEBUG
+PCL_KDTREE_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_KEYPOINTS_LIBRARY
+PCL_KEYPOINTS_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_KEYPOINTS_LIBRARY_DEBUG
+PCL_KEYPOINTS_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_OCTREE_LIBRARY
+PCL_OCTREE_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_OCTREE_LIBRARY_DEBUG
+PCL_OCTREE_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_OUTOFCORE_LIBRARY
+PCL_OUTOFCORE_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_OUTOFCORE_LIBRARY_DEBUG
+PCL_OUTOFCORE_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_PEOPLE_LIBRARY
+PCL_PEOPLE_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_PEOPLE_LIBRARY_DEBUG
+PCL_PEOPLE_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_RECOGNITION_LIBRARY
+PCL_RECOGNITION_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_RECOGNITION_LIBRARY_DEBUG
+PCL_RECOGNITION_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_REGISTRATION_LIBRARY
+PCL_REGISTRATION_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_REGISTRATION_LIBRARY_DEBUG
+PCL_REGISTRATION_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_SAMPLE_CONSENSUS_LIBRARY
+PCL_SAMPLE_CONSENSUS_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_SAMPLE_CONSENSUS_LIBRARY_DEBUG
+PCL_SAMPLE_CONSENSUS_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_SEARCH_LIBRARY
+PCL_SEARCH_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_SEARCH_LIBRARY_DEBUG
+PCL_SEARCH_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_SEGMENTATION_LIBRARY
+PCL_SEGMENTATION_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_SEGMENTATION_LIBRARY_DEBUG
+PCL_SEGMENTATION_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_SURFACE_LIBRARY
+PCL_SURFACE_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_SURFACE_LIBRARY_DEBUG
+PCL_SURFACE_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_TRACKING_LIBRARY
+PCL_TRACKING_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_TRACKING_LIBRARY_DEBUG
+PCL_TRACKING_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_VISUALIZATION_LIBRARY
+PCL_VISUALIZATION_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PCL_VISUALIZATION_LIBRARY_DEBUG
+PCL_VISUALIZATION_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 PC_EIGEN_CFLAGS:INTERNAL=-I/usr/include/eigen3
 PC_EIGEN_CFLAGS_I:INTERNAL=
 PC_EIGEN_CFLAGS_OTHER:INTERNAL=
@@ -1399,6 +1835,64 @@ PC_EIGEN_eigen3_INCLUDEDIR:INTERNAL=
 PC_EIGEN_eigen3_LIBDIR:INTERNAL=
 PC_EIGEN_eigen3_PREFIX:INTERNAL=
 PC_EIGEN_eigen3_VERSION:INTERNAL=
+PC_FLANN_CFLAGS:INTERNAL=
+PC_FLANN_CFLAGS_I:INTERNAL=
+PC_FLANN_CFLAGS_OTHER:INTERNAL=
+PC_FLANN_FOUND:INTERNAL=1
+PC_FLANN_INCLUDEDIR:INTERNAL=/usr/include
+PC_FLANN_INCLUDE_DIRS:INTERNAL=
+PC_FLANN_LDFLAGS:INTERNAL=-lflann_cpp
+PC_FLANN_LDFLAGS_OTHER:INTERNAL=
+PC_FLANN_LIBDIR:INTERNAL=/usr/lib/x86_64-linux-gnu
+PC_FLANN_LIBRARIES:INTERNAL=flann_cpp
+PC_FLANN_LIBRARY_DIRS:INTERNAL=
+PC_FLANN_LIBS:INTERNAL=
+PC_FLANN_LIBS_L:INTERNAL=
+PC_FLANN_LIBS_OTHER:INTERNAL=
+PC_FLANN_LIBS_PATHS:INTERNAL=
+PC_FLANN_PREFIX:INTERNAL=/usr
+PC_FLANN_STATIC_CFLAGS:INTERNAL=
+PC_FLANN_STATIC_CFLAGS_I:INTERNAL=
+PC_FLANN_STATIC_CFLAGS_OTHER:INTERNAL=
+PC_FLANN_STATIC_INCLUDE_DIRS:INTERNAL=
+PC_FLANN_STATIC_LDFLAGS:INTERNAL=-lflann_cpp
+PC_FLANN_STATIC_LDFLAGS_OTHER:INTERNAL=
+PC_FLANN_STATIC_LIBDIR:INTERNAL=
+PC_FLANN_STATIC_LIBRARIES:INTERNAL=flann_cpp
+PC_FLANN_STATIC_LIBRARY_DIRS:INTERNAL=
+PC_FLANN_STATIC_LIBS:INTERNAL=
+PC_FLANN_STATIC_LIBS_L:INTERNAL=
+PC_FLANN_STATIC_LIBS_OTHER:INTERNAL=
+PC_FLANN_STATIC_LIBS_PATHS:INTERNAL=
+PC_FLANN_VERSION:INTERNAL=1.8.4
+PC_FLANN_flann_INCLUDEDIR:INTERNAL=
+PC_FLANN_flann_LIBDIR:INTERNAL=
+PC_FLANN_flann_PREFIX:INTERNAL=
+PC_FLANN_flann_VERSION:INTERNAL=
+PC_OPENNI_CFLAGS:INTERNAL=
+PC_OPENNI_CFLAGS_I:INTERNAL=
+PC_OPENNI_CFLAGS_OTHER:INTERNAL=
+PC_OPENNI_FOUND:INTERNAL=
+PC_OPENNI_INCLUDEDIR:INTERNAL=
+PC_OPENNI_LIBDIR:INTERNAL=
+PC_OPENNI_LIBS:INTERNAL=
+PC_OPENNI_LIBS_L:INTERNAL=
+PC_OPENNI_LIBS_OTHER:INTERNAL=
+PC_OPENNI_LIBS_PATHS:INTERNAL=
+PC_OPENNI_PREFIX:INTERNAL=
+PC_OPENNI_STATIC_CFLAGS:INTERNAL=
+PC_OPENNI_STATIC_CFLAGS_I:INTERNAL=
+PC_OPENNI_STATIC_CFLAGS_OTHER:INTERNAL=
+PC_OPENNI_STATIC_LIBDIR:INTERNAL=
+PC_OPENNI_STATIC_LIBS:INTERNAL=
+PC_OPENNI_STATIC_LIBS_L:INTERNAL=
+PC_OPENNI_STATIC_LIBS_OTHER:INTERNAL=
+PC_OPENNI_STATIC_LIBS_PATHS:INTERNAL=
+PC_OPENNI_VERSION:INTERNAL=
+PC_OPENNI_openni-dev_INCLUDEDIR:INTERNAL=
+PC_OPENNI_openni-dev_LIBDIR:INTERNAL=
+PC_OPENNI_openni-dev_PREFIX:INTERNAL=
+PC_OPENNI_openni-dev_VERSION:INTERNAL=
 //ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
 PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PYTHON_EXECUTABLE
@@ -1817,8 +2311,12 @@ Q_WS_QWS:INTERNAL=
 Q_WS_WIN:INTERNAL=
 //Have symbol Q_WS_X11
 Q_WS_X11:INTERNAL=1
+//Last used BOOST_INCLUDEDIR value.
+_BOOST_INCLUDEDIR_LAST:INTERNAL=/usr/include
+//Last used Boost_ADDITIONAL_VERSIONS value.
+_Boost_ADDITIONAL_VERSIONS_LAST:INTERNAL=1.47;1.47.0
 //Components requested for this build tree.
-_Boost_COMPONENTS_SEARCHED:INTERNAL=signals;thread
+_Boost_COMPONENTS_SEARCHED:INTERNAL=date_time;filesystem;iostreams;serialization;signals;system;thread
 //Last used Boost_INCLUDE_DIR value.
 _Boost_INCLUDE_DIR_LAST:INTERNAL=/usr/include
 //Last used Boost_LIBRARY_DIR value.
@@ -1826,4 +2324,6 @@ _Boost_LIBRARY_DIR_LAST:INTERNAL=/usr/lib/x86_64-linux-gnu
 //Last used Boost_USE_MULTITHREADED value.
 _Boost_USE_MULTITHREADED_LAST:INTERNAL=TRUE
 __pkg_config_checked_PC_EIGEN:INTERNAL=1
+__pkg_config_checked_PC_FLANN:INTERNAL=1
+__pkg_config_checked_PC_OPENNI:INTERNAL=1
 

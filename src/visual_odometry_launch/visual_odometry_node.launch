@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <node name="camera_tf" pkg="tf" type="static_transform_publisher" args="-0.065 0 0 -1.5708 0 1.5708 base_frame camera_frame 100" />
+
+<!--   <node name="usb_cam" pkg="usb_cam" type="usb_cam_node" output="screen">
+    <remap from="/usb_cam/image_raw" to="/image" />
+    <remap from="/usb_cam/camera_info" to="/camera_info" />
+
+    <param name="video_device" value="/dev/video0" type="str" />
+    <param name="camera_frame_id" value="camera_frame" type="str" />
+  </node> -->
+
+  <node name="kinect_cam" pkg="openni_camera" type="openni_node" output="screen">
+    <remap from="/rgb/image_raw" to="/image" />
+    <remap from="/rgb/camera_info" to="/camera_info" />
+
+    <param name="rgb_frame_id" value="camera_frame" type="str" />
+  </node>
+
+
+  <node name="visual_odom" pkg="viso2_ros" type="mono_odometer" output="screen">
+<!--     <remap from="/usb_cam/image_raw" to="image" /> -->
+
+    <param name="base_link_frame_id" value="base_frame" type="str" />
+    <param name="odom_frame_id" value="odom_frame" type="str" />
+    <param name="publish_tf" value="true" type="bool" />
+<!--     <param name="sensor_frame_id" value="camera_frame" type="str" /> -->
+
+    <param name="camera_height" value="0.80" type="double" />
+    <param name="camera_pitch" value="0.0" type="double" />
+  </node>
+
+</launch>

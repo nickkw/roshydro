@@ -1,0 +1,8 @@
+prefix=/home/nicholaskwan-wong/roshydro/install
+
+Name: viso2_ros
+Description: Description of viso2_ros
+Version: 0.0.1
+Cflags: -I/home/nicholaskwan-wong/roshydro/install/include
+Libs: -L/home/nicholaskwan-wong/roshydro/install/lib 
+Requires: 

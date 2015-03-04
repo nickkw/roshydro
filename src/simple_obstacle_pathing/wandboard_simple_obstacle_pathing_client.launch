@@ -58,10 +58,10 @@
   </node>
 
   <node name="srf08_front_tf" pkg="tf" type="static_transform_publisher" args="0.135 0 0 0 0 0 base_frame srf08_front 100" />
-  <node name="srf08_front_left_tf" pkg="tf" type="static_transform_publisher" args="0.135 0.135 0 0.5236 0 0 base_frame srf08_front_left 100" />
-  <node name="srf08_front_right_tf" pkg="tf" type="static_transform_publisher" args="0.135 -0.135 0 -0.5236 0 0 base_frame srf08_front_right 100" />
-  <node name="srf08_left_tf" pkg="tf" type="static_transform_publisher" args="0.050 0.18 0 1.2217 0 0 base_frame srf08_left 100" />
-  <node name="srf08_right_tf" pkg="tf" type="static_transform_publisher" args="0.050 -0.18 0 -1.2217 0 0 base_frame srf08_right 100" />
+  <node name="srf08_front_left_tf" pkg="tf" type="static_transform_publisher" args="0.135 0.050 0 0.7854 0 0 base_frame srf08_front_left 100" />
+  <node name="srf08_front_right_tf" pkg="tf" type="static_transform_publisher" args="0.135 -0.050 0 -0.7854 0 0 base_frame srf08_front_right 100" />
+  <node name="srf08_left_tf" pkg="tf" type="static_transform_publisher" args="0.10 0.17 0 1.2217 0 0 base_frame srf08_left 100" />
+  <node name="srf08_right_tf" pkg="tf" type="static_transform_publisher" args="0.10 -0.17 0 -1.2217 0 0 base_frame srf08_right 100" />
 <!--   <node name="odom_to_base_tf" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 odom_frame base_frame 100" /> -->
 
   <node name="tf_sensor_broadcaster" pkg="tf_sensors" type="tf_sensor_broadcaster" output="screen">
