@@ -122,7 +122,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/nicholaskwan-wong/roshydro/install/lib;/home/nicholaskwan-wong/roshydro/devel/lib;/home/nicholaskwan-wong/ros_catkin_ws/install_isolated/lib;/opt/ros/indigo/lib)
+    foreach(path /home/nicholaskwan-wong/roshydro/install/lib;/home/nicholaskwan-wong/pcl_workspace/devel_isolated/registration_viewer/lib;/home/nicholaskwan-wong/pcl_workspace/devel_isolated/kinfu/lib;/home/nicholaskwan-wong/pcl_workspace/devel_isolated/kinect2_calibration/lib;/home/nicholaskwan-wong/pcl_workspace/devel_isolated/kinect2_bridge/lib;/home/nicholaskwan-wong/pcl_workspace/devel_isolated/iai_kinect2/lib;/home/nicholaskwan-wong/pcl_workspace/devel_isolated/freenect_stack/lib;/home/nicholaskwan-wong/pcl_workspace/devel_isolated/freenect_launch/lib;/home/nicholaskwan-wong/pcl_workspace/devel_isolated/freenect_camera/lib;/home/nicholaskwan-wong/pcl_workspace/devel_isolated/depth_registration/lib;/home/nicholaskwan-wong/roshydro/devel/lib;/home/nicholaskwan-wong/ros_catkin_ws/install_isolated/lib;/opt/ros/indigo/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

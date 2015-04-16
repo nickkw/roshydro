@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<launch>
+  <node name="map_server" pkg="map_server" type="map_server"  output="screen" 
+    args="/home/nicholaskwan-wong/roshydro/maps/labmap_feb2_15h51.yaml"> <!-- Insert location of .yaml formatted map to be used here -->
+    <param name="frame_id" value="map" type="str" />
+  </node>
+
+  <node name="cloud_tf" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 -1.5708 map cloud_frame 100" />
+
+<!--   <node name="kinect_clouds_pub" pkg="kinect_pathing" type="kinect_clouds_pub" output="screen"/> -->
+
+  <node name="kinect_waypoint_pub" pkg="kinect_pathing" type="kinect_waypoint_pub" output="screen"/>
+
+  <param name="/use_sim_time" value="false"/>
+  <node pkg="rviz" type="rviz" name="rviz" 
+    args="-d /home/nicholaskwan-wong/.rviz/kinect_pathing.rviz"/>
+  
+</launch>

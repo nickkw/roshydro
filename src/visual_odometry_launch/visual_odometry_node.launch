@@ -28,7 +28,7 @@
     <param name="publish_tf" value="true" type="bool" />
 <!--     <param name="sensor_frame_id" value="camera_frame" type="str" /> -->
 
-    <param name="camera_height" value="0.80" type="double" />
+    <param name="camera_height" value="0.38" type="double" />
     <param name="camera_pitch" value="0.0" type="double" />
   </node>
 

@@ -1,0 +1,8 @@
+prefix=/home/nicholaskwan-wong/roshydro/install
+
+Name: pointcloud_to_laserscan
+Description: Description of pointcloud_to_laserscan
+Version: 1.1.11
+Cflags: -I/home/nicholaskwan-wong/roshydro/install/include
+Libs: -L/home/nicholaskwan-wong/roshydro/install/lib -lpointcloud_to_laserscan
+Requires: dynamic_reconfigure libpcl-all-dev message_filters nodelet pcl_ros roscpp sensor_msgs

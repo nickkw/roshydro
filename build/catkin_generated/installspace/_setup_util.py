@@ -252,7 +252,7 @@ if __name__ == '__main__':
             sys.exit(1)
 
         # environment at generation time
-        CMAKE_PREFIX_PATH = '/home/nicholaskwan-wong/ros_hydro/install;/home/nicholaskwan-wong/roshydro/devel;/home/nicholaskwan-wong/ros_catkin_ws/install_isolated;/opt/ros/indigo'.split(';')
+        CMAKE_PREFIX_PATH = '/home/nicholaskwan-wong/pcl_workspace/devel_isolated/registration_viewer;/home/nicholaskwan-wong/pcl_workspace/devel_isolated/kinfu;/home/nicholaskwan-wong/pcl_workspace/devel_isolated/kinect2_calibration;/home/nicholaskwan-wong/pcl_workspace/devel_isolated/kinect2_bridge;/home/nicholaskwan-wong/pcl_workspace/devel_isolated/iai_kinect2;/home/nicholaskwan-wong/pcl_workspace/devel_isolated/freenect_stack;/home/nicholaskwan-wong/pcl_workspace/devel_isolated/freenect_launch;/home/nicholaskwan-wong/pcl_workspace/devel_isolated/freenect_camera;/home/nicholaskwan-wong/pcl_workspace/devel_isolated/depth_registration;/home/nicholaskwan-wong/ros_hydro/install;/home/nicholaskwan-wong/roshydro/devel;/home/nicholaskwan-wong/ros_catkin_ws/install_isolated;/opt/ros/indigo;/home/nicholaskwan-wong/pcl_workspace/devel_isolated/pcl'.split(';')
         # prepend current workspace if not already part of CPP
         base_path = os.path.dirname(__file__)
         if base_path not in CMAKE_PREFIX_PATH:

@@ -1,0 +1,8 @@
+prefix=/home/nicholaskwan-wong/roshydro/devel
+
+Name: kinect_pathing
+Description: Description of kinect_pathing
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/nicholaskwan-wong/roshydro/devel/lib 
+Requires: 

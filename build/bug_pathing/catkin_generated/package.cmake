@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "bug_pathing")
+set(bug_pathing_MAINTAINER "nicholaskwan-wong <nicholaskwan-wong@todo.todo>")
+set(bug_pathing_DEPRECATED "")
+set(bug_pathing_VERSION "0.0.0")
+set(bug_pathing_BUILD_DEPENDS "geometry_msgs" "tf" "roscpp" "std_msgs")
+set(bug_pathing_RUN_DEPENDS "geometry_msgs" "tf" "roscpp" "std_msgs" "range_broadcaster")
+set(bug_pathing_BUILDTOOL_DEPENDS "catkin")
