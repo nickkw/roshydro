@@ -959,6 +959,19 @@ kinect_waypoint_pub/fast:
 .PHONY : kinect_waypoint_pub/fast
 
 #=============================================================================
+# Target rules for targets named tf_broadcaster
+
+# Build rule for target.
+tf_broadcaster: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tf_broadcaster
+.PHONY : tf_broadcaster
+
+# fast build rule for target.
+tf_broadcaster/fast:
+	$(MAKE) -f kinect_pathing/CMakeFiles/tf_broadcaster.dir/build.make kinect_pathing/CMakeFiles/tf_broadcaster.dir/build
+.PHONY : tf_broadcaster/fast
+
+#=============================================================================
 # Target rules for targets named odom_broadcaster
 
 # Build rule for target.
@@ -1800,6 +1813,7 @@ help:
 	@echo "... hector_trajectory_server"
 	@echo "... kinect_clouds_pub"
 	@echo "... kinect_waypoint_pub"
+	@echo "... tf_broadcaster"
 	@echo "... odom_broadcaster"
 	@echo "... bag_to_pcd"
 	@echo "... bond_generate_messages_cpp"

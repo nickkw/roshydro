@@ -4,6 +4,7 @@ Kinect cloud publisher
 
 TODO:
 -Have it maybe so that instead of constantly updating the map, updates are done via callback?
+-Figure out if there is a better way to retrieve TSDF point clodus from kinfuls node
 
 ***************************************/
 
@@ -28,22 +29,12 @@ int main(int argc, char **argv)
   ros::NodeHandle nh;
   ros::NodeHandle pnh_("~");
 
-  // // Parameters
-  // nh.param<std::string>("base_frame", base_frame_, "base_frame"); // Names of the base_frame tf frame to subscribe to.
-  // nh.param<std::string>("map_frame", map_frame_, "map"); // Names of the map tf frame to subscribe to.
-  // pnh_.param<std::string>("left_sensor_frame", left_sensor_frame_, "srf08_left"); // Names the frame of the front left sensor.
-  // pnh_.param<std::string>("right_sensor_frame", right_sensor_frame_, "srf08_right"); // Names the frame of the right sensor.
-  // pnh_.param<std::string>("front_left_sensor_frame", front_left_sensor_frame_, "srf08_front_left"); // Names the frame of the front left sensor.
-  // pnh_.param<std::string>("front_right_sensor_frame", front_right_sensor_frame_, "srf08_front_right"); // Names the frame of the right sensor.
-  // pnh_.param<std::string>("front_sensor_frame", front_sensor_frame_, "srf08_front"); // Names the frame of the front sensor.
-  // pnh_.param<double>("lin_vel_max", l_vel_max_, 1.0); // Maximum linear velocity
-  // pnh_.param<double>("ang_vel_max", a_vel_max_, 1.0); // Maximum angular velocity
-  // pnh_.param<double>("obstacle_range_threshold", range_thresh_, 1.0); // [in metres] Minimum (ceiling) proximity for an object to be considered an obstacle
+  // Parameters
+  bool request_new_saves_;
+  pnh_.param<bool>("request_new_saves", request_new_saves_, false); // Set whether or not the node will ask KinFuLS to save new point clouds
   
   // Objects
   sensor_msgs::PointCloud2 projection_cloud_msg, hull_cloud_msg;
-
-
   std_msgs::String pubmsg;
   pcl::PCLPointCloud2::Ptr cloud_input (new pcl::PCLPointCloud2);
   pcl::PointCloud<pcl::PointXYZ>::Ptr projection_cloud (new pcl::PointCloud<pcl::PointXYZ>), hull_cloud (new pcl::PointCloud<pcl::PointXYZ>);
@@ -58,9 +49,11 @@ int main(int argc, char **argv)
   ros::Rate loop_rate(0.25);
   while (ros::ok())
   {
-    // // MESSY IMPLEMENTATION -- publish empty message to get kinfu node to save
-    // ROS_INFO("Sending message to KinFu to save cloud.");
-    // kinfu_save_pub.publish(pubmsg);
+    if (request_new_saves_) {
+      // MESSY IMPLEMENTATION -- publish empty message to get kinfu node to save
+      ROS_INFO("Sending message to KinFu to save cloud.");
+      kinfu_save_pub.publish(pubmsg);
+    }
 
     // Read raw point cloud from file
     if (reader.read ("/home/nicholaskwan-wong/.ros/world.pcd", *cloud_input) < 0) {

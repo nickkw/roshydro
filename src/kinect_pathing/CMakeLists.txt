@@ -48,3 +48,10 @@ add_executable(kinect_waypoint_pub src/kinect_waypoint_pub.cpp)
 target_link_libraries(kinect_waypoint_pub
   ${catkin_LIBRARIES}
 )
+
+# Declare a cpp executable
+add_executable(tf_broadcaster src/tf_broadcaster.cpp)
+# Specify libraries to link a library or executable target against
+target_link_libraries(tf_broadcaster
+  ${catkin_LIBRARIES}
+)

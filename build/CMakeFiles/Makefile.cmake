@@ -498,6 +498,7 @@ SET(CMAKE_DEPEND_INFO_FILES
   "hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/DependInfo.cmake"
   "kinect_pathing/CMakeFiles/kinect_clouds_pub.dir/DependInfo.cmake"
   "kinect_pathing/CMakeFiles/kinect_waypoint_pub.dir/DependInfo.cmake"
+  "kinect_pathing/CMakeFiles/tf_broadcaster.dir/DependInfo.cmake"
   "odom_broadcaster/CMakeFiles/odom_broadcaster.dir/DependInfo.cmake"
   "perception_pcl/pcl_ros/CMakeFiles/bag_to_pcd.dir/DependInfo.cmake"
   "perception_pcl/pcl_ros/CMakeFiles/bond_generate_messages_cpp.dir/DependInfo.cmake"

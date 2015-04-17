@@ -20,7 +20,7 @@ Kinect waypoint selector / publisher
 
 using namespace std;
 
-pcl::PointCloud<pcl::PointXYZ>::Ptr wp_cloud (new pcl::PointCloud<pcl::PointXYZ>);
+pcl::PointCloud<pcl::PointXYZRGB>::Ptr wp_cloud (new pcl::PointCloud<pcl::PointXYZRGB>);
 bool newCloud = false;
 string base_frame_, map_frame_;
 int num_waypoints;
@@ -32,6 +32,9 @@ void wpCloudCallback(const sensor_msgs::PointCloud2::ConstPtr &msg)
   num_waypoints = wp_cloud->points.size();
   ROS_INFO_STREAM("New cloud received! It contains " << num_waypoints << " waypoints.");
   newCloud = true;
+  for(int i = 0; i < wp_cloud->points.size(); i++) {
+    wp_cloud->points.at(i).r = 120; wp_cloud->points.at(i).g = 120; wp_cloud->points.at(i).b = 120; // 'Inactive' colour - grey
+  }
 }
 
 
@@ -57,9 +60,12 @@ int main(int argc, char **argv)
   bool last_point = false; // True if the robot is headed towards the last waypoint in the cloud after doing a full circle
   bool done;
   int current_wp = 0;
+  sensor_msgs::PointCloud2 hull_cloud_colour_msg;
+
 
   // Subscribers and Publishers
   ros::Publisher waypoint_pub = nh.advertise<geometry_msgs::PointStamped>("waypoint", 1);
+  ros::Publisher hull_cloud_colour_pub = nh.advertise<sensor_msgs::PointCloud2>("colour_hull_cloud", 10);
   ros::Subscriber wp_cloud_sub = nh.subscribe<sensor_msgs::PointCloud2>("hull_cloud", 20, &wpCloudCallback);
 
   
@@ -100,22 +106,24 @@ int main(int argc, char **argv)
       last_point = false;
       waypoint.point.x = wp_cloud->points.at(current_wp_index).x;
       waypoint.point.y = wp_cloud->points.at(current_wp_index).z;
+      wp_cloud->points.at(current_wp_index).r = 0; wp_cloud->points.at(current_wp_index).g = 0; wp_cloud->points.at(current_wp_index).b = 255; // 'First' colour - blue
     }
 
     // Otherwise, see if arrived close to current waypoint
-    else if ( (abs(waypoint.point.x - x) < 0.20) && (abs(waypoint.point.y - y) < 0.20) ){
+    else if ( (abs(waypoint.point.x - x) < 0.20) && (abs(waypoint.point.y - y) < 0.20) && wp_cloud->points.size()){ // Make sure the cloud is non-empty toavoid out_of_range error
       // Check if arrived to last point
       if (last_point) {
         if(!done) {
           ROS_INFO_STREAM("PATH COMPLETE!");
           done = true;   
         }
-       }
+      }
 
       // Otherwise pick the next point
       else {
-        // ROS_INFO_STREAM("Waypoint " << current_wp << " of " << num_waypoints << " reached! (x: " << wp_cloud->points.at(current_wp_index).x << " y: " << wp_cloud->points.at(current_wp_index).z << ")");
         ROS_INFO("Waypoint %d of %d reached! (x: %3.2f y: %3.2f)", current_wp, num_waypoints, wp_cloud->points.at(current_wp_index).x, wp_cloud->points.at(current_wp_index).z);
+        if (current_wp_index != first_wp_index) // Leave the first waypoint coloured blue
+          wp_cloud->points.at(current_wp_index).r = 0; wp_cloud->points.at(current_wp_index).g = 255; wp_cloud->points.at(current_wp_index).b = 0; // 'Done' colour - green
         // Update new waypoint, being careful not to overrun the point vector
         if (current_wp_index+1 >= wp_cloud->points.size())
           current_wp_index = 0;
@@ -124,7 +132,6 @@ int main(int argc, char **argv)
 
         // If heading back towards the first waypoint (i.e. full circle), do not send a new wp once current wp is reached.
         if (current_wp_index == first_wp_index){
-          //ROS_INFO_STREAM("HEADING TOWARDS THE STARTING WAYPOINT!" << " at x: " << wp_cloud->points.at(current_wp_index).x << " y: " << wp_cloud->points.at(current_wp_index).z);
           ROS_INFO("HEADING TOWARDS THE STARTING WAYPOINT (x: %3.2f y: %3.2f)", wp_cloud->points.at(current_wp_index).x, wp_cloud->points.at(current_wp_index).z);
           last_point = true;
         }
@@ -134,6 +141,8 @@ int main(int argc, char **argv)
         current_wp++;
         waypoint.point.x = wp_cloud->points.at(current_wp_index).x;
         waypoint.point.y = wp_cloud->points.at(current_wp_index).z;
+        wp_cloud->points.at(current_wp_index).r = 255; wp_cloud->points.at(current_wp_index).g = 255; wp_cloud->points.at(current_wp_index).b = 0; // 'Active' colour - yellow
+        wp_cloud->points.at(first_wp_index).r = 0; wp_cloud->points.at(first_wp_index).g = 0; wp_cloud->points.at(first_wp_index).b = 255; // 'First' colour - blue
       }
     }
 
@@ -144,9 +153,12 @@ int main(int argc, char **argv)
       waypoint.header.stamp = ros::Time::now();
       waypoint_pub.publish(waypoint);
       if(!last_point)
-        //ROS_INFO_STREAM("Heading towards waypoint: " << current_wp << " of " << num_waypoints << " at x: " << wp_cloud->points.at(current_wp_index).x << " y: " << wp_cloud->points.at(current_wp_index).z);
         ROS_INFO("Heading towards waypoint %d of %d (x: %3.2f y: %3.2f)", current_wp, num_waypoints, wp_cloud->points.at(current_wp_index).x, wp_cloud->points.at(current_wp_index).z);
     }
+
+    // Publish the coloured hull cloud
+    pcl::toROSMsg(*wp_cloud, hull_cloud_colour_msg);
+    hull_cloud_colour_pub.publish(hull_cloud_colour_msg);
 
     ros::spinOnce();
     loop_rate.sleep();

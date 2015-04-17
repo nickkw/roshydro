@@ -7,9 +7,12 @@
   </node>
 
   <node name="cloud_tf" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 -1.5708 map cloud_frame 100" />
+  <node name="tf_broadcaster" pkg="kinect_pathing" type="tf_broadcaster" output="screen" />
 
-<!--   <node name="kinect_clouds_pub" pkg="kinect_pathing" type="kinect_clouds_pub" output="screen"/> -->
-
+<!--   <node name="kinect_clouds_pub" pkg="kinect_pathing" type="kinect_clouds_pub" output="screen">
+  	<param name="request_new_saves" value="false" type="bool" />
+  </node>
+ -->
   <node name="kinect_waypoint_pub" pkg="kinect_pathing" type="kinect_waypoint_pub" output="screen"/>
 
   <param name="/use_sim_time" value="false"/>

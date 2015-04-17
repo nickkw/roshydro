@@ -101,6 +101,7 @@
 /home/nicholaskwan-wong/roshydro/build/bug_pathing/CMakeFiles/tf2_msgs_generate_messages_cpp.dir
 /home/nicholaskwan-wong/roshydro/build/bug_pathing/CMakeFiles/tf2_msgs_generate_messages_lisp.dir
 /home/nicholaskwan-wong/roshydro/build/bug_pathing/CMakeFiles/tf2_msgs_generate_messages_py.dir
+/home/nicholaskwan-wong/roshydro/build/kinect_pathing/CMakeFiles/tf_broadcaster.dir
 /home/nicholaskwan-wong/roshydro/build/bug_pathing/CMakeFiles/tf_generate_messages_cpp.dir
 /home/nicholaskwan-wong/roshydro/build/bug_pathing/CMakeFiles/tf_generate_messages_lisp.dir
 /home/nicholaskwan-wong/roshydro/build/bug_pathing/CMakeFiles/tf_generate_messages_py.dir

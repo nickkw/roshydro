@@ -180,6 +180,20 @@ kinect_waypoint_pub/fast:
 	cd /home/nicholaskwan-wong/roshydro/build && $(MAKE) -f kinect_pathing/CMakeFiles/kinect_waypoint_pub.dir/build.make kinect_pathing/CMakeFiles/kinect_waypoint_pub.dir/build
 .PHONY : kinect_waypoint_pub/fast
 
+# Convenience name for target.
+kinect_pathing/CMakeFiles/tf_broadcaster.dir/rule:
+	cd /home/nicholaskwan-wong/roshydro/build && $(MAKE) -f CMakeFiles/Makefile2 kinect_pathing/CMakeFiles/tf_broadcaster.dir/rule
+.PHONY : kinect_pathing/CMakeFiles/tf_broadcaster.dir/rule
+
+# Convenience name for target.
+tf_broadcaster: kinect_pathing/CMakeFiles/tf_broadcaster.dir/rule
+.PHONY : tf_broadcaster
+
+# fast build rule for target.
+tf_broadcaster/fast:
+	cd /home/nicholaskwan-wong/roshydro/build && $(MAKE) -f kinect_pathing/CMakeFiles/tf_broadcaster.dir/build.make kinect_pathing/CMakeFiles/tf_broadcaster.dir/build
+.PHONY : tf_broadcaster/fast
+
 src/extract_path.o: src/extract_path.cpp.o
 .PHONY : src/extract_path.o
 
@@ -252,6 +266,30 @@ src/kinect_waypoint_pub.cpp.s:
 	cd /home/nicholaskwan-wong/roshydro/build && $(MAKE) -f kinect_pathing/CMakeFiles/kinect_waypoint_pub.dir/build.make kinect_pathing/CMakeFiles/kinect_waypoint_pub.dir/src/kinect_waypoint_pub.cpp.s
 .PHONY : src/kinect_waypoint_pub.cpp.s
 
+src/tf_broadcaster.o: src/tf_broadcaster.cpp.o
+.PHONY : src/tf_broadcaster.o
+
+# target to build an object file
+src/tf_broadcaster.cpp.o:
+	cd /home/nicholaskwan-wong/roshydro/build && $(MAKE) -f kinect_pathing/CMakeFiles/tf_broadcaster.dir/build.make kinect_pathing/CMakeFiles/tf_broadcaster.dir/src/tf_broadcaster.cpp.o
+.PHONY : src/tf_broadcaster.cpp.o
+
+src/tf_broadcaster.i: src/tf_broadcaster.cpp.i
+.PHONY : src/tf_broadcaster.i
+
+# target to preprocess a source file
+src/tf_broadcaster.cpp.i:
+	cd /home/nicholaskwan-wong/roshydro/build && $(MAKE) -f kinect_pathing/CMakeFiles/tf_broadcaster.dir/build.make kinect_pathing/CMakeFiles/tf_broadcaster.dir/src/tf_broadcaster.cpp.i
+.PHONY : src/tf_broadcaster.cpp.i
+
+src/tf_broadcaster.s: src/tf_broadcaster.cpp.s
+.PHONY : src/tf_broadcaster.s
+
+# target to generate assembly for a file
+src/tf_broadcaster.cpp.s:
+	cd /home/nicholaskwan-wong/roshydro/build && $(MAKE) -f kinect_pathing/CMakeFiles/tf_broadcaster.dir/build.make kinect_pathing/CMakeFiles/tf_broadcaster.dir/src/tf_broadcaster.cpp.s
+.PHONY : src/tf_broadcaster.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -267,6 +305,7 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... tf_broadcaster"
 	@echo "... src/extract_path.o"
 	@echo "... src/extract_path.i"
 	@echo "... src/extract_path.s"
@@ -276,6 +315,9 @@ help:
 	@echo "... src/kinect_waypoint_pub.o"
 	@echo "... src/kinect_waypoint_pub.i"
 	@echo "... src/kinect_waypoint_pub.s"
+	@echo "... src/tf_broadcaster.o"
+	@echo "... src/tf_broadcaster.i"
+	@echo "... src/tf_broadcaster.s"
 .PHONY : help
 
 
