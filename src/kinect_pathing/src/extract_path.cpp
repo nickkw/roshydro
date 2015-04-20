@@ -17,6 +17,11 @@
 // Extract the path of the input point cloud and pass back to the function as pointers to the resultant clouds
 void extractPath (pcl::PCLPointCloud2::Ptr input_cloud, pcl::PointCloud<pcl::PointXYZ>::Ptr projection_cloud, pcl::PointCloud<pcl::PointXYZ>::Ptr hull_cloud)
 {
+  if (input_cloud->width == 0) {
+    std::cout << "Extract path: No points in input cloud!" << std::endl;
+    return;
+  }
+
   pcl::PCLPointCloud2::Ptr cloud_original (new pcl::PCLPointCloud2), cloud_filtered1 (new pcl::PCLPointCloud2),  cloud_filtered2 (new pcl::PCLPointCloud2);
   pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_filtered3 (new pcl::PointCloud<pcl::PointXYZ>), cloud_filtered4 (new pcl::PointCloud<pcl::PointXYZ>);
 
@@ -92,12 +97,12 @@ void extractPath (pcl::PCLPointCloud2::Ptr input_cloud, pcl::PointCloud<pcl::Poi
   outrem.filter (*cloud_filtered1);
   // Filter second time
   outrem.setInputCloud(cloud_filtered1);
-  outrem.setRadiusSearch(3.0f);
+  outrem.setRadiusSearch(2.0f);
   outrem.setMinNeighborsInRadius (15);
   outrem.filter (*cloud_filtered2);
   // Filter third time
   outrem.setInputCloud(cloud_filtered2);
-  outrem.setRadiusSearch(3.0f);
+  outrem.setRadiusSearch(2.0f);
   outrem.setMinNeighborsInRadius (10);
   outrem.filter (*cloud_filtered2);
   // Convert to the templated PointCloud to template of PointXYZ type

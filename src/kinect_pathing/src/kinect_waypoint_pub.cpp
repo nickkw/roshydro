@@ -30,6 +30,11 @@ void wpCloudCallback(const sensor_msgs::PointCloud2::ConstPtr &msg)
 {
   pcl::fromROSMsg(*msg, *wp_cloud); // Convert from PointCloud2 message to PCL type
   num_waypoints = wp_cloud->points.size();
+  if (num_waypoints == 0) {
+    ROS_WARN("There are no waypoints in the received cloud!");
+    newCloud = false;
+    return;
+  }
   ROS_INFO_STREAM("New cloud received! It contains " << num_waypoints << " waypoints.");
   newCloud = true;
   for(int i = 0; i < wp_cloud->points.size(); i++) {
@@ -65,7 +70,7 @@ int main(int argc, char **argv)
 
   // Subscribers and Publishers
   ros::Publisher waypoint_pub = nh.advertise<geometry_msgs::PointStamped>("waypoint", 1);
-  ros::Publisher hull_cloud_colour_pub = nh.advertise<sensor_msgs::PointCloud2>("colour_hull_cloud", 10);
+  ros::Publisher hull_cloud_colour_pub = nh.advertise<sensor_msgs::PointCloud2>("waypoint_cloud", 10);
   ros::Subscriber wp_cloud_sub = nh.subscribe<sensor_msgs::PointCloud2>("hull_cloud", 20, &wpCloudCallback);
 
   
@@ -110,7 +115,7 @@ int main(int argc, char **argv)
     }
 
     // Otherwise, see if arrived close to current waypoint
-    else if ( (abs(waypoint.point.x - x) < 0.20) && (abs(waypoint.point.y - y) < 0.20) && wp_cloud->points.size()){ // Make sure the cloud is non-empty toavoid out_of_range error
+    else if ( (abs(waypoint.point.x - x) < 0.20) && (abs(waypoint.point.y - y) < 0.20) && wp_cloud->points.size()){ // Make sure the cloud is non-empty to avoid out_of_range error
       // Check if arrived to last point
       if (last_point) {
         if(!done) {
