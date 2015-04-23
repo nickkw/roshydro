@@ -933,45 +933,6 @@ hector_trajectory_server/fast:
 .PHONY : hector_trajectory_server/fast
 
 #=============================================================================
-# Target rules for targets named kinect_clouds_pub
-
-# Build rule for target.
-kinect_clouds_pub: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 kinect_clouds_pub
-.PHONY : kinect_clouds_pub
-
-# fast build rule for target.
-kinect_clouds_pub/fast:
-	$(MAKE) -f kinect_pathing/CMakeFiles/kinect_clouds_pub.dir/build.make kinect_pathing/CMakeFiles/kinect_clouds_pub.dir/build
-.PHONY : kinect_clouds_pub/fast
-
-#=============================================================================
-# Target rules for targets named kinect_waypoint_pub
-
-# Build rule for target.
-kinect_waypoint_pub: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 kinect_waypoint_pub
-.PHONY : kinect_waypoint_pub
-
-# fast build rule for target.
-kinect_waypoint_pub/fast:
-	$(MAKE) -f kinect_pathing/CMakeFiles/kinect_waypoint_pub.dir/build.make kinect_pathing/CMakeFiles/kinect_waypoint_pub.dir/build
-.PHONY : kinect_waypoint_pub/fast
-
-#=============================================================================
-# Target rules for targets named tf_broadcaster
-
-# Build rule for target.
-tf_broadcaster: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tf_broadcaster
-.PHONY : tf_broadcaster
-
-# fast build rule for target.
-tf_broadcaster/fast:
-	$(MAKE) -f kinect_pathing/CMakeFiles/tf_broadcaster.dir/build.make kinect_pathing/CMakeFiles/tf_broadcaster.dir/build
-.PHONY : tf_broadcaster/fast
-
-#=============================================================================
 # Target rules for targets named odom_broadcaster
 
 # Build rule for target.
@@ -1360,6 +1321,58 @@ topic_tools_generate_messages_py: cmake_check_build_system
 topic_tools_generate_messages_py/fast:
 	$(MAKE) -f perception_pcl/pcl_ros/CMakeFiles/topic_tools_generate_messages_py.dir/build.make perception_pcl/pcl_ros/CMakeFiles/topic_tools_generate_messages_py.dir/build
 .PHONY : topic_tools_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named kinect_clouds_pub
+
+# Build rule for target.
+kinect_clouds_pub: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 kinect_clouds_pub
+.PHONY : kinect_clouds_pub
+
+# fast build rule for target.
+kinect_clouds_pub/fast:
+	$(MAKE) -f kinect_pathing/CMakeFiles/kinect_clouds_pub.dir/build.make kinect_pathing/CMakeFiles/kinect_clouds_pub.dir/build
+.PHONY : kinect_clouds_pub/fast
+
+#=============================================================================
+# Target rules for targets named kinect_waypoint_pub
+
+# Build rule for target.
+kinect_waypoint_pub: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 kinect_waypoint_pub
+.PHONY : kinect_waypoint_pub
+
+# fast build rule for target.
+kinect_waypoint_pub/fast:
+	$(MAKE) -f kinect_pathing/CMakeFiles/kinect_waypoint_pub.dir/build.make kinect_pathing/CMakeFiles/kinect_waypoint_pub.dir/build
+.PHONY : kinect_waypoint_pub/fast
+
+#=============================================================================
+# Target rules for targets named move_to_waypoint
+
+# Build rule for target.
+move_to_waypoint: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 move_to_waypoint
+.PHONY : move_to_waypoint
+
+# fast build rule for target.
+move_to_waypoint/fast:
+	$(MAKE) -f kinect_pathing/CMakeFiles/move_to_waypoint.dir/build.make kinect_pathing/CMakeFiles/move_to_waypoint.dir/build
+.PHONY : move_to_waypoint/fast
+
+#=============================================================================
+# Target rules for targets named tf_broadcaster
+
+# Build rule for target.
+tf_broadcaster: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tf_broadcaster
+.PHONY : tf_broadcaster
+
+# fast build rule for target.
+tf_broadcaster/fast:
+	$(MAKE) -f kinect_pathing/CMakeFiles/tf_broadcaster.dir/build.make kinect_pathing/CMakeFiles/tf_broadcaster.dir/build
+.PHONY : tf_broadcaster/fast
 
 #=============================================================================
 # Target rules for targets named _run_tests_pointcloud_to_laserscan
@@ -1811,9 +1824,6 @@ help:
 	@echo "... pose_and_orientation_to_imu_node"
 	@echo "... hector_map_server"
 	@echo "... hector_trajectory_server"
-	@echo "... kinect_clouds_pub"
-	@echo "... kinect_waypoint_pub"
-	@echo "... tf_broadcaster"
 	@echo "... odom_broadcaster"
 	@echo "... bag_to_pcd"
 	@echo "... bond_generate_messages_cpp"
@@ -1844,6 +1854,10 @@ help:
 	@echo "... topic_tools_generate_messages_cpp"
 	@echo "... topic_tools_generate_messages_lisp"
 	@echo "... topic_tools_generate_messages_py"
+	@echo "... kinect_clouds_pub"
+	@echo "... kinect_waypoint_pub"
+	@echo "... move_to_waypoint"
+	@echo "... tf_broadcaster"
 	@echo "... _run_tests_pointcloud_to_laserscan"
 	@echo "... _run_tests_pointcloud_to_laserscan_roslaunch-check"
 	@echo "... _run_tests_pointcloud_to_laserscan_roslaunch-check_launch"

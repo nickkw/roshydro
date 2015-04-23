@@ -181,6 +181,20 @@ kinect_waypoint_pub/fast:
 .PHONY : kinect_waypoint_pub/fast
 
 # Convenience name for target.
+kinect_pathing/CMakeFiles/move_to_waypoint.dir/rule:
+	cd /home/nicholaskwan-wong/roshydro/build && $(MAKE) -f CMakeFiles/Makefile2 kinect_pathing/CMakeFiles/move_to_waypoint.dir/rule
+.PHONY : kinect_pathing/CMakeFiles/move_to_waypoint.dir/rule
+
+# Convenience name for target.
+move_to_waypoint: kinect_pathing/CMakeFiles/move_to_waypoint.dir/rule
+.PHONY : move_to_waypoint
+
+# fast build rule for target.
+move_to_waypoint/fast:
+	cd /home/nicholaskwan-wong/roshydro/build && $(MAKE) -f kinect_pathing/CMakeFiles/move_to_waypoint.dir/build.make kinect_pathing/CMakeFiles/move_to_waypoint.dir/build
+.PHONY : move_to_waypoint/fast
+
+# Convenience name for target.
 kinect_pathing/CMakeFiles/tf_broadcaster.dir/rule:
 	cd /home/nicholaskwan-wong/roshydro/build && $(MAKE) -f CMakeFiles/Makefile2 kinect_pathing/CMakeFiles/tf_broadcaster.dir/rule
 .PHONY : kinect_pathing/CMakeFiles/tf_broadcaster.dir/rule
@@ -266,6 +280,30 @@ src/kinect_waypoint_pub.cpp.s:
 	cd /home/nicholaskwan-wong/roshydro/build && $(MAKE) -f kinect_pathing/CMakeFiles/kinect_waypoint_pub.dir/build.make kinect_pathing/CMakeFiles/kinect_waypoint_pub.dir/src/kinect_waypoint_pub.cpp.s
 .PHONY : src/kinect_waypoint_pub.cpp.s
 
+src/move_to_waypoint.o: src/move_to_waypoint.cpp.o
+.PHONY : src/move_to_waypoint.o
+
+# target to build an object file
+src/move_to_waypoint.cpp.o:
+	cd /home/nicholaskwan-wong/roshydro/build && $(MAKE) -f kinect_pathing/CMakeFiles/move_to_waypoint.dir/build.make kinect_pathing/CMakeFiles/move_to_waypoint.dir/src/move_to_waypoint.cpp.o
+.PHONY : src/move_to_waypoint.cpp.o
+
+src/move_to_waypoint.i: src/move_to_waypoint.cpp.i
+.PHONY : src/move_to_waypoint.i
+
+# target to preprocess a source file
+src/move_to_waypoint.cpp.i:
+	cd /home/nicholaskwan-wong/roshydro/build && $(MAKE) -f kinect_pathing/CMakeFiles/move_to_waypoint.dir/build.make kinect_pathing/CMakeFiles/move_to_waypoint.dir/src/move_to_waypoint.cpp.i
+.PHONY : src/move_to_waypoint.cpp.i
+
+src/move_to_waypoint.s: src/move_to_waypoint.cpp.s
+.PHONY : src/move_to_waypoint.s
+
+# target to generate assembly for a file
+src/move_to_waypoint.cpp.s:
+	cd /home/nicholaskwan-wong/roshydro/build && $(MAKE) -f kinect_pathing/CMakeFiles/move_to_waypoint.dir/build.make kinect_pathing/CMakeFiles/move_to_waypoint.dir/src/move_to_waypoint.cpp.s
+.PHONY : src/move_to_waypoint.cpp.s
+
 src/tf_broadcaster.o: src/tf_broadcaster.cpp.o
 .PHONY : src/tf_broadcaster.o
 
@@ -303,6 +341,7 @@ help:
 	@echo "... kinect_clouds_pub"
 	@echo "... kinect_waypoint_pub"
 	@echo "... list_install_components"
+	@echo "... move_to_waypoint"
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... tf_broadcaster"
@@ -315,6 +354,9 @@ help:
 	@echo "... src/kinect_waypoint_pub.o"
 	@echo "... src/kinect_waypoint_pub.i"
 	@echo "... src/kinect_waypoint_pub.s"
+	@echo "... src/move_to_waypoint.o"
+	@echo "... src/move_to_waypoint.i"
+	@echo "... src/move_to_waypoint.s"
 	@echo "... src/tf_broadcaster.o"
 	@echo "... src/tf_broadcaster.i"
 	@echo "... src/tf_broadcaster.s"

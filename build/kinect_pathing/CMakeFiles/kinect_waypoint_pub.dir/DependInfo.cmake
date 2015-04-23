@@ -24,17 +24,23 @@ SET(CMAKE_TARGET_DEFINITIONS
 
 # Targets to which this target links.
 SET(CMAKE_TARGET_LINKED_INFO_FILES
+  "/home/nicholaskwan-wong/roshydro/build/perception_pcl/pcl_ros/CMakeFiles/pcl_ros_filters.dir/DependInfo.cmake"
+  "/home/nicholaskwan-wong/roshydro/build/perception_pcl/pcl_ros/CMakeFiles/pcl_ros_io.dir/DependInfo.cmake"
+  "/home/nicholaskwan-wong/roshydro/build/perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/DependInfo.cmake"
   )
 
 # The include file search paths:
 SET(CMAKE_C_TARGET_INCLUDE_PATH
   "/usr/local/include/vtk-5.10"
   "/home/nicholaskwan-wong/roshydro/src/kinect_pathing/include"
+  "/home/nicholaskwan-wong/roshydro/devel/include"
+  "/home/nicholaskwan-wong/roshydro/src/perception_pcl/pcl_ros/include"
   "/home/nicholaskwan-wong/ros_catkin_ws/install_isolated/include"
   "/home/nicholaskwan-wong/pcl_workspace/devel_isolated/pcl/include/pcl-1.8"
   "/usr/include/eigen3"
   "/usr/include/ni"
   "/usr/include/openni2"
+  "/usr/include/pcl-1.7"
   )
 SET(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
 SET(CMAKE_Fortran_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})

@@ -838,8 +838,8 @@ clean: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_gencpp.dir/clean
 
 # All Build rule for target.
 hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_lisp.dir/all
-hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py.dir/all
 hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py.dir/all
 	$(MAKE) -f hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages.dir/build.make hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages.dir/depend
 	$(MAKE) -f hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages.dir/build.make hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nicholaskwan-wong/roshydro/build/CMakeFiles 
@@ -906,8 +906,8 @@ clean: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_
 # Target rules for target hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_lisp.dir
 
 # All Build rule for target.
-hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_lisp.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_lisp.dir/all: hector_slam/hector_map_tools/CMakeFiles/nav_msgs_generate_messages_lisp.dir/all
+hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_lisp.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
 	$(MAKE) -f hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_lisp.dir/build.make hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_lisp.dir/depend
 	$(MAKE) -f hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_lisp.dir/build.make hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_lisp.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nicholaskwan-wong/roshydro/build/CMakeFiles  24 25 26 27 28
@@ -1072,28 +1072,28 @@ hector_slam/hector_geotiff/preinstall:
 # Target rules for target hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir
 
 # All Build rule for target.
+hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_map_tools/CMakeFiles/nav_msgs_generate_messages_cpp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_map_tools/CMakeFiles/nav_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_map_tools/CMakeFiles/nav_msgs_generate_messages_py.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_cpp.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_py.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_lisp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_py.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_lisp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_cpp.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/all
 	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/build.make hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/depend
 	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/build.make hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nicholaskwan-wong/roshydro/build/CMakeFiles  5
@@ -1128,28 +1128,28 @@ clean: hector_slam/hector_geotiff/CMakeFiles/geotiff_node.dir/clean
 # Target rules for target hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir
 
 # All Build rule for target.
+hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_map_tools/CMakeFiles/nav_msgs_generate_messages_cpp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_map_tools/CMakeFiles/nav_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_map_tools/CMakeFiles/nav_msgs_generate_messages_py.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_cpp.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_py.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_lisp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_py.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_lisp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_cpp.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/all
 	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/build.make hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/depend
 	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/build.make hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nicholaskwan-wong/roshydro/build/CMakeFiles  6
@@ -1186,25 +1186,25 @@ clean: hector_slam/hector_geotiff/CMakeFiles/geotiff_saver.dir/clean
 # All Build rule for target.
 hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/nav_msgs_generate_messages_cpp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/nav_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/nav_msgs_generate_messages_py.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_cpp.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_py.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_lisp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_py.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_lisp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_cpp.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/all
 hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/all
 	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/build.make hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/depend
 	$(MAKE) -f hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/build.make hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nicholaskwan-wong/roshydro/build/CMakeFiles  7
@@ -1440,28 +1440,28 @@ hector_slam/hector_geotiff_plugins/preinstall:
 # Target rules for target hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir
 
 # All Build rule for target.
+hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all
 hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
 hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_map_tools/CMakeFiles/nav_msgs_generate_messages_cpp.dir/all
-hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_map_tools/CMakeFiles/nav_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_map_tools/CMakeFiles/nav_msgs_generate_messages_py.dir/all
+hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/all
+hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_cpp.dir/all
 hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
+hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py.dir/all
 hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
 hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_py.dir/all
 hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/all
-hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_lisp.dir/all
-hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_geotiff/CMakeFiles/geotiff_writer.dir/all
-hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_py.dir/all
-hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
-hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_lisp.dir/all
-hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py.dir/all
-hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_cpp.dir/all
 hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
 hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/all
 hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/all
 	$(MAKE) -f hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/build.make hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/depend
 	$(MAKE) -f hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/build.make hector_slam/hector_geotiff_plugins/CMakeFiles/hector_geotiff_plugins.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nicholaskwan-wong/roshydro/build/CMakeFiles  9
@@ -1626,7 +1626,7 @@ range_broadcaster/preinstall:
 range_broadcaster/CMakeFiles/sensor_broadcaster.dir/all: range_broadcaster/CMakeFiles/srf08_ultrasound_driver.dir/all
 	$(MAKE) -f range_broadcaster/CMakeFiles/sensor_broadcaster.dir/build.make range_broadcaster/CMakeFiles/sensor_broadcaster.dir/depend
 	$(MAKE) -f range_broadcaster/CMakeFiles/sensor_broadcaster.dir/build.make range_broadcaster/CMakeFiles/sensor_broadcaster.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nicholaskwan-wong/roshydro/build/CMakeFiles  85
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nicholaskwan-wong/roshydro/build/CMakeFiles 
 	@echo "Built target sensor_broadcaster"
 .PHONY : range_broadcaster/CMakeFiles/sensor_broadcaster.dir/all
 
@@ -1636,7 +1636,7 @@ all: range_broadcaster/CMakeFiles/sensor_broadcaster.dir/all
 
 # Build rule for subdir invocation for target.
 range_broadcaster/CMakeFiles/sensor_broadcaster.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nicholaskwan-wong/roshydro/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nicholaskwan-wong/roshydro/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 range_broadcaster/CMakeFiles/sensor_broadcaster.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nicholaskwan-wong/roshydro/build/CMakeFiles 0
 .PHONY : range_broadcaster/CMakeFiles/sensor_broadcaster.dir/rule
@@ -1714,7 +1714,7 @@ hector_slam/hector_compressed_map_transport/preinstall:
 hector_slam/hector_compressed_map_transport/CMakeFiles/map_to_image_node.dir/all:
 	$(MAKE) -f hector_slam/hector_compressed_map_transport/CMakeFiles/map_to_image_node.dir/build.make hector_slam/hector_compressed_map_transport/CMakeFiles/map_to_image_node.dir/depend
 	$(MAKE) -f hector_slam/hector_compressed_map_transport/CMakeFiles/map_to_image_node.dir/build.make hector_slam/hector_compressed_map_transport/CMakeFiles/map_to_image_node.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nicholaskwan-wong/roshydro/build/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nicholaskwan-wong/roshydro/build/CMakeFiles  38
 	@echo "Built target map_to_image_node"
 .PHONY : hector_slam/hector_compressed_map_transport/CMakeFiles/map_to_image_node.dir/all
 
@@ -1724,7 +1724,7 @@ all: hector_slam/hector_compressed_map_transport/CMakeFiles/map_to_image_node.di
 
 # Build rule for subdir invocation for target.
 hector_slam/hector_compressed_map_transport/CMakeFiles/map_to_image_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nicholaskwan-wong/roshydro/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nicholaskwan-wong/roshydro/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_compressed_map_transport/CMakeFiles/map_to_image_node.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nicholaskwan-wong/roshydro/build/CMakeFiles 0
 .PHONY : hector_slam/hector_compressed_map_transport/CMakeFiles/map_to_image_node.dir/rule
@@ -2245,7 +2245,7 @@ hector_slam/hector_imu_tools/preinstall:
 hector_slam/hector_imu_tools/CMakeFiles/pose_and_orientation_to_imu_node.dir/all:
 	$(MAKE) -f hector_slam/hector_imu_tools/CMakeFiles/pose_and_orientation_to_imu_node.dir/build.make hector_slam/hector_imu_tools/CMakeFiles/pose_and_orientation_to_imu_node.dir/depend
 	$(MAKE) -f hector_slam/hector_imu_tools/CMakeFiles/pose_and_orientation_to_imu_node.dir/build.make hector_slam/hector_imu_tools/CMakeFiles/pose_and_orientation_to_imu_node.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nicholaskwan-wong/roshydro/build/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nicholaskwan-wong/roshydro/build/CMakeFiles  85
 	@echo "Built target pose_and_orientation_to_imu_node"
 .PHONY : hector_slam/hector_imu_tools/CMakeFiles/pose_and_orientation_to_imu_node.dir/all
 
@@ -2255,7 +2255,7 @@ all: hector_slam/hector_imu_tools/CMakeFiles/pose_and_orientation_to_imu_node.di
 
 # Build rule for subdir invocation for target.
 hector_slam/hector_imu_tools/CMakeFiles/pose_and_orientation_to_imu_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nicholaskwan-wong/roshydro/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nicholaskwan-wong/roshydro/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_imu_tools/CMakeFiles/pose_and_orientation_to_imu_node.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nicholaskwan-wong/roshydro/build/CMakeFiles 0
 .PHONY : hector_slam/hector_imu_tools/CMakeFiles/pose_and_orientation_to_imu_node.dir/rule
@@ -2292,42 +2292,42 @@ hector_slam/hector_map_server/preinstall:
 # Target rules for target hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir
 
 # All Build rule for target.
-hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: bug_pathing/CMakeFiles/tf_generate_messages_lisp.dir/all
 hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
 hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/nav_msgs_generate_messages_cpp.dir/all
-hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/nav_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/nav_msgs_generate_messages_py.dir/all
+hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/all
+hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_cpp.dir/all
 hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
+hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py.dir/all
 hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
 hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_py.dir/all
 hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/all
-hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_lisp.dir/all
-hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_py.dir/all
-hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
-hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_lisp.dir/all
-hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py.dir/all
-hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_cpp.dir/all
 hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
 hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/all
 hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_marker_drawing/CMakeFiles/visualization_msgs_generate_messages_py.dir/all
-hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: bug_pathing/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/all
-hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_marker_drawing/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/all
+hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: bug_pathing/CMakeFiles/tf_generate_messages_lisp.dir/all
+hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/all
 hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_marker_drawing/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_marker_drawing/CMakeFiles/visualization_msgs_generate_messages_py.dir/all
+hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_marker_drawing/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/all
+hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: bug_pathing/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_compressed_map_transport/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
 hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_compressed_map_transport/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: hector_slam/hector_compressed_map_transport/CMakeFiles/sensor_msgs_generate_messages_py.dir/all
+hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: bug_pathing/CMakeFiles/tf_generate_messages_py.dir/all
 hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: bug_pathing/CMakeFiles/tf_generate_messages_cpp.dir/all
 hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: bug_pathing/CMakeFiles/actionlib_generate_messages_cpp.dir/all
 hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: bug_pathing/CMakeFiles/actionlib_generate_messages_lisp.dir/all
 hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: bug_pathing/CMakeFiles/actionlib_generate_messages_py.dir/all
-hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: bug_pathing/CMakeFiles/tf_generate_messages_py.dir/all
+hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: bug_pathing/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/all
 hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: bug_pathing/CMakeFiles/tf2_msgs_generate_messages_py.dir/all
-hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/all: bug_pathing/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/all
 	$(MAKE) -f hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/build.make hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/depend
 	$(MAKE) -f hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/build.make hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nicholaskwan-wong/roshydro/build/CMakeFiles  10
@@ -2377,39 +2377,39 @@ hector_slam/hector_trajectory_server/preinstall:
 # Target rules for target hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir
 
 # All Build rule for target.
-hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: bug_pathing/CMakeFiles/tf_generate_messages_lisp.dir/all
 hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
 hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/nav_msgs_generate_messages_cpp.dir/all
-hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/nav_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/nav_msgs_generate_messages_py.dir/all
+hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/all
+hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_cpp.dir/all
 hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
+hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py.dir/all
 hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
 hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_py.dir/all
 hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/all
-hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_lisp.dir/all
-hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_py.dir/all
-hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
-hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_lisp.dir/all
-hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_py.dir/all
-hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_cpp.dir/all
 hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
 hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/all
 hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: bug_pathing/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/all
+hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: bug_pathing/CMakeFiles/tf_generate_messages_lisp.dir/all
+hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/all
+hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: bug_pathing/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_compressed_map_transport/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
 hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_compressed_map_transport/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
 hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: hector_slam/hector_compressed_map_transport/CMakeFiles/sensor_msgs_generate_messages_py.dir/all
+hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: bug_pathing/CMakeFiles/tf_generate_messages_py.dir/all
 hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: bug_pathing/CMakeFiles/tf_generate_messages_cpp.dir/all
 hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: bug_pathing/CMakeFiles/actionlib_generate_messages_cpp.dir/all
 hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: bug_pathing/CMakeFiles/actionlib_generate_messages_lisp.dir/all
 hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: bug_pathing/CMakeFiles/actionlib_generate_messages_py.dir/all
-hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: bug_pathing/CMakeFiles/tf_generate_messages_py.dir/all
+hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: bug_pathing/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/all
 hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: bug_pathing/CMakeFiles/tf2_msgs_generate_messages_py.dir/all
-hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/all: bug_pathing/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/all
 	$(MAKE) -f hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/build.make hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/depend
 	$(MAKE) -f hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/build.make hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nicholaskwan-wong/roshydro/build/CMakeFiles  34
@@ -2441,130 +2441,6 @@ clean: hector_slam/hector_trajectory_server/CMakeFiles/hector_trajectory_server.
 .PHONY : clean
 
 #=============================================================================
-# Directory level rules for directory kinect_pathing
-
-# Convenience name for "all" pass in the directory.
-kinect_pathing/all: kinect_pathing/CMakeFiles/kinect_clouds_pub.dir/all
-kinect_pathing/all: kinect_pathing/CMakeFiles/kinect_waypoint_pub.dir/all
-kinect_pathing/all: kinect_pathing/CMakeFiles/tf_broadcaster.dir/all
-.PHONY : kinect_pathing/all
-
-# Convenience name for "clean" pass in the directory.
-kinect_pathing/clean: kinect_pathing/CMakeFiles/kinect_clouds_pub.dir/clean
-kinect_pathing/clean: kinect_pathing/CMakeFiles/kinect_waypoint_pub.dir/clean
-kinect_pathing/clean: kinect_pathing/CMakeFiles/tf_broadcaster.dir/clean
-.PHONY : kinect_pathing/clean
-
-# Convenience name for "preinstall" pass in the directory.
-kinect_pathing/preinstall:
-.PHONY : kinect_pathing/preinstall
-
-#=============================================================================
-# Target rules for target kinect_pathing/CMakeFiles/kinect_clouds_pub.dir
-
-# All Build rule for target.
-kinect_pathing/CMakeFiles/kinect_clouds_pub.dir/all:
-	$(MAKE) -f kinect_pathing/CMakeFiles/kinect_clouds_pub.dir/build.make kinect_pathing/CMakeFiles/kinect_clouds_pub.dir/depend
-	$(MAKE) -f kinect_pathing/CMakeFiles/kinect_clouds_pub.dir/build.make kinect_pathing/CMakeFiles/kinect_clouds_pub.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nicholaskwan-wong/roshydro/build/CMakeFiles  36 37
-	@echo "Built target kinect_clouds_pub"
-.PHONY : kinect_pathing/CMakeFiles/kinect_clouds_pub.dir/all
-
-# Include target in all.
-all: kinect_pathing/CMakeFiles/kinect_clouds_pub.dir/all
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-kinect_pathing/CMakeFiles/kinect_clouds_pub.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nicholaskwan-wong/roshydro/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 kinect_pathing/CMakeFiles/kinect_clouds_pub.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nicholaskwan-wong/roshydro/build/CMakeFiles 0
-.PHONY : kinect_pathing/CMakeFiles/kinect_clouds_pub.dir/rule
-
-# Convenience name for target.
-kinect_clouds_pub: kinect_pathing/CMakeFiles/kinect_clouds_pub.dir/rule
-.PHONY : kinect_clouds_pub
-
-# clean rule for target.
-kinect_pathing/CMakeFiles/kinect_clouds_pub.dir/clean:
-	$(MAKE) -f kinect_pathing/CMakeFiles/kinect_clouds_pub.dir/build.make kinect_pathing/CMakeFiles/kinect_clouds_pub.dir/clean
-.PHONY : kinect_pathing/CMakeFiles/kinect_clouds_pub.dir/clean
-
-# clean rule for target.
-clean: kinect_pathing/CMakeFiles/kinect_clouds_pub.dir/clean
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target kinect_pathing/CMakeFiles/kinect_waypoint_pub.dir
-
-# All Build rule for target.
-kinect_pathing/CMakeFiles/kinect_waypoint_pub.dir/all:
-	$(MAKE) -f kinect_pathing/CMakeFiles/kinect_waypoint_pub.dir/build.make kinect_pathing/CMakeFiles/kinect_waypoint_pub.dir/depend
-	$(MAKE) -f kinect_pathing/CMakeFiles/kinect_waypoint_pub.dir/build.make kinect_pathing/CMakeFiles/kinect_waypoint_pub.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nicholaskwan-wong/roshydro/build/CMakeFiles  38
-	@echo "Built target kinect_waypoint_pub"
-.PHONY : kinect_pathing/CMakeFiles/kinect_waypoint_pub.dir/all
-
-# Include target in all.
-all: kinect_pathing/CMakeFiles/kinect_waypoint_pub.dir/all
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-kinect_pathing/CMakeFiles/kinect_waypoint_pub.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nicholaskwan-wong/roshydro/build/CMakeFiles 1
-	$(MAKE) -f CMakeFiles/Makefile2 kinect_pathing/CMakeFiles/kinect_waypoint_pub.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nicholaskwan-wong/roshydro/build/CMakeFiles 0
-.PHONY : kinect_pathing/CMakeFiles/kinect_waypoint_pub.dir/rule
-
-# Convenience name for target.
-kinect_waypoint_pub: kinect_pathing/CMakeFiles/kinect_waypoint_pub.dir/rule
-.PHONY : kinect_waypoint_pub
-
-# clean rule for target.
-kinect_pathing/CMakeFiles/kinect_waypoint_pub.dir/clean:
-	$(MAKE) -f kinect_pathing/CMakeFiles/kinect_waypoint_pub.dir/build.make kinect_pathing/CMakeFiles/kinect_waypoint_pub.dir/clean
-.PHONY : kinect_pathing/CMakeFiles/kinect_waypoint_pub.dir/clean
-
-# clean rule for target.
-clean: kinect_pathing/CMakeFiles/kinect_waypoint_pub.dir/clean
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target kinect_pathing/CMakeFiles/tf_broadcaster.dir
-
-# All Build rule for target.
-kinect_pathing/CMakeFiles/tf_broadcaster.dir/all:
-	$(MAKE) -f kinect_pathing/CMakeFiles/tf_broadcaster.dir/build.make kinect_pathing/CMakeFiles/tf_broadcaster.dir/depend
-	$(MAKE) -f kinect_pathing/CMakeFiles/tf_broadcaster.dir/build.make kinect_pathing/CMakeFiles/tf_broadcaster.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nicholaskwan-wong/roshydro/build/CMakeFiles  88
-	@echo "Built target tf_broadcaster"
-.PHONY : kinect_pathing/CMakeFiles/tf_broadcaster.dir/all
-
-# Include target in all.
-all: kinect_pathing/CMakeFiles/tf_broadcaster.dir/all
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-kinect_pathing/CMakeFiles/tf_broadcaster.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nicholaskwan-wong/roshydro/build/CMakeFiles 1
-	$(MAKE) -f CMakeFiles/Makefile2 kinect_pathing/CMakeFiles/tf_broadcaster.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nicholaskwan-wong/roshydro/build/CMakeFiles 0
-.PHONY : kinect_pathing/CMakeFiles/tf_broadcaster.dir/rule
-
-# Convenience name for target.
-tf_broadcaster: kinect_pathing/CMakeFiles/tf_broadcaster.dir/rule
-.PHONY : tf_broadcaster
-
-# clean rule for target.
-kinect_pathing/CMakeFiles/tf_broadcaster.dir/clean:
-	$(MAKE) -f kinect_pathing/CMakeFiles/tf_broadcaster.dir/build.make kinect_pathing/CMakeFiles/tf_broadcaster.dir/clean
-.PHONY : kinect_pathing/CMakeFiles/tf_broadcaster.dir/clean
-
-# clean rule for target.
-clean: kinect_pathing/CMakeFiles/tf_broadcaster.dir/clean
-.PHONY : clean
-
-#=============================================================================
 # Directory level rules for directory odom_broadcaster
 
 # Convenience name for "all" pass in the directory.
@@ -2586,7 +2462,7 @@ odom_broadcaster/preinstall:
 odom_broadcaster/CMakeFiles/odom_broadcaster.dir/all:
 	$(MAKE) -f odom_broadcaster/CMakeFiles/odom_broadcaster.dir/build.make odom_broadcaster/CMakeFiles/odom_broadcaster.dir/depend
 	$(MAKE) -f odom_broadcaster/CMakeFiles/odom_broadcaster.dir/build.make odom_broadcaster/CMakeFiles/odom_broadcaster.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nicholaskwan-wong/roshydro/build/CMakeFiles  40
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nicholaskwan-wong/roshydro/build/CMakeFiles  41
 	@echo "Built target odom_broadcaster"
 .PHONY : odom_broadcaster/CMakeFiles/odom_broadcaster.dir/all
 
@@ -3121,7 +2997,7 @@ clean: perception_pcl/pcl_ros/CMakeFiles/nodelet_topic_tools_gencfg.dir/clean
 perception_pcl/pcl_ros/CMakeFiles/pcd_to_pointcloud.dir/all:
 	$(MAKE) -f perception_pcl/pcl_ros/CMakeFiles/pcd_to_pointcloud.dir/build.make perception_pcl/pcl_ros/CMakeFiles/pcd_to_pointcloud.dir/depend
 	$(MAKE) -f perception_pcl/pcl_ros/CMakeFiles/pcd_to_pointcloud.dir/build.make perception_pcl/pcl_ros/CMakeFiles/pcd_to_pointcloud.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nicholaskwan-wong/roshydro/build/CMakeFiles  41
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nicholaskwan-wong/roshydro/build/CMakeFiles  42
 	@echo "Built target pcd_to_pointcloud"
 .PHONY : perception_pcl/pcl_ros/CMakeFiles/pcd_to_pointcloud.dir/all
 
@@ -3249,7 +3125,7 @@ clean: perception_pcl/pcl_ros/CMakeFiles/pcl_msgs_generate_messages_py.dir/clean
 perception_pcl/pcl_ros/CMakeFiles/pcl_ros_features.dir/all: perception_pcl/pcl_ros/CMakeFiles/pcl_ros_gencfg.dir/all
 	$(MAKE) -f perception_pcl/pcl_ros/CMakeFiles/pcl_ros_features.dir/build.make perception_pcl/pcl_ros/CMakeFiles/pcl_ros_features.dir/depend
 	$(MAKE) -f perception_pcl/pcl_ros/CMakeFiles/pcl_ros_features.dir/build.make perception_pcl/pcl_ros/CMakeFiles/pcl_ros_features.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nicholaskwan-wong/roshydro/build/CMakeFiles  42 43 44 45 46 47 48 49 50
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nicholaskwan-wong/roshydro/build/CMakeFiles  43 44 45 46 47 48 49 50
 	@echo "Built target pcl_ros_features"
 .PHONY : perception_pcl/pcl_ros/CMakeFiles/pcl_ros_features.dir/all
 
@@ -3259,7 +3135,7 @@ all: perception_pcl/pcl_ros/CMakeFiles/pcl_ros_features.dir/all
 
 # Build rule for subdir invocation for target.
 perception_pcl/pcl_ros/CMakeFiles/pcl_ros_features.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nicholaskwan-wong/roshydro/build/CMakeFiles 20
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nicholaskwan-wong/roshydro/build/CMakeFiles 19
 	$(MAKE) -f CMakeFiles/Makefile2 perception_pcl/pcl_ros/CMakeFiles/pcl_ros_features.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nicholaskwan-wong/roshydro/build/CMakeFiles 0
 .PHONY : perception_pcl/pcl_ros/CMakeFiles/pcl_ros_features.dir/rule
@@ -3281,8 +3157,8 @@ clean: perception_pcl/pcl_ros/CMakeFiles/pcl_ros_features.dir/clean
 # Target rules for target perception_pcl/pcl_ros/CMakeFiles/pcl_ros_filters.dir
 
 # All Build rule for target.
-perception_pcl/pcl_ros/CMakeFiles/pcl_ros_filters.dir/all: perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all
 perception_pcl/pcl_ros/CMakeFiles/pcl_ros_filters.dir/all: perception_pcl/pcl_ros/CMakeFiles/pcl_ros_gencfg.dir/all
+perception_pcl/pcl_ros/CMakeFiles/pcl_ros_filters.dir/all: perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all
 	$(MAKE) -f perception_pcl/pcl_ros/CMakeFiles/pcl_ros_filters.dir/build.make perception_pcl/pcl_ros/CMakeFiles/pcl_ros_filters.dir/depend
 	$(MAKE) -f perception_pcl/pcl_ros/CMakeFiles/pcl_ros_filters.dir/build.make perception_pcl/pcl_ros/CMakeFiles/pcl_ros_filters.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nicholaskwan-wong/roshydro/build/CMakeFiles  51 52 53 54 55 56 57
@@ -3387,11 +3263,11 @@ clean: perception_pcl/pcl_ros/CMakeFiles/pcl_ros_io.dir/clean
 # Target rules for target perception_pcl/pcl_ros/CMakeFiles/pcl_ros_segmentation.dir
 
 # All Build rule for target.
-perception_pcl/pcl_ros/CMakeFiles/pcl_ros_segmentation.dir/all: perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all
 perception_pcl/pcl_ros/CMakeFiles/pcl_ros_segmentation.dir/all: perception_pcl/pcl_ros/CMakeFiles/pcl_ros_gencfg.dir/all
+perception_pcl/pcl_ros/CMakeFiles/pcl_ros_segmentation.dir/all: perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all
 	$(MAKE) -f perception_pcl/pcl_ros/CMakeFiles/pcl_ros_segmentation.dir/build.make perception_pcl/pcl_ros/CMakeFiles/pcl_ros_segmentation.dir/depend
 	$(MAKE) -f perception_pcl/pcl_ros/CMakeFiles/pcl_ros_segmentation.dir/build.make perception_pcl/pcl_ros/CMakeFiles/pcl_ros_segmentation.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nicholaskwan-wong/roshydro/build/CMakeFiles  73 74 75 76
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nicholaskwan-wong/roshydro/build/CMakeFiles  73 74 75 76 77
 	@echo "Built target pcl_ros_segmentation"
 .PHONY : perception_pcl/pcl_ros/CMakeFiles/pcl_ros_segmentation.dir/all
 
@@ -3401,7 +3277,7 @@ all: perception_pcl/pcl_ros/CMakeFiles/pcl_ros_segmentation.dir/all
 
 # Build rule for subdir invocation for target.
 perception_pcl/pcl_ros/CMakeFiles/pcl_ros_segmentation.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nicholaskwan-wong/roshydro/build/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nicholaskwan-wong/roshydro/build/CMakeFiles 17
 	$(MAKE) -f CMakeFiles/Makefile2 perception_pcl/pcl_ros/CMakeFiles/pcl_ros_segmentation.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nicholaskwan-wong/roshydro/build/CMakeFiles 0
 .PHONY : perception_pcl/pcl_ros/CMakeFiles/pcl_ros_segmentation.dir/rule
@@ -3426,7 +3302,7 @@ clean: perception_pcl/pcl_ros/CMakeFiles/pcl_ros_segmentation.dir/clean
 perception_pcl/pcl_ros/CMakeFiles/pcl_ros_surface.dir/all: perception_pcl/pcl_ros/CMakeFiles/pcl_ros_gencfg.dir/all
 	$(MAKE) -f perception_pcl/pcl_ros/CMakeFiles/pcl_ros_surface.dir/build.make perception_pcl/pcl_ros/CMakeFiles/pcl_ros_surface.dir/depend
 	$(MAKE) -f perception_pcl/pcl_ros/CMakeFiles/pcl_ros_surface.dir/build.make perception_pcl/pcl_ros/CMakeFiles/pcl_ros_surface.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nicholaskwan-wong/roshydro/build/CMakeFiles  77 78 79
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nicholaskwan-wong/roshydro/build/CMakeFiles  78 79
 	@echo "Built target pcl_ros_surface"
 .PHONY : perception_pcl/pcl_ros/CMakeFiles/pcl_ros_surface.dir/all
 
@@ -3436,7 +3312,7 @@ all: perception_pcl/pcl_ros/CMakeFiles/pcl_ros_surface.dir/all
 
 # Build rule for subdir invocation for target.
 perception_pcl/pcl_ros/CMakeFiles/pcl_ros_surface.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nicholaskwan-wong/roshydro/build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nicholaskwan-wong/roshydro/build/CMakeFiles 13
 	$(MAKE) -f CMakeFiles/Makefile2 perception_pcl/pcl_ros/CMakeFiles/pcl_ros_surface.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nicholaskwan-wong/roshydro/build/CMakeFiles 0
 .PHONY : perception_pcl/pcl_ros/CMakeFiles/pcl_ros_surface.dir/rule
@@ -3458,50 +3334,50 @@ clean: perception_pcl/pcl_ros/CMakeFiles/pcl_ros_surface.dir/clean
 # Target rules for target perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir
 
 # All Build rule for target.
-perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: bug_pathing/CMakeFiles/tf_generate_messages_lisp.dir/all
 perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
-perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/all
 perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
 perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
 perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_py.dir/all
 perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
 perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/all
-perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_lisp.dir/all
-perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/all
 perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_py.dir/all
-perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
 perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
 perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/all
 perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: bug_pathing/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/all
+perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: bug_pathing/CMakeFiles/tf_generate_messages_lisp.dir/all
+perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/all
+perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: bug_pathing/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/all
 perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: hector_slam/hector_compressed_map_transport/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
 perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: hector_slam/hector_compressed_map_transport/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
 perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: hector_slam/hector_compressed_map_transport/CMakeFiles/sensor_msgs_generate_messages_py.dir/all
+perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: bug_pathing/CMakeFiles/tf_generate_messages_py.dir/all
 perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: bug_pathing/CMakeFiles/tf_generate_messages_cpp.dir/all
 perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: bug_pathing/CMakeFiles/actionlib_generate_messages_cpp.dir/all
 perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: bug_pathing/CMakeFiles/actionlib_generate_messages_lisp.dir/all
 perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: bug_pathing/CMakeFiles/actionlib_generate_messages_py.dir/all
-perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: bug_pathing/CMakeFiles/tf_generate_messages_py.dir/all
+perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: bug_pathing/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/all
 perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: bug_pathing/CMakeFiles/tf2_msgs_generate_messages_py.dir/all
-perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: bug_pathing/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/all
-perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: perception_pcl/pcl_ros/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/all
-perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: perception_pcl/pcl_ros/CMakeFiles/bond_generate_messages_lisp.dir/all
-perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: perception_pcl/pcl_ros/CMakeFiles/nodelet_generate_messages_py.dir/all
-perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: perception_pcl/pcl_ros/CMakeFiles/bond_generate_messages_py.dir/all
-perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: perception_pcl/pcl_ros/CMakeFiles/nodelet_generate_messages_lisp.dir/all
-perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: perception_pcl/pcl_ros/CMakeFiles/topic_tools_generate_messages_lisp.dir/all
-perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: perception_pcl/pcl_ros/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/all
-perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: perception_pcl/pcl_ros/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/all
-perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: perception_pcl/pcl_ros/CMakeFiles/dynamic_reconfigure_gencfg.dir/all
-perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: perception_pcl/pcl_ros/CMakeFiles/bond_generate_messages_cpp.dir/all
-perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: perception_pcl/pcl_ros/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/all
 perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: perception_pcl/pcl_ros/CMakeFiles/pcl_msgs_generate_messages_py.dir/all
-perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: perception_pcl/pcl_ros/CMakeFiles/nodelet_topic_tools_gencfg.dir/all
+perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: perception_pcl/pcl_ros/CMakeFiles/bond_generate_messages_cpp.dir/all
 perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: perception_pcl/pcl_ros/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/all
+perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: perception_pcl/pcl_ros/CMakeFiles/nodelet_generate_messages_py.dir/all
+perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: perception_pcl/pcl_ros/CMakeFiles/dynamic_reconfigure_gencfg.dir/all
+perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: perception_pcl/pcl_ros/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/all
+perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: perception_pcl/pcl_ros/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/all
+perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: perception_pcl/pcl_ros/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/all
+perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: perception_pcl/pcl_ros/CMakeFiles/bond_generate_messages_lisp.dir/all
+perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: perception_pcl/pcl_ros/CMakeFiles/bond_generate_messages_py.dir/all
 perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: perception_pcl/pcl_ros/CMakeFiles/nodelet_generate_messages_cpp.dir/all
-perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: perception_pcl/pcl_ros/CMakeFiles/topic_tools_generate_messages_py.dir/all
+perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: perception_pcl/pcl_ros/CMakeFiles/nodelet_generate_messages_lisp.dir/all
+perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: perception_pcl/pcl_ros/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/all
+perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: perception_pcl/pcl_ros/CMakeFiles/nodelet_topic_tools_gencfg.dir/all
+perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: perception_pcl/pcl_ros/CMakeFiles/topic_tools_generate_messages_lisp.dir/all
 perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: perception_pcl/pcl_ros/CMakeFiles/topic_tools_generate_messages_cpp.dir/all
+perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all: perception_pcl/pcl_ros/CMakeFiles/topic_tools_generate_messages_py.dir/all
 	$(MAKE) -f perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/build.make perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/depend
 	$(MAKE) -f perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/build.make perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nicholaskwan-wong/roshydro/build/CMakeFiles  80
@@ -3661,6 +3537,175 @@ clean: perception_pcl/pcl_ros/CMakeFiles/topic_tools_generate_messages_py.dir/cl
 .PHONY : clean
 
 #=============================================================================
+# Directory level rules for directory kinect_pathing
+
+# Convenience name for "all" pass in the directory.
+kinect_pathing/all: kinect_pathing/CMakeFiles/kinect_clouds_pub.dir/all
+kinect_pathing/all: kinect_pathing/CMakeFiles/kinect_waypoint_pub.dir/all
+kinect_pathing/all: kinect_pathing/CMakeFiles/move_to_waypoint.dir/all
+kinect_pathing/all: kinect_pathing/CMakeFiles/tf_broadcaster.dir/all
+.PHONY : kinect_pathing/all
+
+# Convenience name for "clean" pass in the directory.
+kinect_pathing/clean: kinect_pathing/CMakeFiles/kinect_clouds_pub.dir/clean
+kinect_pathing/clean: kinect_pathing/CMakeFiles/kinect_waypoint_pub.dir/clean
+kinect_pathing/clean: kinect_pathing/CMakeFiles/move_to_waypoint.dir/clean
+kinect_pathing/clean: kinect_pathing/CMakeFiles/tf_broadcaster.dir/clean
+.PHONY : kinect_pathing/clean
+
+# Convenience name for "preinstall" pass in the directory.
+kinect_pathing/preinstall:
+.PHONY : kinect_pathing/preinstall
+
+#=============================================================================
+# Target rules for target kinect_pathing/CMakeFiles/kinect_clouds_pub.dir
+
+# All Build rule for target.
+kinect_pathing/CMakeFiles/kinect_clouds_pub.dir/all: perception_pcl/pcl_ros/CMakeFiles/pcl_ros_io.dir/all
+kinect_pathing/CMakeFiles/kinect_clouds_pub.dir/all: perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all
+kinect_pathing/CMakeFiles/kinect_clouds_pub.dir/all: perception_pcl/pcl_ros/CMakeFiles/pcl_ros_filters.dir/all
+	$(MAKE) -f kinect_pathing/CMakeFiles/kinect_clouds_pub.dir/build.make kinect_pathing/CMakeFiles/kinect_clouds_pub.dir/depend
+	$(MAKE) -f kinect_pathing/CMakeFiles/kinect_clouds_pub.dir/build.make kinect_pathing/CMakeFiles/kinect_clouds_pub.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nicholaskwan-wong/roshydro/build/CMakeFiles  36
+	@echo "Built target kinect_clouds_pub"
+.PHONY : kinect_pathing/CMakeFiles/kinect_clouds_pub.dir/all
+
+# Include target in all.
+all: kinect_pathing/CMakeFiles/kinect_clouds_pub.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+kinect_pathing/CMakeFiles/kinect_clouds_pub.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nicholaskwan-wong/roshydro/build/CMakeFiles 24
+	$(MAKE) -f CMakeFiles/Makefile2 kinect_pathing/CMakeFiles/kinect_clouds_pub.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nicholaskwan-wong/roshydro/build/CMakeFiles 0
+.PHONY : kinect_pathing/CMakeFiles/kinect_clouds_pub.dir/rule
+
+# Convenience name for target.
+kinect_clouds_pub: kinect_pathing/CMakeFiles/kinect_clouds_pub.dir/rule
+.PHONY : kinect_clouds_pub
+
+# clean rule for target.
+kinect_pathing/CMakeFiles/kinect_clouds_pub.dir/clean:
+	$(MAKE) -f kinect_pathing/CMakeFiles/kinect_clouds_pub.dir/build.make kinect_pathing/CMakeFiles/kinect_clouds_pub.dir/clean
+.PHONY : kinect_pathing/CMakeFiles/kinect_clouds_pub.dir/clean
+
+# clean rule for target.
+clean: kinect_pathing/CMakeFiles/kinect_clouds_pub.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target kinect_pathing/CMakeFiles/kinect_waypoint_pub.dir
+
+# All Build rule for target.
+kinect_pathing/CMakeFiles/kinect_waypoint_pub.dir/all: perception_pcl/pcl_ros/CMakeFiles/pcl_ros_io.dir/all
+kinect_pathing/CMakeFiles/kinect_waypoint_pub.dir/all: perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all
+kinect_pathing/CMakeFiles/kinect_waypoint_pub.dir/all: perception_pcl/pcl_ros/CMakeFiles/pcl_ros_filters.dir/all
+	$(MAKE) -f kinect_pathing/CMakeFiles/kinect_waypoint_pub.dir/build.make kinect_pathing/CMakeFiles/kinect_waypoint_pub.dir/depend
+	$(MAKE) -f kinect_pathing/CMakeFiles/kinect_waypoint_pub.dir/build.make kinect_pathing/CMakeFiles/kinect_waypoint_pub.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nicholaskwan-wong/roshydro/build/CMakeFiles  37
+	@echo "Built target kinect_waypoint_pub"
+.PHONY : kinect_pathing/CMakeFiles/kinect_waypoint_pub.dir/all
+
+# Include target in all.
+all: kinect_pathing/CMakeFiles/kinect_waypoint_pub.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+kinect_pathing/CMakeFiles/kinect_waypoint_pub.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nicholaskwan-wong/roshydro/build/CMakeFiles 24
+	$(MAKE) -f CMakeFiles/Makefile2 kinect_pathing/CMakeFiles/kinect_waypoint_pub.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nicholaskwan-wong/roshydro/build/CMakeFiles 0
+.PHONY : kinect_pathing/CMakeFiles/kinect_waypoint_pub.dir/rule
+
+# Convenience name for target.
+kinect_waypoint_pub: kinect_pathing/CMakeFiles/kinect_waypoint_pub.dir/rule
+.PHONY : kinect_waypoint_pub
+
+# clean rule for target.
+kinect_pathing/CMakeFiles/kinect_waypoint_pub.dir/clean:
+	$(MAKE) -f kinect_pathing/CMakeFiles/kinect_waypoint_pub.dir/build.make kinect_pathing/CMakeFiles/kinect_waypoint_pub.dir/clean
+.PHONY : kinect_pathing/CMakeFiles/kinect_waypoint_pub.dir/clean
+
+# clean rule for target.
+clean: kinect_pathing/CMakeFiles/kinect_waypoint_pub.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target kinect_pathing/CMakeFiles/move_to_waypoint.dir
+
+# All Build rule for target.
+kinect_pathing/CMakeFiles/move_to_waypoint.dir/all: perception_pcl/pcl_ros/CMakeFiles/pcl_ros_io.dir/all
+kinect_pathing/CMakeFiles/move_to_waypoint.dir/all: perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all
+kinect_pathing/CMakeFiles/move_to_waypoint.dir/all: perception_pcl/pcl_ros/CMakeFiles/pcl_ros_filters.dir/all
+	$(MAKE) -f kinect_pathing/CMakeFiles/move_to_waypoint.dir/build.make kinect_pathing/CMakeFiles/move_to_waypoint.dir/depend
+	$(MAKE) -f kinect_pathing/CMakeFiles/move_to_waypoint.dir/build.make kinect_pathing/CMakeFiles/move_to_waypoint.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nicholaskwan-wong/roshydro/build/CMakeFiles  40
+	@echo "Built target move_to_waypoint"
+.PHONY : kinect_pathing/CMakeFiles/move_to_waypoint.dir/all
+
+# Include target in all.
+all: kinect_pathing/CMakeFiles/move_to_waypoint.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+kinect_pathing/CMakeFiles/move_to_waypoint.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nicholaskwan-wong/roshydro/build/CMakeFiles 24
+	$(MAKE) -f CMakeFiles/Makefile2 kinect_pathing/CMakeFiles/move_to_waypoint.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nicholaskwan-wong/roshydro/build/CMakeFiles 0
+.PHONY : kinect_pathing/CMakeFiles/move_to_waypoint.dir/rule
+
+# Convenience name for target.
+move_to_waypoint: kinect_pathing/CMakeFiles/move_to_waypoint.dir/rule
+.PHONY : move_to_waypoint
+
+# clean rule for target.
+kinect_pathing/CMakeFiles/move_to_waypoint.dir/clean:
+	$(MAKE) -f kinect_pathing/CMakeFiles/move_to_waypoint.dir/build.make kinect_pathing/CMakeFiles/move_to_waypoint.dir/clean
+.PHONY : kinect_pathing/CMakeFiles/move_to_waypoint.dir/clean
+
+# clean rule for target.
+clean: kinect_pathing/CMakeFiles/move_to_waypoint.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target kinect_pathing/CMakeFiles/tf_broadcaster.dir
+
+# All Build rule for target.
+kinect_pathing/CMakeFiles/tf_broadcaster.dir/all: perception_pcl/pcl_ros/CMakeFiles/pcl_ros_io.dir/all
+kinect_pathing/CMakeFiles/tf_broadcaster.dir/all: perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all
+kinect_pathing/CMakeFiles/tf_broadcaster.dir/all: perception_pcl/pcl_ros/CMakeFiles/pcl_ros_filters.dir/all
+	$(MAKE) -f kinect_pathing/CMakeFiles/tf_broadcaster.dir/build.make kinect_pathing/CMakeFiles/tf_broadcaster.dir/depend
+	$(MAKE) -f kinect_pathing/CMakeFiles/tf_broadcaster.dir/build.make kinect_pathing/CMakeFiles/tf_broadcaster.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nicholaskwan-wong/roshydro/build/CMakeFiles  88
+	@echo "Built target tf_broadcaster"
+.PHONY : kinect_pathing/CMakeFiles/tf_broadcaster.dir/all
+
+# Include target in all.
+all: kinect_pathing/CMakeFiles/tf_broadcaster.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+kinect_pathing/CMakeFiles/tf_broadcaster.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nicholaskwan-wong/roshydro/build/CMakeFiles 24
+	$(MAKE) -f CMakeFiles/Makefile2 kinect_pathing/CMakeFiles/tf_broadcaster.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nicholaskwan-wong/roshydro/build/CMakeFiles 0
+.PHONY : kinect_pathing/CMakeFiles/tf_broadcaster.dir/rule
+
+# Convenience name for target.
+tf_broadcaster: kinect_pathing/CMakeFiles/tf_broadcaster.dir/rule
+.PHONY : tf_broadcaster
+
+# clean rule for target.
+kinect_pathing/CMakeFiles/tf_broadcaster.dir/clean:
+	$(MAKE) -f kinect_pathing/CMakeFiles/tf_broadcaster.dir/build.make kinect_pathing/CMakeFiles/tf_broadcaster.dir/clean
+.PHONY : kinect_pathing/CMakeFiles/tf_broadcaster.dir/clean
+
+# clean rule for target.
+clean: kinect_pathing/CMakeFiles/tf_broadcaster.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Directory level rules for directory perception_pcl/pointcloud_to_laserscan
 
 # Convenience name for "all" pass in the directory.
@@ -3781,8 +3826,8 @@ clean: perception_pcl/pointcloud_to_laserscan/CMakeFiles/_run_tests_pointcloud_t
 # Target rules for target perception_pcl/pointcloud_to_laserscan/CMakeFiles/pointcloud_to_laserscan.dir
 
 # All Build rule for target.
-perception_pcl/pointcloud_to_laserscan/CMakeFiles/pointcloud_to_laserscan.dir/all: perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all
 perception_pcl/pointcloud_to_laserscan/CMakeFiles/pointcloud_to_laserscan.dir/all: perception_pcl/pcl_ros/CMakeFiles/pcl_ros_io.dir/all
+perception_pcl/pointcloud_to_laserscan/CMakeFiles/pointcloud_to_laserscan.dir/all: perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all
 perception_pcl/pointcloud_to_laserscan/CMakeFiles/pointcloud_to_laserscan.dir/all: perception_pcl/pcl_ros/CMakeFiles/pcl_ros_filters.dir/all
 	$(MAKE) -f perception_pcl/pointcloud_to_laserscan/CMakeFiles/pointcloud_to_laserscan.dir/build.make perception_pcl/pointcloud_to_laserscan/CMakeFiles/pointcloud_to_laserscan.dir/depend
 	$(MAKE) -f perception_pcl/pointcloud_to_laserscan/CMakeFiles/pointcloud_to_laserscan.dir/build.make perception_pcl/pointcloud_to_laserscan/CMakeFiles/pointcloud_to_laserscan.dir/build
@@ -3818,8 +3863,8 @@ clean: perception_pcl/pointcloud_to_laserscan/CMakeFiles/pointcloud_to_laserscan
 # Target rules for target perception_pcl/pointcloud_to_laserscan/CMakeFiles/pointcloud_to_laserscan_node.dir
 
 # All Build rule for target.
-perception_pcl/pointcloud_to_laserscan/CMakeFiles/pointcloud_to_laserscan_node.dir/all: perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all
 perception_pcl/pointcloud_to_laserscan/CMakeFiles/pointcloud_to_laserscan_node.dir/all: perception_pcl/pcl_ros/CMakeFiles/pcl_ros_io.dir/all
+perception_pcl/pointcloud_to_laserscan/CMakeFiles/pointcloud_to_laserscan_node.dir/all: perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all
 perception_pcl/pointcloud_to_laserscan/CMakeFiles/pointcloud_to_laserscan_node.dir/all: perception_pcl/pcl_ros/CMakeFiles/pcl_ros_filters.dir/all
 perception_pcl/pointcloud_to_laserscan/CMakeFiles/pointcloud_to_laserscan_node.dir/all: perception_pcl/pointcloud_to_laserscan/CMakeFiles/pointcloud_to_laserscan.dir/all
 	$(MAKE) -f perception_pcl/pointcloud_to_laserscan/CMakeFiles/pointcloud_to_laserscan_node.dir/build.make perception_pcl/pointcloud_to_laserscan/CMakeFiles/pointcloud_to_laserscan_node.dir/depend
@@ -3985,7 +4030,7 @@ all: hector_slam/hector_mapping/CMakeFiles/hector_mapping.dir/all
 
 # Build rule for subdir invocation for target.
 hector_slam/hector_mapping/CMakeFiles/hector_mapping.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nicholaskwan-wong/roshydro/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nicholaskwan-wong/roshydro/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_mapping/CMakeFiles/hector_mapping.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nicholaskwan-wong/roshydro/build/CMakeFiles 0
 .PHONY : hector_slam/hector_mapping/CMakeFiles/hector_mapping.dir/rule
@@ -4016,7 +4061,7 @@ hector_slam/hector_mapping/CMakeFiles/hector_mapping_gencpp.dir/all: hector_slam
 
 # Build rule for subdir invocation for target.
 hector_slam/hector_mapping/CMakeFiles/hector_mapping_gencpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nicholaskwan-wong/roshydro/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nicholaskwan-wong/roshydro/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_mapping/CMakeFiles/hector_mapping_gencpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nicholaskwan-wong/roshydro/build/CMakeFiles 0
 .PHONY : hector_slam/hector_mapping/CMakeFiles/hector_mapping_gencpp.dir/rule
@@ -4038,9 +4083,9 @@ clean: hector_slam/hector_mapping/CMakeFiles/hector_mapping_gencpp.dir/clean
 # Target rules for target hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages.dir
 
 # All Build rule for target.
+hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages.dir/all: hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_py.dir/all
 hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages.dir/all: hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_cpp.dir/all
 hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages.dir/all: hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_lisp.dir/all
-hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages.dir/all: hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_py.dir/all
 	$(MAKE) -f hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages.dir/build.make hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages.dir/depend
 	$(MAKE) -f hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages.dir/build.make hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nicholaskwan-wong/roshydro/build/CMakeFiles 
@@ -4078,13 +4123,13 @@ clean: hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages.di
 hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_cpp.dir/all:
 	$(MAKE) -f hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_cpp.dir/build.make hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_cpp.dir/depend
 	$(MAKE) -f hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_cpp.dir/build.make hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_cpp.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nicholaskwan-wong/roshydro/build/CMakeFiles  14 15
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nicholaskwan-wong/roshydro/build/CMakeFiles  14
 	@echo "Built target hector_mapping_generate_messages_cpp"
 .PHONY : hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nicholaskwan-wong/roshydro/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nicholaskwan-wong/roshydro/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nicholaskwan-wong/roshydro/build/CMakeFiles 0
 .PHONY : hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_cpp.dir/rule
@@ -4109,13 +4154,13 @@ clean: hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_cp
 hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_lisp.dir/all:
 	$(MAKE) -f hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_lisp.dir/build.make hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_lisp.dir/depend
 	$(MAKE) -f hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_lisp.dir/build.make hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_lisp.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/nicholaskwan-wong/roshydro/build/CMakeFiles  16
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/nicholaskwan-wong/roshydro/build/CMakeFiles  15 16
 	@echo "Built target hector_mapping_generate_messages_lisp"
 .PHONY : hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nicholaskwan-wong/roshydro/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nicholaskwan-wong/roshydro/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_lisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nicholaskwan-wong/roshydro/build/CMakeFiles 0
 .PHONY : hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_lisp.dir/rule
@@ -4177,7 +4222,7 @@ hector_slam/hector_mapping/CMakeFiles/hector_mapping_genlisp.dir/all: hector_sla
 
 # Build rule for subdir invocation for target.
 hector_slam/hector_mapping/CMakeFiles/hector_mapping_genlisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nicholaskwan-wong/roshydro/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nicholaskwan-wong/roshydro/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_mapping/CMakeFiles/hector_mapping_genlisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nicholaskwan-wong/roshydro/build/CMakeFiles 0
 .PHONY : hector_slam/hector_mapping/CMakeFiles/hector_mapping_genlisp.dir/rule
@@ -4308,60 +4353,60 @@ viso2/viso2_ros/preinstall:
 # Target rules for target viso2/viso2_ros/CMakeFiles/mono_odometer.dir
 
 # All Build rule for target.
-viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: bug_pathing/CMakeFiles/tf_generate_messages_lisp.dir/all
 viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: viso2/libviso2/CMakeFiles/viso2.dir/all
 viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
 viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: hector_slam/hector_map_tools/CMakeFiles/nav_msgs_generate_messages_cpp.dir/all
-viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
 viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: hector_slam/hector_map_tools/CMakeFiles/nav_msgs_generate_messages_lisp.dir/all
 viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: hector_slam/hector_map_tools/CMakeFiles/nav_msgs_generate_messages_py.dir/all
+viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/all
 viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
 viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
 viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_py.dir/all
 viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
 viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/all
-viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_lisp.dir/all
-viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/all
 viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_py.dir/all
-viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
 viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
 viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/all
 viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: bug_pathing/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/all
+viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: bug_pathing/CMakeFiles/tf_generate_messages_lisp.dir/all
+viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/all
+viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: bug_pathing/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/all
 viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: hector_slam/hector_compressed_map_transport/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
 viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: hector_slam/hector_compressed_map_transport/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
 viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: hector_slam/hector_compressed_map_transport/CMakeFiles/sensor_msgs_generate_messages_py.dir/all
+viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: bug_pathing/CMakeFiles/tf_generate_messages_py.dir/all
 viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: bug_pathing/CMakeFiles/tf_generate_messages_cpp.dir/all
 viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: bug_pathing/CMakeFiles/actionlib_generate_messages_cpp.dir/all
 viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: bug_pathing/CMakeFiles/actionlib_generate_messages_lisp.dir/all
 viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: bug_pathing/CMakeFiles/actionlib_generate_messages_py.dir/all
-viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: bug_pathing/CMakeFiles/tf_generate_messages_py.dir/all
+viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: bug_pathing/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/all
 viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: bug_pathing/CMakeFiles/tf2_msgs_generate_messages_py.dir/all
-viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: bug_pathing/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/all
-viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/all
-viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/bond_generate_messages_lisp.dir/all
-viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/nodelet_generate_messages_py.dir/all
-viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/bond_generate_messages_py.dir/all
-viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/nodelet_generate_messages_lisp.dir/all
-viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/topic_tools_generate_messages_lisp.dir/all
-viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/all
-viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/all
-viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/dynamic_reconfigure_gencfg.dir/all
-viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/bond_generate_messages_cpp.dir/all
-viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/all
 viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/pcl_msgs_generate_messages_py.dir/all
+viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/bond_generate_messages_cpp.dir/all
 viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/all
+viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/nodelet_generate_messages_py.dir/all
+viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/dynamic_reconfigure_gencfg.dir/all
+viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/pcl_ros_io.dir/all
+viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/all
+viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/all
+viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/all
+viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/bond_generate_messages_lisp.dir/all
+viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/bond_generate_messages_py.dir/all
 viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/nodelet_generate_messages_cpp.dir/all
+viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/nodelet_generate_messages_lisp.dir/all
+viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/all
+viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/topic_tools_generate_messages_lisp.dir/all
+viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/pcl_ros_gencfg.dir/all
+viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/topic_tools_generate_messages_cpp.dir/all
 viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/topic_tools_generate_messages_py.dir/all
 viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all
-viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/topic_tools_generate_messages_cpp.dir/all
-viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/pcl_ros_io.dir/all
-viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/pcl_ros_gencfg.dir/all
 viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/pcl_ros_filters.dir/all
+viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: viso2/viso2_ros/CMakeFiles/std_srvs_generate_messages_lisp.dir/all
 viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: viso2/viso2_ros/CMakeFiles/std_srvs_generate_messages_cpp.dir/all
 viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: viso2/viso2_ros/CMakeFiles/std_srvs_generate_messages_py.dir/all
-viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: viso2/viso2_ros/CMakeFiles/std_srvs_generate_messages_lisp.dir/all
 viso2/viso2_ros/CMakeFiles/mono_odometer.dir/all: viso2/viso2_ros/CMakeFiles/viso2_ros_gencpp.dir/all
 	$(MAKE) -f viso2/viso2_ros/CMakeFiles/mono_odometer.dir/build.make viso2/viso2_ros/CMakeFiles/mono_odometer.dir/depend
 	$(MAKE) -f viso2/viso2_ros/CMakeFiles/mono_odometer.dir/build.make viso2/viso2_ros/CMakeFiles/mono_odometer.dir/build
@@ -4490,60 +4535,60 @@ clean: viso2/viso2_ros/CMakeFiles/std_srvs_generate_messages_py.dir/clean
 # Target rules for target viso2/viso2_ros/CMakeFiles/stereo_odometer.dir
 
 # All Build rule for target.
-viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: bug_pathing/CMakeFiles/tf_generate_messages_lisp.dir/all
 viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: viso2/libviso2/CMakeFiles/viso2.dir/all
 viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
 viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: hector_slam/hector_map_tools/CMakeFiles/nav_msgs_generate_messages_cpp.dir/all
-viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
 viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: hector_slam/hector_map_tools/CMakeFiles/nav_msgs_generate_messages_lisp.dir/all
 viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: hector_slam/hector_map_tools/CMakeFiles/nav_msgs_generate_messages_py.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/all
 viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
 viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: hector_slam/hector_map_tools/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
 viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_py.dir/all
 viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: hector_slam/hector_map_tools/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
 viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/all
-viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_lisp.dir/all
-viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/all
 viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_py.dir/all
-viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
 viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
 viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/all
 viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: hector_slam/hector_geotiff/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: bug_pathing/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: bug_pathing/CMakeFiles/tf_generate_messages_lisp.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: hector_slam/hector_geotiff/CMakeFiles/roscpp_generate_messages_py.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: bug_pathing/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/all
 viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: hector_slam/hector_compressed_map_transport/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
 viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: hector_slam/hector_compressed_map_transport/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
 viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: hector_slam/hector_compressed_map_transport/CMakeFiles/sensor_msgs_generate_messages_py.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: bug_pathing/CMakeFiles/tf_generate_messages_py.dir/all
 viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: bug_pathing/CMakeFiles/tf_generate_messages_cpp.dir/all
 viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: bug_pathing/CMakeFiles/actionlib_generate_messages_cpp.dir/all
 viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: bug_pathing/CMakeFiles/actionlib_generate_messages_lisp.dir/all
 viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: bug_pathing/CMakeFiles/actionlib_generate_messages_py.dir/all
-viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: bug_pathing/CMakeFiles/tf_generate_messages_py.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: bug_pathing/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/all
 viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: bug_pathing/CMakeFiles/tf2_msgs_generate_messages_py.dir/all
-viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: bug_pathing/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/all
-viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/all
-viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/bond_generate_messages_lisp.dir/all
-viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/nodelet_generate_messages_py.dir/all
-viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/bond_generate_messages_py.dir/all
-viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/nodelet_generate_messages_lisp.dir/all
-viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/topic_tools_generate_messages_lisp.dir/all
-viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/all
-viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/all
-viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/dynamic_reconfigure_gencfg.dir/all
-viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/bond_generate_messages_cpp.dir/all
-viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/all
 viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/pcl_msgs_generate_messages_py.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/bond_generate_messages_cpp.dir/all
 viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/nodelet_generate_messages_py.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/dynamic_reconfigure_gencfg.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/pcl_ros_io.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/bond_generate_messages_lisp.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/bond_generate_messages_py.dir/all
 viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/nodelet_generate_messages_cpp.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/nodelet_generate_messages_lisp.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/topic_tools_generate_messages_lisp.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/pcl_ros_gencfg.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/topic_tools_generate_messages_cpp.dir/all
 viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/topic_tools_generate_messages_py.dir/all
 viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/pcl_ros_tf.dir/all
-viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/topic_tools_generate_messages_cpp.dir/all
-viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/pcl_ros_io.dir/all
-viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/pcl_ros_gencfg.dir/all
 viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: perception_pcl/pcl_ros/CMakeFiles/pcl_ros_filters.dir/all
+viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: viso2/viso2_ros/CMakeFiles/std_srvs_generate_messages_lisp.dir/all
 viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: viso2/viso2_ros/CMakeFiles/std_srvs_generate_messages_cpp.dir/all
 viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: viso2/viso2_ros/CMakeFiles/std_srvs_generate_messages_py.dir/all
-viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: viso2/viso2_ros/CMakeFiles/std_srvs_generate_messages_lisp.dir/all
 viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/all: viso2/viso2_ros/CMakeFiles/viso2_ros_gencpp.dir/all
 	$(MAKE) -f viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/build.make viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/depend
 	$(MAKE) -f viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/build.make viso2/viso2_ros/CMakeFiles/stereo_odometer.dir/build
@@ -4610,9 +4655,9 @@ clean: viso2/viso2_ros/CMakeFiles/viso2_ros_gencpp.dir/clean
 # Target rules for target viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages.dir
 
 # All Build rule for target.
-viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages.dir/all: viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_lisp.dir/all
 viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages.dir/all: viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_cpp.dir/all
 viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages.dir/all: viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_py.dir/all
+viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages.dir/all: viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages_lisp.dir/all
 	$(MAKE) -f viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages.dir/build.make viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages.dir/depend
 	$(MAKE) -f viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages.dir/build.make viso2/viso2_ros/CMakeFiles/viso2_ros_generate_messages.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/nicholaskwan-wong/roshydro/build/CMakeFiles 

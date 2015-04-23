@@ -11,6 +11,7 @@ find_package(catkin REQUIRED COMPONENTS
   geometry_msgs
   PCL
   tf
+  pcl_ros
 )
 
 catkin_package(
@@ -53,5 +54,12 @@ target_link_libraries(kinect_waypoint_pub
 add_executable(tf_broadcaster src/tf_broadcaster.cpp)
 # Specify libraries to link a library or executable target against
 target_link_libraries(tf_broadcaster
+  ${catkin_LIBRARIES}
+)
+
+# Declare a cpp executable
+add_executable(move_to_waypoint src/move_to_waypoint.cpp)
+# Specify libraries to link a library or executable target against
+target_link_libraries(move_to_waypoint
   ${catkin_LIBRARIES}
 )

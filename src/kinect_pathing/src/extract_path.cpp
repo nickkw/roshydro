@@ -100,11 +100,11 @@ void extractPath (pcl::PCLPointCloud2::Ptr input_cloud, pcl::PointCloud<pcl::Poi
   outrem.setRadiusSearch(2.0f);
   outrem.setMinNeighborsInRadius (15);
   outrem.filter (*cloud_filtered2);
-  // Filter third time
-  outrem.setInputCloud(cloud_filtered2);
-  outrem.setRadiusSearch(2.0f);
-  outrem.setMinNeighborsInRadius (10);
-  outrem.filter (*cloud_filtered2);
+  // // Filter third time
+  // outrem.setInputCloud(cloud_filtered2);
+  // outrem.setRadiusSearch(2.0f);
+  // outrem.setMinNeighborsInRadius (10);
+  // outrem.filter (*cloud_filtered2);
   // Convert to the templated PointCloud to template of PointXYZ type
   pcl::fromPCLPointCloud2 (*cloud_filtered2, *cloud_filtered3);
 
@@ -143,6 +143,11 @@ void extractPath (pcl::PCLPointCloud2::Ptr input_cloud, pcl::PointCloud<pcl::Poi
   transform2.scale(0.0033);
   pcl::transformPointCloud (*projection_cloud, *projection_cloud, transform2);
   pcl::transformPointCloud (*hull_cloud, *hull_cloud, transform2);
+
+  // TODO -- less magic number to determine point cloud -> kinect camera transform
+  transform1.translation() << -1.33, 0.0, 0.38;
+  pcl::transformPointCloud (*projection_cloud, *projection_cloud, transform1);
+  pcl::transformPointCloud (*hull_cloud, *hull_cloud, transform1);
 
   // pcl::PCDWriter writer;
   // writer.write ("table_scene_lms400_hull.pcd", *hull_cloud, false);

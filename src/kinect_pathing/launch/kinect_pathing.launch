@@ -1,25 +1,39 @@
 <?xml version="1.0"?>
 
 <launch>
+  <!-- Client related nodes -->
+
   <include file="$(find kinfu)/launch/kinfu2.launch"/>
+
+  <node name="kinect_clouds_pub" pkg="kinect_pathing" type="kinect_clouds_pub" output="screen">
+  	<param name="request_new_saves" value="true" type="bool" />
+  	<param name="update_rate" value="0.25" type="double" /> <!-- Update rate of point clouds of this node in Hz -->
+  </node>
+
+  <node name="kinect_waypoint_pub" pkg="kinect_pathing" type="kinect_waypoint_pub" output="screen"/>
+
+  <node name="cloud_tf" pkg="tf" type="static_transform_publisher" args="0.10 0.17 0 0 0 0 base_frame camera_frame 100" />
+  <node name="tf_broadcaster" pkg="kinect_pathing" type="tf_broadcaster" output="screen" />
+
+<!--   <node name="cmd_send_pge5" pkg="cmd_send" type="cmd_send" output="screen" />
+  <node name="rec_odo_pge5" pkg="collect_odometry" type="rec_odo" output="screen" /> -->
+
+  <node name="bug_pathing" pkg="bug_pathing" type="bug_pathing" output="screen">
+    <remap from="command_pge5" to="command" />
+    <param name="lin_vel_max" value="0.5" type="double" /> <!-- Maximum linear velocity of the robot. Default 1.0 -->
+    <param name="ang_vel_max" value="2.0" type="double" /> <!-- Maximum angular velocity of the robot. Default 1.0 -->
+  </node>
+
+  <!-- Server related nodes -->
 
   <node name="map_server" pkg="map_server" type="map_server"  output="screen" 
     args="/home/nicholaskwan-wong/roshydro/maps/labmap_feb2_15h51.yaml"> <!-- Insert location of .yaml formatted map to be used here -->
     <param name="frame_id" value="map" type="str" />
   </node>
 
-  <node name="cloud_tf" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 -1.5708 map cloud_frame 100" />
-  <node name="tf_broadcaster" pkg="kinect_pathing" type="tf_broadcaster" output="screen" />
-
-  <node name="kinect_clouds_pub" pkg="kinect_pathing" type="kinect_clouds_pub" output="screen">
-  	<param name="request_new_saves" value="true" type="bool" />
-  	<param name="update_rate" value="4.0" type="double" /> <!-- Update rate of point clouds of this node in Hz -->
-  </node>
-
-  <node name="kinect_waypoint_pub" pkg="kinect_pathing" type="kinect_waypoint_pub" output="screen"/>
-
   <param name="/use_sim_time" value="false"/>
   <node pkg="rviz" type="rviz" name="rviz" 
     args="-d /home/nicholaskwan-wong/.rviz/kinect_pathing.rviz"/>
   
 </launch>
+

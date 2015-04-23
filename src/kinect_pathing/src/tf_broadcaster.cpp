@@ -3,7 +3,7 @@
 #include <geometry_msgs/PoseWithCovarianceStamped.h>
 #include <tf/transform_broadcaster.h>
 
-std::string base_frame_, odom_frame_, map_frame_;
+std::string base_frame_, odom_frame_, map_frame_, wp_fixed_frame_;
 
 // Implementation variables
 std::string velstr, xmsg, ymsg, thmsg;
@@ -24,6 +24,10 @@ double th_odo_origin = 0.0;
 double x_init_pose = 0.0;
 double y_init_pose = 0.0;
 double th_init_pose = 0.0;
+
+double x_newmap_pose = 0.0;
+double y_newmap_pose = 0.0;
+double th_newmap_pose = 0.0;
 
 
 // velCallback function takes incoming odometry message from the low level board
@@ -93,6 +97,7 @@ int main(int argc, char** argv){
   nh_.param<std::string>("base_frame", base_frame_, "base_frame"); // Names the base tf frame.
   nh_.param<std::string>("odom_frame", odom_frame_, "odom_frame"); // Names the odom tf frame.
   nh_.param<std::string>("map_frame", map_frame_, "map"); // Names the map tf frame.
+  nh_.param<std::string>("waypoint_frame", wp_fixed_frame_, "wp_fixed_frame"); // Names the base tf frame.
   
   // Loop
   ros::Rate rate(10.0);
@@ -111,6 +116,13 @@ int main(int argc, char** argv){
     rotation.setRPY(0, 0, th_init_pose + th_odo);
     transform.setRotation( rotation );
     br.sendTransform(tf::StampedTransform(transform, ros::Time::now(), map_frame_, base_frame_));
+
+    // Map -> WP fixed frame transform
+    // transform.setOrigin( tf::Vector3(x_init_pose + 0.10, y_init_pose + 0.17, 0.0) );
+    transform.setOrigin( tf::Vector3(x_init_pose, y_init_pose, 0.0) );
+    rotation.setRPY(0, 0, th_init_pose);
+    transform.setRotation( rotation );
+    br.sendTransform(tf::StampedTransform(transform, ros::Time::now(), map_frame_, wp_fixed_frame_));
 
     rate.sleep();
   }
